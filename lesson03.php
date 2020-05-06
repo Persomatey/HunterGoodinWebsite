@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php 
-        require 'all-lessons.php';
+        echo "Hello, World!";
     ?>
 
 </body>

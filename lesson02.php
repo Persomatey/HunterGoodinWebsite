@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php 
-        require 'all-lessons.php';
+        print "I have installed PHP onto the computer and went through the php.ini file and configured my delimiter tags as well."; 
     ?>
 
 </body>
