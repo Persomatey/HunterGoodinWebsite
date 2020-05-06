@@ -1,0 +1,551 @@
+
+
+  body{
+	margin:0;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+   	}
+
+   header{
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://www.c7creative.com/wp-content/uploads/2016/01/Digital-Marketing-Jacksonville-Florida-C7-Creative-904-395-1944.jpg) no-repeat;
+    background-size:cover;
+    overflow-x: hidden;
+    background-position: center;
+   	}
+
+  .header{
+	height:100vh;
+	}
+
+  #flex1{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    color: white;
+	}
+  .hexagon{
+	 width: 120px;
+	 height: 85px;   
+	 color: white;       
+	 position: relative;
+	 background:#5F9EA0;
+	 margin: 0 auto;
+     font-size: 70px;
+
+    }
+   .hexagon:before {
+	  content: "";
+	  position: absolute;
+	  top: -25px;
+	  left: 0;
+	  width: 0;
+	  height: 0;
+	  border-left: 60px solid transparent;
+	  border-right: 60px solid transparent;
+	  border-bottom: 25px solid #5F9EA0;
+    }
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+     border-top: 25px solid #5F9EA0;
+    }
+
+    #myname{
+    	font-weight: 400;
+    	font-size: 3rem;
+     	line-height: 1.12;
+    	letter-spacing: .1rem;
+    }
+    .colorchange{
+	animation: colorchange 3s infinite;
+}
+@keyframes colorchange{
+	0%{color:white;}	
+	100%{color:#F9812A }
+	
+}
+    #btn{
+   		text-align: left;
+		background-color: transparent;
+		color:white;
+		padding:.8rem 1.4rem;
+		border-bottom-right-radius:.3rem; 
+		border:none;
+		font-size:160% ;
+		font-family: 'Raleway', sans-serif;
+		letter-spacing: .1rem;
+		border:2px solid white;
+		outline: none;
+		text-decoration: none; 
+		
+    }
+    .fas{
+      color: white;
+      padding-left: 1rem;
+      font-size: 20px;
+     margin: 0;
+    }
+
+    #btn:hover .fa-arrow-right{
+    	//content:"\f063";
+    	 -ms-transform: skew(70deg,70deg);; /* IE 9 */
+      -webkit-transform: skew(70deg,70deg);; /* Safari 3-8 */
+       transform: skew(70deg,70deg);
+    	transition: transform 0.8s;
+	--webkit-transition:transform 0.8s;
+	--moz-transition: transform 0.8s;
+   }
+    #btn:hover{
+        background-color: #00CED1;
+        font-weight: normal;
+         transition: all 1s;
+	   --webkit-transition:all 1s;
+	   --moz-transition: all 1s;
+	    border: none;
+    }
+    
+    /*about me*/
+
+    .nav2,.show2{
+    	display: flex;
+    	background-color: #232323;
+    	margin: 0;
+    }
+    .nav{
+    	padding: 20px;
+    	padding-left: 80px;    	
+    }
+
+    .nav1{
+    	position: fixed;
+    	top: 0;
+    	width: 100%;
+    	z-index: 100;
+    }
+     .nav .active, .active1{
+    	color: 	#F9812A;
+    }
+     .nav li{
+       	list-style: none;
+      	margin-left: 30px;
+    }
+
+    .nav li a{
+    	text-decoration: none;
+    	color: white;
+    	font-size: 17px;
+    }
+
+    .nav li a:hover{
+    	color: 	#F9812A;
+    }
+    .mobileview{
+    	display: none;    	
+    }
+        
+    .fa{   
+     	float: right;
+     	line-height: 0;
+    }
+    .show{
+    	color: white;
+    	font-size: 35px;
+    	   	
+    }
+
+    .sectionsheading{
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 0; 
+        font-size: 35px;
+    }
+    
+    #flex2{
+        display: flex;
+        margin:10px; 
+        flex-flow: row wrap;	
+    }
+    
+    .flex2items{
+    	width:22%;
+    	margin: 10px;
+    	text-align: center;
+    	color:rgba(0,0,0,0.7);
+    	font-weight: bolder;
+
+    }
+    .flex2items h2{
+    	margin-top: 50px;
+    	font-size:28px ;
+    }
+    .flex2items p{
+    	font-weight: normal;
+    	font-size: 16px;
+    }
+    hr{
+    	padding: 0;
+    	width: 80px;
+    	text-align: center;
+    	border: 2px solid gray;
+    	margin-bottom: 5rem;
+    }
+
+ /*my skills*/
+   #myskills{
+   	margin-top: 50px;
+   	padding-top: 30px;
+   	background-color: #232323;
+   	padding-bottom: 70px;
+   }
+
+   .whitehead{
+   	color: white;
+   }
+
+   .flex{
+   	display: flex;
+   	flex-wrap: wrap;
+   }
+     
+    .justify1{
+   	justify-content: space-around;
+   }
+
+   .justify2{
+   	justify-content: space-between;
+   }
+
+   .flex3sub1{
+     background-color:rgba(0,0,0,0.3);
+      width: 500px;
+      margin: 10px;
+      height: 25px;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+       
+    } 
+    /*.flex3sub1 div:nth-of-type(2){
+    	transition: all 1s;
+    }*/
+
+    .forwidth{      
+       background-color: rgba(0,255,255,0.6);
+       
+    }
+   
+   .subject{
+   	width: 23%;
+   	background-color:rgba(222,49,99,0.6);
+   	padding-top: .2rem;
+   	font-size: .93em;
+  
+   }
+  .percent{
+   padding-top: .2rem;
+   }
+    
+    .fifty{
+    	width:40%;
+
+    }
+
+    .eighty{
+    	width:60%;
+    }
+    .fourty{
+    	width: 30%;
+    }
+    .thirty{
+    	width:25%;
+    }
+    .twenty{
+      width: 15%;
+    }
+    .sixty{
+    	width: 50%;
+    }
+
+    /*my projects*/
+
+    #myprojects{
+    	background-color: rgba(0,0,0,0.05);
+    	padding-top: 30px;
+    	
+    }
+    iframe{
+    	width: 600px;
+    	height: 400px;
+    }
+
+    .projimages{
+    	max-width: 400px;
+    	height: 300px;
+    	width: 100%;
+        
+    } 
+    .projimages:hover{
+        width: 500px
+    } 
+    
+    .flex4{
+    	justify-content: center;
+    } 
+    
+  .projnames{
+    	display: none;
+    	transition: all 1s
+
+    }
+    .projname{
+    	margin-bottom:5rem;
+    }
+    .onhover h3{
+    	margin-bottom: 30px;
+    	color:brown;
+    }
+
+     .projbut1{
+
+    	margin-left: 5px;
+		width: 10%;
+		text-align: left;
+		background-color: teal;
+		color:white;
+		font-size: 15px;
+		font-weight: bold;
+		padding:.7rem;
+		border-bottom-right-radius:.3rem; 
+		border:none;
+		text-transform: uppercase;
+		outline: none;
+		text-decoration: none;
+    }
+
+    .projbut1:hover{
+    	color: teal;
+    	background-color: white;
+    	border: 1px solid teal;
+    }
+
+    .projbut2{
+    	
+        color:teal;
+        margin-left: 15px;
+	    background-color: white;
+		padding:10px 18px;
+		font-size: 15px;
+		font-weight: bold;
+        border: 1px solid teal;
+        text-transform: uppercase;
+        outline: none;
+        text-decoration: none;
+
+    }
+
+    .projbut2:hover{
+    	color: white;
+    	background-color: teal;
+    }
+    .hello{
+      text-align: center;
+      margin-top: 0px;
+      height: 40px;      
+    }
+    .viewmore{      
+      border:1px solid brown;
+      color: brown;      
+    }
+    .viewmore:hover{ 
+    background-color: brown;
+    } 
+
+    /*contact */  
+
+    #contact {
+    	text-align: center;
+    	background-color: rgba(0,0,0,0.8);
+    	color: white;
+    	padding-top: 10px;
+      box-sizing: border-box;      
+      padding-bottom: 30px;
+    }
+    #contact a{
+      text-decoration: none;
+      color:#C0C0C0;
+      font-size: 20px;
+      width: 100%;
+     padding: 10rem;
+    }
+
+    #contact .fab{
+      color: blue;
+    }
+
+/*     #contact form{
+    	margin: 0px auto;
+    	padding: 50px;
+    	box-sizing: border-box;
+    }
+
+    #contact input{
+    	display: block;
+    	margin: 10px auto;
+    	padding: 10px 100px;    	
+    	font-weight: bold;
+    	font-size: 18px;
+    	background-color: white;    	
+    	outline: none;
+
+    }
+    textarea{
+    	font-size: 15px;
+    	box-sizing: border-box;
+
+    } */
+    #footer{
+    	padding: 30px;
+    }
+
+    #footer a{
+    	font-size: 30px
+
+    }
+    .fab{
+      color: black;
+    }
+    .fas{
+      font-size: 30px;
+    }
+
+
+    /* media queries*/
+
+
+    @media screen and (max-width: 1250px){
+    	iframe{
+    		width:900px;
+    	}
+    }
+
+    @media screen and (max-width: 1110px){
+    	.flex2items{    		
+    		width: 40%;	
+    	}
+    	.flex2items h2{
+            font-size: 20px;
+    	}
+    	.flex2items p{
+            font-size: 14px;
+    	}
+    }
+     @media screen and (max-width: 956px){
+        #contact a{
+          padding: 5rem;
+        }
+     }
+
+    @media screen and (max-width: 950px){
+    	iframe{
+    		width:600px;
+    	}
+    	.sectionsheading{
+    		font-size: 25px;
+    	}
+    	.mobileview{
+    		display: block;
+    		padding: 30px;
+    	}
+    	.nav2{
+    		display: none;
+    	}
+    	.navtoggle{
+    	display: flex;
+    	flex-direction: column;    	
+        }
+        .nav{
+        	padding-left: 10px;
+        	background-color: rgba(0,0,0,0.7);
+        }
+        .nav li{
+        	margin-left: 10px;
+        	padding-bottom: 10px;
+        }
+
+    	
+    }
+
+     @media screen and (max-width: 650px){
+     	#myname{
+     		font-size: 2.5rem;
+     	}
+     	#btn{
+     		padding:.4rem 0.7rem;
+     	}
+    	iframe{
+    		width:400px;
+    	}
+    	.onhover h3{
+    		font-size: 17px;
+    	}
+      #contact a{
+          padding: 1rem;
+        }
+
+    	/*#contact form{
+    		padding: 20px;
+    	}
+    	 #contact input{   	
+    	padding: 5px 60px;    	
+    	font-size: 12px;
+        }
+        textarea{
+        	font-size: 10px;
+        }*/
+
+    }
+     @media screen and (max-width: 550px ){
+     	#myname{
+     		font-size: 2.2rem;
+     	}
+     }
+      @media screen and (max-width: 550px ){
+     	#myname{
+     		font-size: 1.8rem;
+     	}
+     }
+
+    @media screen and (max-width: 510px){
+    	
+    	.flex2items h2{
+            font-size: 20px;
+    	}
+    	.flex2items p{
+            font-size: 12px;
+    	}
+    }
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+

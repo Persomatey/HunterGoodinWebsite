@@ -1,13 +1,278 @@
 <!DOCTYPE html>
-<html lang = "en-US"> 
-<head>
-  <meta charset = "UTF-8" />
-  <title>helloWorld</title>
-</head>
-<body>
-    <?php 
-        require 'all-lessons.php';
-    ?>
+<html>
+	<head>
+		<title>My portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
 
+		<!-- HOME-->
+
+		<header id="home" >
+			<div   class="header" id="flex1"  >
+				<h1 id="myname" >
+				Hello,I'm <span  class=" colorchange active1 animated  heartBeat " >Jhansi Nambala.</span><br>
+				I'm a front-end developer.
+				</h1><br>
+				<a id="btn" href="#aboutme" >
+				View my work
+				<i class="fas fa-arrow-right"></i>
+				<!--<i class="icon fas fa-arrow-down"></i>-->
+				</a>
+			</div>
+		</header>
+		
+		<!--ABOUT ME-->
+
+		<section  id="aboutme">
+			<div id="nav3" >
+			    <nav class="animated slideInDown" >				
+					<a href="#aboutme" class="mobileview show show2"><i class="  fa fa-bars"></i></a>
+					<ul  class=" nav nav2">
+						<li ><a class="active" href="#home">HOME</a></li>
+						<li ><a href="#aboutme">ABOUT ME</a></li>
+						<li ><a href="#myskills">MY SKILLS</a></li>
+						<li ><a href="#myprojects">MY PROJECTS</a></li>
+						<li ><a href="#contact">CONTACT</a></li>
+					</ul>				
+			    </nav>
+			</div>
+			
+			<h1 class="sectionsheading animated slideInLeft">ABOUT ME</h1>
+			<hr class="animated slideInRight">
+			<div id="flex2">
+				<div class="flex2items ">
+					<div class="hexagon">
+						<i class="mdi mdi-cellphone-link"></i>
+					</div>
+					<h2 >Responsive</h2>
+					<p>My layouts will work on any device, big or small.</p>
+				</div>
+				<div class="flex2items ">
+					<div class="hexagon">
+						<i class="mdi mdi-lightbulb-outline"></i>
+					</div>
+					<h2>Intuitive</h2>
+					<p>Strong preference for easy to use, intuitive UX/UI.</p>
+				</div>
+				<div class="flex2items ">
+					<div class="hexagon">
+						<i class="mdi mdi-rocket"></i>
+					</div>
+					<h2>Dynamic</h2>
+					<p>Websites don't have to be static, I love making pages come to life.</p>
+				</div>
+				<div class="flex2items ">
+					<div class="hexagon">
+						<i class="mdi mdi-account-group"></i>
+					</div>
+					<h2>Co-operation</h2>
+					<p>I love working in teams, getting feedback from colleagues and sharing ideas. Let's work together!</p>
+				</div>
+			</div>
+		</section>
+
+		<!--MY SKILLS-->
+
+		<section id="myskills">
+			<h1 class="sectionsheading whitehead animated  slideInLeft">TECHNICAL SKILLS</h1>
+			<hr class="animated slideInRight">
+			<div  class= "flex justify1 ">
+				<div class="flex3sub1 flex">
+					<div class="subject  justify2">HTML </div>
+					<div class="forwidth eighty animated "></div> 			  		<span class="percent">
+					80%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">Node.js </div>
+				<div class="forwidth thirty "></div>
+				<span class="percent">
+					30%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">CSS  </div>
+				<div class="forwidth sixty"></div>
+				<span class="percent">
+					60%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">Express.js </div>
+				<div class="forwidth thirty"></div>
+				<span class="percent">
+					30%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">Bootstrap </div>
+				<div class="forwidth fifty"></div>
+				<span class="percent">
+					50%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">MySQL </div>
+				<div class="forwidth sixty"></div>
+				<span class="percent">
+					60%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">JavaScript </div>
+				<div class="forwidth sixty"></div>
+				<span class="percent">
+					60%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">MongoDB </div>
+				<div class="forwidth  fifty"></div>
+				<span class="percent">
+					50%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">jQuery </div>
+				<div class="forwidth fourty"></div>
+				<span class="percent">
+					40%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">Wordpress </div>
+				<div class="forwidth fourty"></div>
+				<span class="percent">
+					40%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">React  </div>
+				<div class="forwidth twenty"></div>
+				<span class="percent">
+					20%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject ">ChromeDevTools </div>
+				<div class="forwidth fourty"></div>
+				<span class="percent">
+					40%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">TypeScript  </div>
+				<div class="forwidth twenty"></div>
+				<span class="percent">
+					20%
+				</span>
+			</div>
+			<div class="flex3sub1 flex ">
+				<div class="subject "> Git </div>
+				<div class="forwidth fifty"></div>
+				<span class="percent">
+					50%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">Angular </div>
+				<div class="forwidth fourty"></div>
+				<span class="percent">
+					50%
+				</span>
+			</div>
+			<div class="flex3sub1 flex">
+				<div class="subject ">GitHub </div>
+				<div class="forwidth fifty"></div>
+				<span class="percent">
+					50%
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- MY PROJECTS-->
+
+	<section id="myprojects">
+		<h1 class="sectionsheading animated slideInLeft">PROJECTS</h1>
+		<hr class="animated slideInRight">
+		<div class="flex flex4">
+			<div class="projname">
+				<iframe src=" https://jhansi111.github.io/Colorguess/"></iframe>
+				<div class="onhover">
+					<h3>RGB Color Guessing Game</h3>
+					<a class="projbut1" href=" https://jhansi111.github.io/Colorguess/">View</a>
+					<a class="projbut2" href="https://github.com/Jhansi111/Colorguess">Code on GitHub</a>
+				</div>
+			</div>
+			<div class="projname">
+				<iframe src= "https://jhansi111.github.io/Score-Keeper/"></iframe>	
+				<div class="onhover">
+					<h3>Score Keeper</h3>
+					<a  class="projbut1" href="https://jhansi111.github.io/Score-Keeper/">View</a>
+					<a class="projbut2" href="https://github.com/Jhansi111/Score-Keeper">Code on GitHub</a>
+				</div>
+			</div>
+			<!-- <div class="projname">
+				<iframe src= "https://jhansi111.github.io/patatap-clone/"></iframe>
+				<div class="onhover">
+					<h3>Patatap Clone|website copy (Press any alphabet key)</h3>
+					<a class="projbut1" href= "https://jhansi111.github.io/patatap-clone/">View</a>
+					<a class="projbut2" href="https://github.com/Jhansi111/patatap-clone">Code on GitHub</a>
+					
+				</div>
+			</div> -->
+			<div class="projname">
+				<iframe src="  https://jhansi111.github.io/pig-game/"></iframe>		
+				<div class="onhover">
+					<h3>Pig Game</h3>
+					<a class="projbut1" href="https://jhansi111.github.io/pig-game/">View</a>
+					<a class="projbut2" href="https://github.com/Jhansi111/pig-game">Code on GitHub</a>
+				</div>
+			</div>			
+			<div class="projname">
+				<iframe src=" https://jhansi111.github.io/Image-gallery/"></iframe>	
+				<div class="onhover">
+					<h3>Image-gallery(Responsive Design)</h3>
+					<a class="projbut1" href="https://jhansi111.github.io/Image-gallery/">View</a>
+					<a class="projbut2" href="https://github.com/Jhansi111/Image-gallery">Code on GitHub</a>
+				</div>
+		    </div>					
+		 </div>
+		 <div class="hello">
+		    <a class="viewmore projbut2" href="https://github.com/Jhansi111">View more</a>
+		 </div> 
+	</section>
+
+	<!-- CONTACT-->
+
+	<section id="contact">
+		<h1 class="sectionsheading animated slideInLeft">CONTACT</h1>
+		<hr class="animated slideInRight">
+
+        <p>Please Contact me on Email.</p>
+        <a href="mailto:jhansi.nambala@gmail.com"><i class="fab fa-google"></i>  Email Me</a>
+        <a href="https://github.com/Jhansi111?tab=repositories"><i class="fab fa-github"></i>  My GitHub Profile</a>
+
+		
+		 
+	</section>
+
+	<!--footer-->
+
+	<footer id="footer">
+		JHANSI NAMBALA@2019 | 		
+		<a href="mailto:jhansi.nambala@gmail.com"><i class="fab fa-google"></i></a> |
+		<a href="https://github.com/Jhansi111?tab=repositories"><i class="fab fa-github"></i></a> |
+		<a href="jhansi.nambala@gmail.com"><i class="fab fas fa-file-alt"></i></a>
+	</footer>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
