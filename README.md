@@ -1,4 +1,4 @@
-# Hunter Goodin Portfolio
+# Hunter Goodin Website
 
 This is the repository that I am using for my personal website. 
 
