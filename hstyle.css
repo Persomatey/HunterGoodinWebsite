@@ -1,10 +1,12 @@
 body 
 {
 	display: table-cell;
-	margin: auto; 
-	background-color:blue;
-	font-family: arial, sans-serif; 
-	font-size:14px; 
-
 	vertical-align: middle;
+	margin: 20px; 
+	background-color:grey;
+
+	/* alignment */
+	font-family: arial, sans-serif; 
+	font-size:20px; 
+	color: white;
 }
