@@ -1,11 +1,10 @@
 body 
 {
-	margin: 25px; 
+	display: table-cell;
+	margin: auto; 
 	background-color:grey;
 	font-family: arial, sans-serif; 
 	font-size:14px; 
-	
-	padding: 70px 0; 
-	border: 3px solid green; 
-	text-align:center;
+
+	vertical-align: middle;
 }
