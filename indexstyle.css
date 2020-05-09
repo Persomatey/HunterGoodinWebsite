@@ -101,3 +101,25 @@ img
   display: table;
   clear: both;
 }
+
+.footercolumnsides
+{
+  float: left; 
+  width: 45%;
+}
+
+.footercolumn
+{
+  float: left; 
+  width: 2.5%;
+}
+
+footer
+{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
