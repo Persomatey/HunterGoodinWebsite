@@ -1,12 +1,12 @@
 html 
 {
-  font-size: 10px;
-  font-family: 'Helvetica', sans-serif;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 p, li 
 {
-  font-size: 20px;
+  font-family: "Times New Roman", Times, serif
+  font-size: 18px;
   line-height: 2;
   letter-spacing: 1px;
 }
@@ -14,7 +14,8 @@ p, li
 
 html 
 {
-  background-color: grey;
+  background-color: white;
+  font-size: 40px;
 }
 
 body 
@@ -22,52 +23,139 @@ body
   width: auto;
   height: auto;
   margin: 0 auto;
-  background-color: grey;
-  color: white;
-  padding: 0 20px 20px 20px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  /*padding: 0 20px 20px 20px;*/
 }
 
 h1 
 {
-  font-size: 75px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px 0;
+  font-size: 50px;
+  text-align: left;
+  padding-top: 50px;
+  padding-right: 10px;
+  padding-left: 0px;
   color: black;
+  margin-bottom: 0;
 }
 
 h2 
 {
-  font-size: 25px;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 0px;
+  color: grey;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
-.centered 
+h3
 {
-  text-shadow: 0 0 10px black, 0 0 10px black; 
-  z-index: 2;
-  position: relative;
-  top: 125px;
-  left: 0px;
-  transform: translate(-0px, -0px);
-  text-align: center; 
-  font-size: 35px;
+  font-size: 15px;
+  text-align: right;
+  margin-top:136px;
+  padding-right: 10px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+h4
+{
+  font-size: 30px;
+  text-align: left;
+  margin: 0 auto;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+h5
+{
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h6
+{
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+p
+{
+  padding-left: 15px;
+  padding-right: 0px;
+  color: grey; 
 }
 
 img 
 {
   display: block;
-  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+
+hr 
+{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.columnheader
+{
+  float: left; 
+  width: 25%;
+  /*background-color:blue;*/
+}
+
+.columnside
+{
+  float: left; 
+  width: 20%;
+  /*background-color:yellow;*/
+
 }
 
 .column
 {
+  padding-top: 0%;
   float: left; 
-  width: 33%;
+  width: 30%;
+  /*background-color:orange;*/
+}
+
+.columngameimg
+{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  float: left; 
+  width: 20%;
+  /*background-color:orange;*/
+}
+
+.columngamedes
+{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  float: left; 
+  width: 40%;
+  /*background-color:orange;*/
 }
 
 .row:after 
