@@ -74,7 +74,7 @@
 
 			<div id="contact-form" class="container">
 				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-					First & last name:
+					First & Last name:
 					<br>
 					<input type="text" name="entry.246933771" id="entry.246933771">
 					<br>
@@ -87,7 +87,7 @@
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
 					<br>
 					<input type="submit" value="Send">
-					<text style="color: #45a049;" id="feedback"></text>
+					<text id="feedback"></text>
 				</form>
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
@@ -98,8 +98,36 @@
 
 			function AfterSend()
 			{
-				document.getElementById("gform").reset();
-				document.getElementById("feedback").innerHTML = "Message Sent!";
+				var error = ""; 
+				var name = " 'Name' ";
+				var email = " 'Email' "; 
+				var message = " 'Message' "; 
+
+				if(document.forms["gform"]["entry.246933771"].value == "")
+				{
+					error = error + name; 
+				}
+
+				if(document.forms["gform"]["entry.1580348872"].value == "")
+				{
+					error = error + email; 
+				}
+
+				if(document.forms["gform"]["entry.1579448101"].value == "")
+				{
+					error = error + message; 
+				}
+
+				if(error == "")
+				{
+					document.getElementById("gform").reset();
+					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>Message Sent!</b></font>";
+				}
+
+				else 
+				{
+					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " are required fields </b></font>";
+				}
 			}
 			
 		</script>
