@@ -102,29 +102,36 @@
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
 				var message = " 'Message' "; 
+				var count = 0; 
 
 				if(document.forms["gform"]["entry.246933771"].value == "")
 				{
 					error = error + name; 
+					count++; 
 				}
 
 				if(document.forms["gform"]["entry.1580348872"].value == "")
 				{
 					error = error + email; 
+					count++;
 				}
 
 				if(document.forms["gform"]["entry.1579448101"].value == "")
 				{
 					error = error + message; 
+					count++;
 				}
 
-				if(error == "")
+				if(count == 0)
 				{
 					document.getElementById("gform").reset();
 					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>Message Sent!</b></font>";
 				}
-
-				else 
+				else if(count == 1)
+				{
+					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " is a required field </b></font>";
+				}
+				else if(count > 1)
 				{
 					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " are required fields </b></font>";
 				}
