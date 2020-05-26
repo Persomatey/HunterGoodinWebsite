@@ -62,75 +62,47 @@
 		<hr/>
 
 		<!-- Email form -->
-
 		<div style="text-align: left; padding-top: 1%; font-size: 20px">
 			<h5 style="font-size: 45px;">Contact Me</h5>
 
 			<div style="text-align: center;">
-				If you would like to infer about work or get a resume, feel free to shoot me an email. V1
+				If you would like to infer about work or get a resume, feel free to shoot me an email.
 			</div>
 
 			</br>
 			</br>
 
 			<div id="contact-form" class="container">
-				<form action="https://formspree.io/huntercgoodin@gmail.com" method="POST">
-
-				    <label for="fname">First Name</label>
-				    <input type="text" id="name" name="name" placeholder="Your first and last name">
-
-				    <label for="fname">Email</label>
-				    <input type="text" id="name" name="name" placeholder="Your email">
-					
-					<label for="subject">Subject</label>
-				    <input type="text" name="subject" placeholder="What is this email about?"></textarea>
-
-				    <label for="subject">Message</label>
-				    <textarea id="subject" name="subject" placeholder="Write something" style="height:200px"></textarea>
-
-				    <input type="submit" value="Submit">
-
-				    <!--
-					    <label for="country">Country</label>
-					    <select id="country" name="country">
-					      <option value="australia">Australia</option>
-					      <option value="canada">Canada</option>
-					      <option value="usa">USA</option>
-					    </select>
-					-->
-
+				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+					First & last name:
+					<br>
+					<input type="text" name="entry.246933771" id="entry.246933771">
+					<br>
+					Email:
+					<br>
+					<input type="text" name="entry.1580348872" id="entry.1580348872">
+					<br>
+					Message:
+					<br>
+					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
+					<br>
+					<input type="submit" value="Send">
+					<text style="color: #45a049;" id="feedback"></text>
 				</form>
+
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
 		</div>
 
-		<script src="https://smtpjs.com/v3/smtp.js">
-			function SendEmail() 
+		<script type="text/javascript">
+
+			function AfterSend()
 			{
-				$(document).ready(function() {
-				  $('#contact-form').submit(function(e) {
-				    var name    = document.getElementById('inputName')
-				    var email   = document.getElementById('inputEmail')
-				    var message = document.getElementById('inputMessage')
-
-				    if (!name.value || !email.value || !message.value) {
-				      alertify.error("Please check your entries");
-				      return false;
-				    } else {
-				      $.ajax({
-				        method: 'POST',
-				        url: '//formspree.io/name@youremail.com',
-				        data: $('#contact-form').serialize(),
-				        datatype: 'json'
-				      });
-				      e.preventDefault();
-				      $(this).get(0).reset();
-				      alertify.success("Message sent");
-				    }
-				  });
-				});
+				document.getElementById("gform").reset();
+				document.getElementById("feedback").innerHTML = "Message Sent!";
 			}
+			
 		</script>
-
 
 	</body>
 </html>
