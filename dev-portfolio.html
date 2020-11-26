@@ -3,6 +3,171 @@
 	<head>
 		<title>Hunter Goodin - Game Developer</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
+		<script>
+			// R3 Functions
+			function ChangeImageR3L()
+			{
+				var imgR3 = document.getElementById("imageR3");
+				imgR3.src="images/devphotos/R3Logo.png";
+
+				document.getElementById("ButR31").className = "buttonR3YeSel";
+
+				document.getElementById("ButR32").className = "buttonR3UnSel";
+
+				document.getElementById("ButR33").className = "buttonR3UnSel";
+
+				return false;
+			}
+			function ChangeImageR3I1()
+			{
+				var imgR3 = document.getElementById("imageR3");
+				imgR3.src="images/devphotos/R3Gameplay1.png";
+
+				document.getElementById("ButR31").className = "buttonR3UnSel";
+
+				document.getElementById("ButR32").className = "buttonR3YeSel";
+
+				document.getElementById("ButR33").className = "buttonR3UnSel";
+				
+				return false;
+			}
+			function ChangeImageR3I2()
+			{
+				var imgR3 = document.getElementById("imageR3");
+				imgR3.src="images/devphotos/R3Gameplay2.png";
+
+				document.getElementById("ButR31").className = "buttonR3UnSel";
+
+				document.getElementById("ButR32").className = "buttonR3UnSel";
+
+				document.getElementById("ButR33").className = "buttonR3YeSel";
+
+				return false;
+			}
+
+			// LoF Functions
+			function ChangeImageLoFL()
+			{
+				var imgLoF = document.getElementById("imageLoF");
+				imgLoF.src="images/devphotos/LoFLogo.png"; 
+
+				document.getElementById("ButLoF1").className = "buttonLoFYeSel";
+
+				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+
+				return false;
+			}
+			function ChangeImageLoFI1()
+			{
+				var imgLoF = document.getElementById("imageLoF");
+				imgLoF.src="images/devphotos/LoFGameplay1.png";
+
+				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF2").className = "buttonLoFYeSel";
+
+				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+				
+				return false;
+			}
+			function ChangeImageLoFI2()
+			{
+				var imgLoF = document.getElementById("imageLoF");
+				imgLoF.src="images/devphotos/LoFGameplay2.png";
+
+				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF3").className = "buttonLoFYeSel";
+
+				return false;
+			}
+
+			// SS Functions
+			function ChangeImageSSL()
+			{
+				var imgLoF = document.getElementById("imageSS");
+				imgLoF.src="images/devphotos/SS9000Logo.png"; 
+
+				document.getElementById("ButSS1").className = "buttonSSYeSel";
+
+				document.getElementById("ButSS2").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS3").className = "buttonSSUnSel";
+
+				return false;
+			}
+			function ChangeImageSSI1()
+			{
+				var imgLoF = document.getElementById("imageSS");
+				imgLoF.src="images/devphotos/SS9000Gameplay1.png";
+
+				document.getElementById("ButSS1").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS2").className = "buttonSSYeSel";
+
+				document.getElementById("ButSS3").className = "buttonSSUnSel";
+				
+				return false;
+			}
+			function ChangeImageSSI2()
+			{
+				var imgLoF = document.getElementById("imageSS");
+				imgLoF.src="images/devphotos/SS9000Gameplay2.png";
+
+				document.getElementById("ButSS1").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS2").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS3").className = "buttonSSYeSel";
+
+				return false;
+			}
+
+			// Fa Functions
+			function ChangeImageFaL()
+			{
+				var imgLoF = document.getElementById("imageFa");
+				imgLoF.src="images/devphotos/FactoryLogo.png"; 
+
+				document.getElementById("ButFa1").className = "buttonFaYeSel";
+
+				document.getElementById("ButFa2").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa3").className = "buttonFaUnSel";
+
+				return false;
+			}
+			function ChangeImageFaI1()
+			{
+				var imgLoF = document.getElementById("imageFa");
+				imgLoF.src="images/devphotos/FactoryGameplay1.png";
+
+				document.getElementById("ButFa1").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa2").className = "buttonFaYeSel";
+
+				document.getElementById("ButFa3").className = "buttonFaUnSel";
+				
+				return false;
+			}
+			function ChangeImageFaI2()
+			{
+				var imgLoF = document.getElementById("imageFa");
+				imgLoF.src="images/devphotos/FactoryGameplay2.png";
+
+				document.getElementById("ButFa1").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa2").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa3").className = "buttonFaYeSel";
+
+				return false;
+			}
+		</script>
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style> 
@@ -49,6 +214,129 @@
 		{
 		 	background: #555; 
 		}
+
+		/* Custom Button Stuff */
+		.buttonR3UnSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: grey; 
+			border-radius: 3px;
+		}
+		.buttonR3YeSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: #0000d1; 
+			border-radius: 14px;
+		}
+		.buttonLoFUnSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: grey; 
+			border-radius: 3px;
+		}
+		.buttonLoFYeSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: #2e7630; 
+			border-radius: 14px;
+		}
+		.buttonSSUnSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: grey; 
+			border-radius: 3px;
+		}
+		.buttonSSYeSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: #f41818; 
+			border-radius: 14px;
+		}
+		.buttonFaUnSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: grey; 
+			border-radius: 3px;
+		}
+		.buttonFaYeSel 
+		{
+			border: none;
+			color: white;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+
+			background-color: #195195; 
+			border-radius: 14px;
+		}
+
 	</style>
 	<body>
 		<div class="row">
@@ -89,7 +377,10 @@
 			<div class="columngameimg">
 				<h5>Rewound Running Remix</h5>
 				<h6>(Brackeys 2020.2 "Rewind" Game Jam )</h6>
-		  		<img style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/R3Logo.png">
+		  		<img id="imageR3" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/R3Logo.png">
+		  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
+		  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Gameplay Img</button>
+		  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Gameplay Img</button>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -140,7 +431,10 @@
 			<div class="columngameimg">
 				<h5>Legend of Fantasy</h5>
 				<h6>(COC CSC Spring 2019)</h6>
-		  		<img style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/LoFLogo.png">
+		  		<img  id="imageLoF" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/LoFLogo.png">
+		  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
+		  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Gameplay Img</button>
+		  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Gameplay Img</button>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -187,7 +481,10 @@
 			<div class="columngameimg">
 				<h5>Space Shooter 9000</h5>
 				<h6>(COC CSC Fall 2017)</h6>
-		  		<img style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/SS9000Logo.png">
+		  		<img  id="imageSS" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/SS9000Logo.png">
+		  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
+		  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Gameplay Img</button>
+		  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Gameplay Img</button>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -234,7 +531,10 @@
 			<div class="columngameimg">
 				<h5>Factory</h5>
 				<h6>(COC CSC Fall 2016)</h6>
-		  		<img style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/FactoryLogo.png">
+		  		<img  id="imageFa" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/FactoryLogo.png">
+		  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
+		  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Gameplay Img</button>
+		  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Gameplay Img</button>
 		  	</div>
 
 		  	<div class="columngamedes">
