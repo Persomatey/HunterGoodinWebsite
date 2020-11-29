@@ -1,3 +1,5 @@
+/* Look into media queries for dynamic css stuff */ 
+
 html 
 {
   font-family: Arial, Helvetica, sans-serif
@@ -10,7 +12,6 @@ p, li
   line-height: 2;
   letter-spacing: 1px;
 }
-
 
 html 
 {
@@ -198,3 +199,177 @@ input[type=submit]:hover {
   padding-left: 30%;
   padding-right: 30%;
 }
+
+/* Font Control Stuff */
+    A
+    {
+      text-decoration: none; 
+    } 
+    C
+    {
+      text-decoration: none;
+      color: black; 
+      padding-right: 0px;
+      padding-left: 20px;
+      font-size: 25px;
+    }
+    D
+    {
+      text-decoration: none;
+      color: grey; 
+      padding-right: 0px;
+      padding-left: 20px;
+    }
+    E
+    {
+      text-decoration: none;
+      color: black; 
+    }
+    F
+    {
+      text-decoration: none;
+      color: black; 
+      padding-right: 0px;
+      padding-left: 5px;
+      font-size: 18px;
+    }
+
+    /* Scroll Bar Stuff */
+    ::-webkit-scrollbar 
+    {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track 
+    {
+      background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb 
+    {
+      background: #888; 
+    }
+    ::-webkit-scrollbar-thumb:hover 
+    {
+      background: #555; 
+    }
+
+        /* Custom Button Stuff */
+    .buttonR3UnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonR3YeSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: #0000d1; 
+      border-radius: 14px;
+    }
+    .buttonLoFUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonLoFYeSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: #2e7630; 
+      border-radius: 14px;
+    }
+    .buttonSSUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonSSYeSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: #f41818; 
+      border-radius: 14px;
+    }
+    .buttonFaUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonFaYeSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+
+      background-color: #195195; 
+      border-radius: 14px;
+    }
