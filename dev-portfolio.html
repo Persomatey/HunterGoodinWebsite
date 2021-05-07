@@ -1,16 +1,57 @@
 <!-- Look into es6 object destructuring for importing specific javascript functions instead of a whole library -->
 
 <!doctype html>
-<html>
+<html style="background-color:whitesmoke;">
 	<head>
 		<title>Hunter Goodin - Game Developer</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script>
+			// Helation Functions
+			function ChangeImageHelL()
+			{
+				var imgHel = document.getElementById("imageHel");
+				imgHel.src="images/devphotos/HelLogo.png";
+
+				document.getElementById("ButHel1").className = "buttonHelYeSel";
+
+				document.getElementById("ButHel2").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel3").className = "buttonHelUnSel";
+
+				return false;
+			}
+			function ChangeImageHelI1()
+			{
+				var imgHel = document.getElementById("imageHel");
+				imgHel.src="images/devphotos/HelGameplay1.png";
+
+				document.getElementById("ButHel1").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel2").className = "buttonHelYeSel";
+
+				document.getElementById("ButHel3").className = "buttonHelUnSel";
+				
+				return false;
+			}
+			function ChangeImageHelI2()
+			{
+				var imgHel = document.getElementById("imageHel");
+				imgHel.src="images/devphotos/HelGameplay2.png";
+
+				document.getElementById("ButHel1").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel2").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel3").className = "buttonHelYeSel";
+
+				return false;
+			}
+
 			// R3 Functions
 			function ChangeImageR3L()
 			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Logo.png";
+				var imgHel = document.getElementById("imageR3");
+				imgHel.src="images/devphotos/R3Logo.png";
 
 				document.getElementById("ButR31").className = "buttonR3YeSel";
 
@@ -169,12 +210,53 @@
 
 				return false;
 			}
+
+			// Black Ops III Functions
+			function ChangeImageBO3L()
+			{
+				var imgBO3 = document.getElementById("imageBO3");
+				imgBO3.src="images/devphotos/BO3Logo.png";
+
+				document.getElementById("ButBO31").className = "buttonBO3YeSel";
+
+				document.getElementById("ButBO32").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO33").className = "buttonBO3UnSel";
+
+				return false;
+			}
+			function ChangeImageBO3I1()
+			{
+				var imgBO3 = document.getElementById("imageBO3");
+				imgBO3.src="images/devphotos/BO3Gameplay1.png";
+
+				document.getElementById("ButBO31").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO32").className = "buttonBO3YeSel";
+
+				document.getElementById("ButBO33").className = "buttonBO3UnSel";
+				
+				return false;
+			}
+			function ChangeImageBO3I2()
+			{
+				var imgBO3 = document.getElementById("imageBO3");
+				imgBO3.src="images/devphotos/BO3Gameplay2.png";
+
+				document.getElementById("ButBO31").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO32").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO33").className = "buttonBO3YeSel";
+
+				return false;
+			}
 		</script>
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style> 
 	</style>
-	<body>
+	<body style="background-color:whitesmoke;">
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -202,7 +284,59 @@
 		<hr/>
 
 		<!-- Portfolio Unique -->
+		<!-- Helation -->
 
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columngameimg">
+				<h5>Helation</h5>
+		  		<img id="imageHel" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+		  			<F><b>Images: </b></F>
+		  			<button id="ButHel1" class="buttonHelYeSel" onclick="ChangeImageHelL();">Logo</button>
+		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();">Gameplay 1</button>
+		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();">Gameplay 2</button>
+		  		</div>
+		  	</div>
+
+		  	<div class="columngamedes">
+		  		<p style="padding-left: 25px; margin-top: 0;">
+		  			An Arena FPS game made in the Unreal Engine inspired by classic games in the genre such as Halo, Portal, and Doom. A tutorial mode where you make your way through the training facility while learning the ropes of the game. An arena mode where you fight your way through troves of enemies to try to beat your high score. 
+		  			</br>
+		  			</br>	
+					Made as a tech demo for my programming in the Unreal Engine, I used a mixture of <b>C++</b> and <b>Blueprints</b> to do all of the game's programming. I did all of the <b>programming</b>, all of the game and <b>level design</b>, all of the <b>UI Art</b>, all of the tutorial's <b>dialogue</b>, some of the <b>SFX</b>, some of the <b>texture art</b>, and edited some free 3D models. 
+
+					</br>
+					</br>
+
+					<E><b>Link to download:</b></E>
+					<A href="https://persomatey.itch.io/helation">
+						<E>
+							<b>https://persomatey.itch.io/helation</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E><b>Link to GitHib repository:</b></E>
+					<A href="https://github.com/Persomatey/ProjectHolyShot">
+						<E>
+							<b>https://github.com/Persomatey/ProjectHolyShot</b>
+						</E>
+					</A>
+				</p>
+		  	</div>
+
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
+		</div>
+
+		<!-- End Helation -->
+		<hr/>
 		<!-- Rewound Running Remix -->
 
 		<div class="row">
@@ -212,12 +346,14 @@
 
 			<div class="columngameimg">
 				<h5>Rewound Running Remix</h5>
-				<h6>(Brackeys 2020.2 "Rewind" Game Jam )</h6>
-		  		<img id="imageR3" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/R3Logo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
-		  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Gameplay 1</button>
-		  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Gameplay 2</button>
+				<h6>(Brackeys 2020.2 "Rewind" Game Jam)</h6>
+		  		<img id="imageR3" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+			  		<F><b>Images: </b></F>
+			  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
+			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Gameplay 1</button>
+			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Gameplay 2</button>
+			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -225,7 +361,7 @@
 		  			This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer created in just 4 days! 
 		  			</br>
 		  			</br>
-					Originally made for the Brackeys "Rewind" game jam, it was made as an auto runner platformer disguized as a rhythm game. I did all of the programming for the game as well as the UI/UX design, SFX, general game design, and acted as team director. 
+					Originally made for the Brackeys "Rewind" game jam, it was made as an auto runner platformer disguized as a rhythm game. I did all of the <b>programming</b> for the game as well as the <b>UI/UX design</b>, <b>SFX</b>, general <b>game design</b>, and acted as the team's <b>director</b>. 
 
 					<!--
 					I have since "Remastered" the game after the jam period to add bug fixes, controller support, a high-score feature, aidio controls, support for multiple resolution monitors, as well as general stability and performance enhancements. 
@@ -269,11 +405,13 @@
 			<div class="columngameimg">
 				<h5>Legend of Fantasy</h5>
 				<h6>(COC CSC Spring 2019)</h6>
-		  		<img  id="imageLoF" style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/LoFLogo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
-		  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Gameplay 1</button>
-		  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Gameplay 2</button>
+		  		<img  id="imageLoF" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+			  		<F><b>Images: </b></F>
+			  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
+			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Gameplay 1</button>
+			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Gameplay 2</button>
+		  		</div>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -320,11 +458,13 @@
 			<div class="columngameimg">
 				<h5>Space Shooter 9000</h5>
 				<h6>(COC CSC Fall 2017)</h6>
-		  		<img  id="imageSS" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/SS9000Logo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
-		  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Gameplay 1</button>
-		  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Gameplay 2</button>
+		  		<img  id="imageSS" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SS9000Logo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+			  		<F><b>Images: </b></F>
+			  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
+			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Gameplay 1</button>
+			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Gameplay 2</button>
+			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -371,11 +511,13 @@
 			<div class="columngameimg">
 				<h5>Factory</h5>
 				<h6>(COC CSC Fall 2016)</h6>
-		  		<img  id="imageFa" style="height: 100%; width: 100% object-fit: contain" src="images/devphotos/FactoryLogo.png">
-		  		<F><b>Images: </b></F>
-		  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
-		  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Gameplay 1</button>
-		  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Gameplay 2</button>
+		  		<img  id="imageFa" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FactoryLogo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+			  		<F><b>Images: </b></F>
+			  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
+			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Gameplay 1</button>
+			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Gameplay 2</button>
+			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -410,6 +552,58 @@
 		  	</div>
 		</div>
 		<!-- End Factory -->
+		<hr/>
+		<!-- Black Ops 3 -->
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columngameimg">
+				<h5>Call of Duty: Black Ops III</h5>
+				<h6>(Activision | Blizzard)</h6>
+		  		<img  id="imageBO3" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+			  		<F><b>Images: </b></F>
+			  		<button id="ButBO31" class="buttonBO3YeSel" onclick="ChangeImageBO3L();">Logo</button>
+			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();">Gameplay 1</button>
+			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();">Gameplay 2</button>
+			  	</div>
+		  	</div>
+
+		  	<div class="columngamedes">
+		  		<p style="padding-left: 25px; margin-top: 0;">
+		  			Military-styled AAA Sci-Fi FPS. The game's multiplayer features different heroes, each with their own abilities. 
+		  			</br>
+					</br>
+					The first AAA game I worked on, I was a Volt Workforce Solutions employee on assignment to work at Activision's Treyarch office. I worked as a <b>Quality Assurance developer</b> working on the game's multiplayer functionality. I was later invited to the QA Manager's personal team. I was tasked with <b>finding and reporting bugs</b>, <b>riting detailed reports</b>, <b>finding creative solutions to resolve bugs</b>, as well as <b>managed smaller teams</b>. 
+					</br>
+					</br>
+
+					<E><b>Link to download:</b></E>
+					<A href="https://coc-computerscienceclub.itch.io/factory">
+						<E>
+							<b>https://coc-computerscienceclub.itch.io/factory</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E><b>Link to GitHib repository:</b></E>
+					<A href="https://github.com/CanyonsCSClub/Fall2016">
+						<E>
+							<b>https://github.com/CanyonsCSClub/Fall2016</b>
+						</E>
+					</A>
+				</p>
+		  	</div>
+
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
+		</div>
+		<!-- End Black Ops 3 -->
 
 	</body>
 </html>

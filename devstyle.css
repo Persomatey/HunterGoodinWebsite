@@ -252,7 +252,63 @@ input[type=submit]:hover {
       background: #555; 
     }
 
-        /* Custom Button Stuff */
+    /* Custom Button Stuff */
+    .buttonBO3UnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonBO3YeSel 
+    {
+      border: none;
+      color: orange;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: black; 
+      border-radius: 14px;
+    }
+    .buttonHelUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonHelYeSel 
+    {
+      border: none;
+      color: #f5e3df;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: lightslategrey; 
+      border-radius: 14px;
+    }
     .buttonR3UnSel 
     {
       border: none;
@@ -264,14 +320,13 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonR3YeSel 
     {
       border: none;
-      color: white;
+      color: yellow;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -279,7 +334,6 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #0000d1; 
       border-radius: 14px;
     }
@@ -294,14 +348,13 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonLoFYeSel 
     {
       border: none;
-      color: white;
+      color: palegoldenrod;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -309,7 +362,6 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #2e7630; 
       border-radius: 14px;
     }
@@ -324,14 +376,13 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonSSYeSel 
     {
       border: none;
-      color: white;
+      color: aliceblue;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -339,7 +390,6 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #f41818; 
       border-radius: 14px;
     }
@@ -354,14 +404,13 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: grey; 
       border-radius: 3px;
     }
     .buttonFaYeSel 
     {
       border: none;
-      color: white;
+      color: aliceblue;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
@@ -369,7 +418,6 @@ input[type=submit]:hover {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-
       background-color: #195195; 
       border-radius: 14px;
     }
