@@ -200,10 +200,21 @@ input[type=submit]:hover {
   padding-right: 30%;
 }
 
+.hunterlink
+{
+  color: slategrey;
+}
+
+.hunterlink:hover
+{
+  color: slateblue;
+}
+
 /* Font Control Stuff */
     A
     {
       text-decoration: none; 
+      color: black;
     } 
     C
     {
@@ -382,7 +393,7 @@ input[type=submit]:hover {
     .buttonSSYeSel 
     {
       border: none;
-      color: aliceblue;
+      color: skyblue;
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
