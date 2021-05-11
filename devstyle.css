@@ -264,6 +264,34 @@ input[type=submit]:hover {
     }
 
     /* Custom Button Stuff */
+    .buttonKeyUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonKeyYeSel 
+    {
+      border: none;
+      color: lightyellow;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: darkolivegreen; 
+      border-radius: 14px;
+    }
     .buttonBO3UnSel 
     {
       border: none;
