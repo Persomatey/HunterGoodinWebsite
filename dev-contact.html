@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<style> 
 	</style>
 	<body style="background-color:whitesmoke;">
@@ -36,6 +37,11 @@
 
 		<!-- Contact Unique -->
 
+		<!-- 
+			Goodle ReCaptcha Stuff 
+			Site Key: 6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5
+		-->
+
 		<!-- Email form -->
 		<div style="text-align: left; padding-top: 1%; font-size: 20px">
 			<h5 style="font-size: 45px;">Contact Me</h5>
@@ -60,6 +66,8 @@
 					Message:
 					<br>
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
+					<br>
+					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
 					<input type="submit" value="Send">
 					<text id="feedback"></text>
