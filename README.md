@@ -2,7 +2,7 @@
 
 This is the repository that I am using for my personal website. 
 
-The website can be accessed at https://persomatey.github.io/HunterGoodinWebsite/ and at https://www.huntergoodin.com. 
+The website can be accessed at https://persomatey.github.io/HunterGoodinWebsite/ and at https://huntergoodin.com. 
 
 The domain was purchased on Hover. 
 
