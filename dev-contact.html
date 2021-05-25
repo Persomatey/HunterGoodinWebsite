@@ -68,14 +68,13 @@
 					<br>
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
 					<br>
-					<!-- action="RaCaptchaCallback" -->
 					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
 					<input id="submitBtn" type="submit" value="Send" onclick="checkRecaptcha()">
 					<text id="feedback"></text>
 				</form>
 				</br>
-				Ver 007 
+				Ver 009 
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
@@ -87,26 +86,18 @@
 
 			function checkRecaptcha() 
 			{
-				document.getElementById("feedback").innerHTML = "<font color='#6e6e6e'><b>Before ReCaptcha</b></font>";
-
 				var response = grecaptcha.getResponse();
 				if(response.length == 0) 
 				{
-					//reCaptcha not verified
-					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b>ReCaptcha did not work...</b></font>";
-
 					boolCap = false; 
 				}
 				else
 				{
-					//reCaptch verified
-					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>ReCaptcha Worked!</b></font>";
-
 					boolCap = true; 
 				}
 			}
 
-			// implement on the backend
+			/*
 			function backend_API_challenge() 
 			{
 				var response = grecaptcha.getResponse();
@@ -119,6 +110,7 @@
 					success: function(data) { console.log(data); }
 				});
 			}
+			
 
 			function RaCaptchaCallback() 
 			{
@@ -126,6 +118,7 @@
 
 				document.getElementById("feedback").innerHTML = "<font color='#FFFF00'><b> " + error + " ReCaptcha Checked! </b></font>";
 			}
+			*/
 
 			function AfterSend()
 			{
