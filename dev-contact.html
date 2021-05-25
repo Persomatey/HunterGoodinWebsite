@@ -96,6 +96,8 @@
 			{
 				// Start of ReCaptcha Stuff
 
+				var boolCap = false; 
+
 				var checkCaptch = false;
 
 				var verifyCallback = function(response) 
@@ -109,7 +111,7 @@
 						checkCaptch = true;
 					}
 				};
-				/*
+				
 				$(document).ready(function() 
 				{
 					$("#btnSubmit").click(function() 
@@ -117,10 +119,11 @@
 						if (checkCaptch && grecaptcha.getResponse()!="") 
 						{
 							// Write your success code here
+							boolCap = true; 
 						}
 					});
 				})
-				*/
+				
 
 				// End of  ReCaptcha Stuff 
 
@@ -149,7 +152,7 @@
 					count++;
 				}
 
-				if(checkCaptch == false)
+				if(boolCap == false)
 				{
 					error = error + cap; 
 					count ++; 
