@@ -69,7 +69,7 @@
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
 					<br>
 					<!-- action="RaCaptchaCallback" -->
-					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5" id="recaptcha_entry"></div>
+					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5" id="recaptcha_entry" action="RaCaptchaCallback"></div>
 					<br>
 					<input id="submitBtn" type="submit" value="Send">
 					<text id="feedback"></text>
@@ -90,12 +90,6 @@
 
 			function AfterSend()
 			{
-				// ReCaptcha Stuff 
-
-				capBool = true; 
-
-				// End ReCaptcha Stuff 
-
 				var error = ""; 
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
