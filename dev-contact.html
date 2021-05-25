@@ -1,7 +1,7 @@
 <!doctype html>
 <html style="background-color:whitesmoke;">
 	<head>
-		<title>Hunter Goodin - Game Developer</title>
+		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 
 			<div class="column">
 				<h1>Hunter Goodin</h1>
-				<h2>Game Developer</h2>
+				<h2>Software Engineer</h2>
 			</div>
 
 			<div class="column">
@@ -40,6 +40,7 @@
 		<!-- 
 			Goodle ReCaptcha Stuff 
 			Site Key: 6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5
+			Secret Key: 6LcWTuwaAAAAAHTQX6XzGc9bvfHfSnsFuA67FCjd
 		-->
 
 		<!-- Email form -->
@@ -67,9 +68,9 @@
 					<br>
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
 					<br>
-					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
+					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5" id="recaptcha_entry"></div>
 					<br>
-					<input type="submit" value="Send">
+					<input id="submitBtn" type="submit" value="Send" disabled>
 					<text id="feedback"></text>
 				</form>
 
@@ -79,12 +80,24 @@
 
 		<script type="text/javascript">
 
+			function recaptchaCallback() 
+			{
+			    $('#submitBtn').removeAttr('disabled');
+			};
+
 			function AfterSend()
 			{
+				// ReCaptcha Stuff 
+
+
+
+				// End ReCaptcha Stuff 
+
 				var error = ""; 
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
 				var message = " 'Message' "; 
+				var cap = " 'ReCaptcha' "; 
 				var count = 0; 
 
 				if(document.forms["gform"]["entry.246933771"].value == "")
@@ -103,6 +116,12 @@
 				{
 					error = error + message; 
 					count++;
+				}
+
+				if(document.forms["gform"]["recaptcha_entry"].value == false)
+				{
+					error = error + cap; 
+					count ++; 
 				}
 
 				if(count == 0)
