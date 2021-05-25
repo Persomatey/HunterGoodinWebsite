@@ -75,7 +75,7 @@
 					<text id="feedback"></text>
 				</form>
 				</br>
-				Ver 003
+				Ver 004 
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkReCaptcha()"></iframe>
 			</div>
@@ -85,6 +85,8 @@
 
 			function checkRecaptcha() 
 			{
+				document.getElementById("feedback").innerHTML = "<font color='#6e6e6e'><b>Before ReCaptcha</b></font>";
+
 				var response = grecaptcha.getResponse();
 				if(response.length == 0) 
 				{
@@ -96,6 +98,8 @@
 					//reCaptch verified
 					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>ReCaptcha Worked!</b></font>";
 				}
+
+				document.getElementById("feedback").innerHTML = "<font color='#6e6e6e'><b>After ReCaptcha</b></font>";
 			}
 
 			// implement on the backend
