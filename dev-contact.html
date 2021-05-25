@@ -71,13 +71,13 @@
 					<!-- action="RaCaptchaCallback" -->
 					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
-					<input id="submitBtn" type="submit" value="Send">
+					<input id="submitBtn" type="submit" value="Send" onclick="checkRecaptcha()">
 					<text id="feedback"></text>
 				</form>
 				</br>
-				Ver 004 
+				Ver 005 
 
-				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="checkReCaptcha()"></iframe>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
 		</div>
 
