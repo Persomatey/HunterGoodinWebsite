@@ -85,11 +85,15 @@
 
 			function RaCaptchaCallback() 
 			{
-			    capBool = true; 
+			    //capBool = true; 
+
+			    document.getElementById("feedback").innerHTML = "<font color='#FFFF00'><b> " + error + " ReCaptcha Checked! </b></font>";
 			}
 
 			function AfterSend()
 			{
+
+				capBool = true; 
 				var error = ""; 
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
