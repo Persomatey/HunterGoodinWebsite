@@ -75,13 +75,15 @@
 					<text id="feedback"></text>
 				</form>
 				</br>
-				Ver 006 
+				Ver 007 
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
 		</div>
 
 		<script type="text/javascript">
+
+			var boolCap = false; 
 
 			function checkRecaptcha() 
 			{
@@ -92,11 +94,15 @@
 				{
 					//reCaptcha not verified
 					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b>ReCaptcha did not work...</b></font>";
+
+					boolCap = false; 
 				}
 				else
 				{
 					//reCaptch verified
 					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>ReCaptcha Worked!</b></font>";
+
+					boolCap = true; 
 				}
 			}
 
@@ -123,12 +129,6 @@
 
 			function AfterSend()
 			{
-				// Start of ReCaptcha Stuff
-
-				var boolCap = false; 
-
-				// End of  ReCaptcha Stuff 
-
 				var error = ""; 
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
