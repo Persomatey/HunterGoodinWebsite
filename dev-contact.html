@@ -74,6 +74,8 @@
 					<input id="submitBtn" type="submit" value="Send">
 					<text id="feedback"></text>
 				</form>
+				</br>
+				Ver 000
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
@@ -92,8 +94,36 @@
 
 			function AfterSend()
 			{
+				// Start of ReCaptcha Stuff
 
-				capBool = true; 
+				var checkCaptch = false;
+
+				var verifyCallback = function(response) 
+				{
+					if (response == "") 
+					{
+						checkCaptch = false;
+					}
+					else 
+					{
+						checkCaptch = true;
+					}
+				};
+				/*
+				$(document).ready(function() 
+				{
+					$("#btnSubmit").click(function() 
+					{
+						if (checkCaptch && grecaptcha.getResponse()!="") 
+						{
+							// Write your success code here
+						}
+					});
+				})
+				*/
+
+				// End of  ReCaptcha Stuff 
+
 				var error = ""; 
 				var name = " 'Name' ";
 				var email = " 'Email' "; 
@@ -119,7 +149,7 @@
 					count++;
 				}
 
-				if(capBool == false)
+				if(checkCaptch == false)
 				{
 					error = error + cap; 
 					count ++; 
