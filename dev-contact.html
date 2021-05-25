@@ -47,16 +47,15 @@
 		<div style="text-align: left; padding-top: 1%; font-size: 20px">
 			<h5 style="font-size: 45px;">Contact Me</h5>
 
-			<div style="text-align: center;">
+			<div style="text-align: center; font-size: 18px; color: grey;">
 				If you would like to infer about work or get a resume, feel free to shoot me an email.
 			</div>
 
-			</br>
-			</br>
+			<br>
 
 			<div id="contact-form" class="container">
 				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-					First & Last name:
+					First & Last Name:
 					<br>
 					<input type="text" name="entry.246933771" id="entry.246933771">
 					<br>
@@ -66,7 +65,7 @@
 					<br>
 					Message:
 					<br>
-					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px"></textarea>
+					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px; min-height:75px;"></textarea>
 					<br>
 					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
@@ -74,7 +73,6 @@
 					<text id="feedback"></text>
 				</form>
 				</br>
-				Ver 009 
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
@@ -96,29 +94,6 @@
 					boolCap = true; 
 				}
 			}
-
-			/*
-			function backend_API_challenge() 
-			{
-				var response = grecaptcha.getResponse();
-				$.ajax(
-				{
-					type: "POST",
-					url: 'https://www.google.com/recaptcha/api/siteverify',
-					data: {"secret" : "6LcWTuwaAAAAAHTQX6XzGc9bvfHfSnsFuA67FCjd", "response" : response, "remoteip":"localhost"},
-					contentType: 'application/x-www-form-urlencoded',
-					success: function(data) { console.log(data); }
-				});
-			}
-			
-
-			function RaCaptchaCallback() 
-			{
-				//capBool = true; 
-
-				document.getElementById("feedback").innerHTML = "<font color='#FFFF00'><b> " + error + " ReCaptcha Checked! </b></font>";
-			}
-			*/
 
 			function AfterSend()
 			{
