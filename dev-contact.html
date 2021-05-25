@@ -80,9 +80,11 @@
 
 		<script type="text/javascript">
 
+			var capBool = false; 
+
 			function recaptchaCallback() 
 			{
-			    $('#submitBtn').removeAttr('disabled');
+			    capBool = true; 
 			};
 
 			function AfterSend()
@@ -118,7 +120,7 @@
 					count++;
 				}
 
-				if(document.forms["gform"]["recaptcha_entry"].value == false)
+				if(capBool == false)
 				{
 					error = error + cap; 
 					count ++; 
