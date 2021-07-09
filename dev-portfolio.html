@@ -6,6 +6,87 @@
 		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script>
+			// MusicBot Functions
+			function ChangeImageMusL()
+			{
+				var imgMus = document.getElementById("imageMus");
+				imgMus.src="images/devphotos/KeyLogo.png";
+
+				document.getElementById("ButMus1").className = "buttonMusYeSel";
+
+				document.getElementById("ButMus2").className = "buttonMusUnSel";
+
+				document.getElementById("ButMus3").className = "buttonMusUnSel";
+
+				return false;
+			}
+			function ChangeImageMusI1()
+			{
+				var imgMus = document.getElementById("imageMus");
+				imgMus.src="images/devphotos/KeyGameplay1.png";
+
+				document.getElementById("ButMus1").className = "buttonMusUnSel";
+
+				document.getElementById("ButMus2").className = "buttonMusYeSel";
+
+				document.getElementById("ButMus3").className = "buttonMusUnSel";
+				
+				return false;
+			}
+			function ChangeImageMusI2()
+			{
+				var imgMus = document.getElementById("imageMus");
+				imgMus.src="images/devphotos/KeyGameplay2.png";
+
+				document.getElementById("ButMus1").className = "buttonMusUnSel";
+
+				document.getElementById("ButMus2").className = "buttonMusUnSel";
+
+				document.getElementById("ButMus3").className = "buttonMusYeSel";
+
+				return false;
+			}
+			// Funem Functions
+			function ChangeImageFunemL()
+			{
+				var imgFunem = document.getElementById("imageFunem");
+				imgFunem.src="images/devphotos/FunLogo.png";
+
+				document.getElementById("ButFunem1").className = "buttonFunemYeSel";
+
+				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
+
+				return false;
+			}
+			function ChangeImageFunemI1()
+			{
+				var imgFunem = document.getElementById("imageFunem");
+				imgFunem.src="images/devphotos/FunGameplay1.png";
+
+				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem2").className = "buttonFunemYeSel";
+
+				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
+				
+				return false;
+			}
+			function ChangeImageFunemI2()
+			{
+				var imgFunem = document.getElementById("imageFunem");
+				imgFunem.src="images/devphotos/FunGameplay2.png";
+
+				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem3").className = "buttonFunemYeSel";
+
+				return false;
+			}
+
 			// Key Finder Functions
 			function ChangeImageKeyL()
 			{
@@ -326,6 +407,98 @@
 
 		<!-- Portfolio Unique -->
 
+		<!-- Funem -->
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columngameimg">
+				<h5>Funem</h5>
+				<h6>(GMTK 2021 "Joined Together" Game Jam)</h6>
+		  		<img id="imageFunem" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+		  			<F><b>Images: </b></F>
+		  			<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();">Logo</button>
+		  			<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();">Gameplay 1</button>
+		  			<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();">Gameplay 2</button>
+		  		</div>
+		  	</div>
+
+		  	<div class="columngamedes">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  			A 2D top-down Zelda-like game where you play as two characters, Wasd and Arro making their way through a puzzle dungeon. Only caveat, Wasd and Arro are joined together by a rope! Fight your way through rats, puzzle your way through rooms, and use spacial reasoning to beat every level.  
+		  			</br>
+		  			</br>	
+					Made in the Unity Engine in <b>C#</b>, it was made during the GMTK Game Jam 2021 with the theme "Joined Together" in just 2 days. I did all of the <b>programming</b> for the game as well as the <b>UI/UX design</b>, <b>SFX</b>, general <b>game design</b> and <b>level design</b>, and some of the game's <b>Art</b>. 
+
+					</br>
+					</br>
+
+					<E><b>Link to download:</b></E>
+					<A href="https://persomatey.itch.io/funem">
+						<E>
+							<b class="hunterlink">PC (itch.io)</b>
+						</E>
+					</A>
+
+					</br>
+
+					<E><b>Link to repository:</b></E>
+					<A href="https://github.com/Persomatey/Funem">
+						<E>
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+		  	</div>
+
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
+		</div>
+
+		<!-- End Funem -->
+		<hr/>
+		<!-- MusicBot -->
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columngameimg">
+				<h5>Music-Chan</h5>
+		  		<img id="imageMus" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.jpg?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">
+		  	</div>
+
+		  	<div class="columngamedes">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  			A music focused Discord bot code that, when linked with a Discord Bot using Discord's Developer Portal, will play a given music stream on runtime in a given Discord server's voice channel. Designed to be easy to impliment for any Discord moderator without requiring any prior coding knowledge.  A full breakdown of the instructions on how to get the code running for your Discord bot can be found in the belowmentioned repository. 
+		  			</br>
+		  			</br>	
+					Made in a 24 hour personal code jam, I did the <b>programming</b> in <b>Javascript</b> using the <b>Node.js</b> using <b>Discord.js</b> frameworks alongside <b>FFmpeg</b> and <b>OpusScript</b> libraries. 
+					</br>
+					</br>
+
+					<E><b>Link to repository:</b></E>
+					<A href="https://github.com/Persomatey/MusicBot">
+						<E>
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+		  	</div>
+
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
+		</div>
+
+		<!-- End MusicBot -->
+		
+		<hr/>
 		<!-- Key Finder -->
 
 		<div class="row">
@@ -345,11 +518,11 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
 		  			A 2D Action Platformer where you must fight your way through enemies to obtain the keys to beat the level. 
 		  			</br>
 		  			</br>	
-					Made in the Unreal Engine, it was made as a personal jam game made in just 4 days. I used a mixture of <b>C++</b> and <b>Blueprints</b> to do all of the game's programming. I did all of the <b>programming</b>, some of the game's <b>art</b> and <b>SFX</b> as well as <b>level design</b>. 
+					Made in the Unreal Engine, it was made during a weekend long personal jam game in just 4 days. I used a mixture of <b>C++</b> and <b>Blueprints</b> to do all of the game's programming. I did all of the <b>programming</b>, some of the game's <b>art</b> and <b>SFX</b> as well as <b>level design</b>. 
 
 					</br>
 					</br>
@@ -377,7 +550,7 @@
 		  	</div>
 		</div>
 
-		<!-- End Helation -->
+		<!-- End Key Finder -->
 		<hr/>
 		<!-- Helation -->
 
@@ -398,8 +571,8 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			An Arena FPS game inspired by classic games in the genre such as Halo, Portal, and Doom. A tutorial mode where you make your way through the training facility while learning the ropes of the game. An arena mode where you fight your way through troves of enemies to try to beat your high score. 
+		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  			An Arena FPS game inspired by classic games in the genre such as Halo, Doom, and Portal. A tutorial mode where you make your way through the training facility while learning the ropes of the game. An arena mode where you fight your way through troves of enemies to try to beat your high score. 
 		  			</br>
 		  			</br>	
 					Made in the Unreal Engine, I used a mixture of <b>C++</b> and <b>Blueprints</b> to do all of the game's programming. I did all of the <b>programming</b>, all of the game and <b>level design</b>, all of the <b>UI Art</b>, all of the tutorial's <b>dialogue</b>, some of the <b>SFX</b>, some of the <b>texture art</b>, and edited some free 3D models. 
@@ -452,23 +625,18 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
-		  			This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer created in just 4 days! 
+		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  			This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer. 
 		  			</br>
 		  			</br>
-					Originally made for the Brackeys "Rewind" game jam, it was made as an auto runner platformer disguized as a rhythm game. I did all of the <b>programming</b> for the game as well as the <b>UI/UX design</b>, <b>SFX</b>, general <b>game design</b>, and acted as the team's <b>director</b>. 
-
-					<!--
-					I have since "Remastered" the game after the jam period to add bug fixes, controller support, a high-score feature, aidio controls, support for multiple resolution monitors, as well as general stability and performance enhancements. 
-					-->
-
+					Made in the Unity Engine in <b>C#</b> during the Brackeys 2020.2 Game Jam with the theme "Rewind" in just 4 days. Made as a rhythm game disguised an auto runner platformer. I did all of the <b>programming</b> for the game as well as the <b>UI/UX design</b>, <b>SFX</b>, general <b>game design</b>, and acted as the team's <b>director</b>. 
 					</br>
 					</br>
 
 					<E><b>Link to download:</b></E>
 					<A href="https://persomatey.itch.io/rewound-running-remix">
 						<E>
-							<b class="hunterlink">PC / Mac (itch.io)</b>
+							<b class="hunterlink">PC (itch.io)</b>
 						</E>
 					</A>
 
@@ -510,18 +678,18 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
 		  			A top-down Zelda-like game with a fantasy theme. Fight your way through droves of villainous monsters such as orcs and mushrooms to make your way to the end to defeat the scourge of the Fantaswhere Forest, Orcutoryx. 
 		  			</br>
 		  			</br>
-					As my last year as <b>President of the Computer Science Club</b>, I wanted to go out with a bang! I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on many aspects of the overall game. I programmed the core movement, health systems, animation rigging, boss mob behavior, and many other aspects of the game. You can see my name commented on pretty much every script. 
+					Made in the Unity Engine in <b>C#</b>. As my last year as <b>President of the Computer Science Club</b>, I wanted to go out with a bang! I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on many aspects of the overall game. I programmed the core movement, health systems, animation rigging, boss mob behavior, and many other aspects of the game. You can see my name commented on pretty much every script. 
 					</br>
 					</br>
 
 					<E><b>Link to download:</b></E>
 					<A href="https://coc-computerscienceclub.itch.io/legend-of-fantasy">
 						<E>
-							<b class="hunterlink">PC / Mac (itch.io)</b>
+							<b class="hunterlink">PC (itch.io)</b>
 						</E>
 					</A>
 
@@ -563,18 +731,18 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
 		  			A side-scrolling space shooter arcade game with a low poly aesthetic. Battle through wave after wave of enemy ships as you plunge deep into enemy territory. 
 		  			</br>
 					</br>
-					My first game as <b>President of the Computer Science Club</b>, we went for a simple arcade shooter. I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on nearly every aspect of the game. I programmed most of the enemy AI, the player projectiles, the enemy spawn system, the point and high score system, the health system, the unlock system, 3D modeling and animation, and many other aspects of the game. You can see my name commented on nearly every script in the game. 
+					Made in the Unity Engine in <b>C#</b>. My first game as <b>President of the Computer Science Club</b>, we went for a simple arcade shooter. I operated as <b>director</b> and <b>lead programmer</b> for this project. I worked on nearly every aspect of the game. I programmed most of the enemy AI, the player projectiles, the enemy spawn system, the point and high score system, the health system, the unlock system, 3D modeling and animation, and many other aspects of the game. You can see my name commented on nearly every script in the game. 
 					</br>
 					</br>
 
 					<E><b>Link to download:</b></E>
 					<A href="https://coc-computerscienceclub.itch.io/space-shooter-9000">
 						<E>
-							<b class="hunterlink">PC / Mac (itch.io)</b>
+							<b class="hunterlink">PC (itch.io)</b>
 						</E>
 					</A>
 
@@ -616,18 +784,18 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
 		  			A top-down shooter with a military theme. Grind your way through hoards of zombies and droves of drones as you fight your way to the large boss drone at the end of the level to recapture the factory! 
 		  			</br>
 					</br>
-					This was the first finished project that I worked on in <b>Computer Science Club</b>. I worked on the death state of the game.  
+					Made in the Unity Engine in <b>C#</b>, this was the first finished project that I worked on in <b>Computer Science Club</b>. I worked on the death state of the game.  
 					</br>
 					</br>
 
 					<E><b>Link to download:</b></E>
 					<A href="https://coc-computerscienceclub.itch.io/factory">
 						<E>
-							<b class="hunterlink">PC / Mac (itch.io)</b>
+							<b class="hunterlink">PC (itch.io)</b>
 						</E>
 					</A>
 
@@ -668,11 +836,11 @@
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 0;">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
 		  			Military-styled AAA Sci-Fi FPS. The game's multiplayer features different heroes, each with their own abilities. 
 		  			</br>
 					</br>
-					The first AAA game I worked on, I was a Volt Workforce Solutions employee on assignment to work at Activision's Treyarch office. I worked as a <b>Quality Assurance developer</b> working on the game's multiplayer functionality. I was later invited to the QA Manager's personal team. I was tasked with <b>finding and reporting bugs</b>, <b>writing detailed reports</b>, <b>finding creative solutions to resolve bugs</b>, as well as <b>managing smaller teams</b>. 
+					The first AAA game I worked on, I was a Volt Workforce Solutions employee on assignment to work at Activision's Treyarch office. I worked as a <b>Quality Assurance Developer</b> working on the game's multiplayer functionality. I was later invited to the QA Manager's personal team. I was tasked with <b>finding and reporting bugs</b>, <b>writing detailed reports</b>, <b>finding creative solutions to resolve bugs</b>, as well as <b>managing smaller teams</b>. 
 					</br>
 					</br>
 

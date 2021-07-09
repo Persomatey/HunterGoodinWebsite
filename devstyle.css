@@ -264,6 +264,34 @@ input[type=submit]:hover {
     }
 
     /* Custom Button Stuff */
+    .buttonFunemUnSel 
+    {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: grey; 
+      border-radius: 3px;
+    }
+    .buttonFunemYeSel 
+    {
+      border: none;
+      color: #dddded;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      background-color: #222323; 
+      border-radius: 14px;
+    }
     .buttonKeyUnSel 
     {
       border: none;
