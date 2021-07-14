@@ -2,489 +2,569 @@
 
 html 
 {
-  font-family: Arial, Helvetica, sans-serif
+	font-family: Arial, Helvetica, sans-serif
 }
 
 p, li 
 {
-  font-family: "Times New Roman", Times, serif
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 1px;
+	font-family: "Times New Roman", Times, serif
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 1px;
 }
 
 html 
 {
-  background-color: white;
-  font-size: 40px;
+	background-color: white;
+	font-size: 40px;
 }
 
 body 
 {
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  background-color: white;
-  color: black;
-  font-size: 15px;
-  /*padding: 0 20px 20px 20px;*/
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	/*padding: 0 20px 20px 20px;*/
 }
 
 h1 
 {
-  font-size: 50px;
-  text-align: left;
-  padding-top: 50px;
-  padding-right: 10px;
-  padding-left: 0px;
-  color: black;
-  margin-bottom: 0;
+	font-size: 50px;
+	text-align: left;
+	padding-top: 50px;
+	padding-right: 10px;
+	padding-left: 0px;
+	color: black;
+	margin-bottom: 0;
 }
 
 h2 
 {
-  font-size: 20px;
-  text-align: left;
-  padding-right: 10px;
-  padding-left: 0px;
-  color: grey;
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0px;
+	font-size: 20px;
+	text-align: left;
+	padding-right: 10px;
+	padding-left: 0px;
+	color: grey;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0px;
 }
 
 h3
 {
-  font-size: 15px;
-  text-align: right;
-  margin-top:136px;
-  padding-right: 10px;
-  padding-left: 0px;
-  margin-bottom: 0px;
+	font-size: 15px;
+	text-align: right;
+	margin-top:136px;
+	padding-right: 10px;
+	padding-left: 0px;
+	margin-bottom: 0px;
 }
 
 h4
 {
-  font-size: 30px;
-  text-align: left;
-  margin: 0 auto;
-  color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 10px;
+	font-size: 30px;
+	text-align: left;
+	margin: 0 auto;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 10px;
 }
 
 h5
 {
-  font-size: 30px;
-  text-align: center;
-  margin: 0 auto;
-  color: black;
-  padding-top: 5px;
-  padding-bottom: 5px;
+	font-size: 30px;
+	text-align: center;
+	margin: 0 auto;
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 h6
 {
-  font-size: 15px;
-  text-align: center;
-  margin: 0 auto;
-  color: black;
-  padding-top: 5px;
-  padding-bottom: 5px;
+	font-size: 15px;
+	text-align: center;
+	margin: 0 auto;
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 p
 {
-  padding-left: 15px;
-  padding-right: 0px;
-  color: grey; 
+	padding-left: 15px;
+	padding-right: 0px;
+	color: grey; 
 }
 
 img 
 {
-  display: block;
-  padding-top: 10px;
-  padding-right: 0px;
-  padding-left: 0px;
+	display: block;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
-
 
 hr 
 {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .columnheader
 {
-  float: left; 
-  width: 25%;
-  /*background-color:blue;*/
+	float: left; 
+	width: 25%;
+	/*background-color:blue;*/
 }
 
 .columnside
 {
-  float: left; 
-  width: 20%;
-  /*background-color:yellow;*/
-
+	float: left; 
+	width: 20%;
+	/*background-color:yellow;*/
 }
 
 .column
 {
-  padding-top: 0%;
-  float: left; 
-  width: 30%;
-  /*background-color:orange;*/
+	padding-top: 0%;
+	float: left; 
+	width: 30%;
+	/*background-color:orange;*/
 }
 
 .columngameimg
 {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  float: left; 
-  width: 20%;
-  /*background-color:orange;*/
+	padding-top: 2%;
+	padding-bottom: 2%;
+	float: left; 
+	width: 25%;
+	/*background-color:orange;*/
 }
 
 .columngamedes
 {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  float: left; 
-  width: 40%;
-  /*background-color:orange;*/
+	padding-top: 2%;
+	padding-bottom: 2%;
+	float: left; 
+	width: 35%;
+	/*background-color:orange;*/
 }
 
 .row:after 
 {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.modal 
+{
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 2.5%; /**/
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content 
+{
+	background-color: whitesmoke;
+	padding-right: 10px; /**/
+	margin: auto;
+	border: 1px solid #888; 
+	width: 75%;
+	height: 90%;
+}
+
+/* The Close Button */
+.close 
+{
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus 
+{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+input[type=image]
+{
+	display: block;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type=text], select, textarea 
+{
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+input[type=submit] 
+{
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
+input[type=submit]:hover 
+{
+	background-color: #45a049;
 }
 
 /* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  padding-left: 30%;
-  padding-right: 30%;
+.container 
+{
+	border-radius: 5px;
+	padding-left: 30%;
+	padding-right: 30%;
 }
 
 .hunterlink
 {
-  color: slategrey;
+	color: slategrey;
 }
 
 .hunterlink:hover
 {
-  color: slateblue;
+	color: slateblue;
 }
 
 /* Font Control Stuff */
-    A
-    {
-      text-decoration: none; 
-      color: black;
-    } 
-    C
-    {
-      text-decoration: none;
-      color: black; 
-      padding-right: 0px;
-      padding-left: 20px;
-      font-size: 25px;
-    }
-    D
-    {
-      text-decoration: none;
-      color: grey; 
-      padding-right: 0px;
-      padding-left: 20px;
-    }
-    E
-    {
-      text-decoration: none;
-      color: black; 
-    }
-    F
-    {
-      text-decoration: none;
-      color: black; 
-      padding-right: 0px;
-      padding-left: 5px;
-      font-size: 18px;
-    }
+A
+{
+	text-decoration: none; 
+	color: black;
+} 
+C
+{
+	text-decoration: none;
+	color: black; 
+	padding-right: 0px;
+	padding-left: 20px;
+	font-size: 25px;
+}
+D
+{
+	text-decoration: none;
+	color: grey; 
+	padding-right: 0px;
+	padding-left: 20px;
+}
+E
+{
+	text-decoration: none;
+	color: black; 
+}
+F
+{
+	text-decoration: none;
+	color: black; 
+	padding-right: 0px;
+	padding-left: 5px;
+	font-size: 18px;
+}
 
-    /* Scroll Bar Stuff */
-    ::-webkit-scrollbar 
-    {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track 
-    {
-      background: #f1f1f1; 
-    }
-    ::-webkit-scrollbar-thumb 
-    {
-      background: #888; 
-    }
-    ::-webkit-scrollbar-thumb:hover 
-    {
-      background: #555; 
-    }
+/* Scroll Bar Stuff */
+::-webkit-scrollbar 
+{
+	width: 10px;
+}
+::-webkit-scrollbar-track 
+{
+	background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb 
+{
+	background: #888; 
+}
+::-webkit-scrollbar-thumb:hover 
+{
+	background: #555; 
+}
 
-    /* Custom Button Stuff */
-    .buttonFunemUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonFunemYeSel 
-    {
-      border: none;
-      color: #dddded;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #222323; 
-      border-radius: 14px;
-    }
-    .buttonKeyUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonKeyYeSel 
-    {
-      border: none;
-      color: lightyellow;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: darkolivegreen; 
-      border-radius: 14px;
-    }
-    .buttonBO3UnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonBO3YeSel 
-    {
-      border: none;
-      color: orange;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: black; 
-      border-radius: 14px;
-    }
-    .buttonHelUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonHelYeSel 
-    {
-      border: none;
-      color: #f5e3df;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: lightslategrey; 
-      border-radius: 14px;
-    }
-    .buttonR3UnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonR3YeSel 
-    {
-      border: none;
-      color: yellow;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #0000d1; 
-      border-radius: 14px;
-    }
-    .buttonLoFUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonLoFYeSel 
-    {
-      border: none;
-      color: palegoldenrod;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #2e7630; 
-      border-radius: 14px;
-    }
-    .buttonSSUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonSSYeSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #f41818; 
-      border-radius: 14px;
-    }
-    .buttonFaUnSel 
-    {
-      border: none;
-      color: white;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: grey; 
-      border-radius: 3px;
-    }
-    .buttonFaYeSel 
-    {
-      border: none;
-      color: aliceblue;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      background-color: #195195; 
-      border-radius: 14px;
-    }
+/* Custom Button Stuff */
+.buttonFunemUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonFunemYeSel 
+{
+	border: none;
+	color: #dddded;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #222323; 
+	border-radius: 14px;
+}
+.buttonMusicUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonMusicYeSel 
+{
+	border: none;
+	color: #fedcac;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #385865; 
+	border-radius: 14px;
+}
+.buttonKeyUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonKeyYeSel 
+{
+	border: none;
+	color: lightyellow;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: darkolivegreen; 
+	border-radius: 14px;
+}
+.buttonBO3UnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonBO3YeSel 
+{
+	border: none;
+	color: orange;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: black; 
+	border-radius: 14px;
+}
+.buttonHelUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonHelYeSel 
+{
+	border: none;
+	color: #f5e3df;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: lightslategrey; 
+	border-radius: 14px;
+}
+.buttonR3UnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonR3YeSel 
+{
+	border: none;
+	color: yellow;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #0000d1; 
+	border-radius: 14px;
+}
+.buttonLoFUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonLoFYeSel 
+{
+	border: none;
+	color: palegoldenrod;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #2e7630; 
+	border-radius: 14px;
+}
+.buttonSSUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonSSYeSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #f41818; 
+	border-radius: 14px;
+}
+.buttonFaUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonFaYeSel 
+{
+	border: none;
+	color: aliceblue;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #195195; 
+	border-radius: 14px;
+}

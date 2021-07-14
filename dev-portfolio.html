@@ -6,51 +6,34 @@
 		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script>
-			// MusicBot Functions
-			function ChangeImageMusL()
+
+			/* Funem Functions */
+
+			function OpenFunemModal()
 			{
-				var imgMus = document.getElementById("imageMus");
-				imgMus.src="images/devphotos/KeyLogo.png";
+				var modal = document.getElementById("funemModal");
+				document.getElementById("funemModalImg").src = imageFunem.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("funemSpan");
 
-				document.getElementById("ButMus1").className = "buttonMusYeSel";
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
 
-				document.getElementById("ButMus2").className = "buttonMusUnSel";
-
-				document.getElementById("ButMus3").className = "buttonMusUnSel";
-
-				return false;
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
 			}
-			function ChangeImageMusI1()
-			{
-				var imgMus = document.getElementById("imageMus");
-				imgMus.src="images/devphotos/KeyGameplay1.png";
-
-				document.getElementById("ButMus1").className = "buttonMusUnSel";
-
-				document.getElementById("ButMus2").className = "buttonMusYeSel";
-
-				document.getElementById("ButMus3").className = "buttonMusUnSel";
-				
-				return false;
-			}
-			function ChangeImageMusI2()
-			{
-				var imgMus = document.getElementById("imageMus");
-				imgMus.src="images/devphotos/KeyGameplay2.png";
-
-				document.getElementById("ButMus1").className = "buttonMusUnSel";
-
-				document.getElementById("ButMus2").className = "buttonMusUnSel";
-
-				document.getElementById("ButMus3").className = "buttonMusYeSel";
-
-				return false;
-			}
-			// Funem Functions
 			function ChangeImageFunemL()
 			{
-				var imgFunem = document.getElementById("imageFunem");
-				imgFunem.src="images/devphotos/FunLogo.png";
+				document.getElementById("FunemMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">'; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemYeSel";
 
@@ -58,25 +41,27 @@
 
 				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
 
+				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
+
 				return false;
 			}
 			function ChangeImageFunemI1()
 			{
-				var imgFunem = document.getElementById("imageFunem");
-				imgFunem.src="images/devphotos/FunGameplay1.png";
+				document.getElementById("FunemMedia").innerHTML = '<input type="image" id="imageFunem" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunGameplay1.png" onclick="OpenFunemModal();">'; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
 
 				document.getElementById("ButFunem2").className = "buttonFunemYeSel";
 
 				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
 				
 				return false;
 			}
 			function ChangeImageFunemI2()
 			{
-				var imgFunem = document.getElementById("imageFunem");
-				imgFunem.src="images/devphotos/FunGameplay2.png";
+				document.getElementById("FunemMedia").innerHTML = '<input type="image" id="imageFunem" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunGameplay2.png" onclick="OpenFunemModal();">'; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
 
@@ -84,14 +69,75 @@
 
 				document.getElementById("ButFunem3").className = "buttonFunemYeSel";
 
+				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
+
+				return false;
+			}
+			function ChangeImageFunemVid()
+			{
+				document.getElementById("FunemMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/QUR4Pki2UoU" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
+
+				document.getElementById("ButFunem4").className = "buttonFunemYeSel";
+
 				return false;
 			}
 
-			// Key Finder Functions
+			/* Music-Chan Functions */
+
+			function ChangeImageMusicL()
+			{
+				document.getElementById("MusicMedia").innerHTML = '<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.jpg?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">'; 
+
+				document.getElementById("ButMusic1").className = "buttonMusicYeSel";
+
+				document.getElementById("ButMusic2").className = "buttonMusicUnSel";
+
+				return false;
+			}
+			function ChangeImageMusicVid()
+			{
+				document.getElementById("MusicMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 112px; padding-bottom: 110px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/4t32sicjFYI" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButMusic1").className = "buttonMusicUnSel";
+
+				document.getElementById("ButMusic2").className = "buttonMusicYeSel";
+
+				return false;
+			}
+
+			/* Key Finder Functions */
+
+			function OpenKeyModal()
+			{
+				var modal = document.getElementById("keyModal");
+				document.getElementById("keyModalImg").src = imageKey.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("keySpan");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageKeyL()
 			{
-				var imgKey = document.getElementById("imageKey");
-				imgKey.src="images/devphotos/KeyLogo.png";
+				document.getElementById("KeyMedia").innerHTML = '<img style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyLogo.png">'; 
 
 				document.getElementById("ButKey1").className = "buttonKeyYeSel";
 
@@ -99,25 +145,27 @@
 
 				document.getElementById("ButKey3").className = "buttonKeyUnSel";
 
+				document.getElementById("ButKey4").className = "buttonKeyUnSel";
+
 				return false;
 			}
 			function ChangeImageKeyI1()
 			{
-				var imgKey = document.getElementById("imageKey");
-				imgKey.src="images/devphotos/KeyGameplay1.png";
+				document.getElementById("KeyMedia").innerHTML = '<input type="image" id="imageKey" style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay1.png" onclick="OpenKeyModal();">'; 
 
 				document.getElementById("ButKey1").className = "buttonKeyUnSel";
 
 				document.getElementById("ButKey2").className = "buttonKeyYeSel";
 
 				document.getElementById("ButKey3").className = "buttonKeyUnSel";
+
+				document.getElementById("ButKey4").className = "buttonKeyUnSel";
 				
 				return false;
 			}
 			function ChangeImageKeyI2()
 			{
-				var imgKey = document.getElementById("imageKey");
-				imgKey.src="images/devphotos/KeyGameplay2.png";
+				document.getElementById("KeyMedia").innerHTML = '<input type="image" id="imageKey" style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay2.png" onclick="OpenKeyModal();">'; 
 
 				document.getElementById("ButKey1").className = "buttonKeyUnSel";
 
@@ -125,14 +173,52 @@
 
 				document.getElementById("ButKey3").className = "buttonKeyYeSel";
 
+				document.getElementById("ButKey4").className = "buttonKeyUnSel";
+
+				return false;
+			}
+			function ChangeImageKeyVid()
+			{
+				document.getElementById("KeyMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 76px; padding-bottom: 67px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/w260kcveYuc" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButKey1").className = "buttonKeyUnSel";
+
+				document.getElementById("ButKey2").className = "buttonKeyUnSel";
+
+				document.getElementById("ButKey3").className = "buttonKeyUnSel";
+
+				document.getElementById("ButKey4").className = "buttonKeyYeSel";
+
 				return false;
 			}
 
-			// Helation Functions
+			/* Helation Functions */
+
+			function OpenHelModal()
+			{
+				var modal = document.getElementById("helModal");
+				document.getElementById("helModalImg").src = imageHel.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("helSpan");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageHelL()
 			{
-				var imgHel = document.getElementById("imageHel");
-				imgHel.src="images/devphotos/HelLogo.png";
+				document.getElementById("HelMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">'; 
 
 				document.getElementById("ButHel1").className = "buttonHelYeSel";
 
@@ -140,25 +226,27 @@
 
 				document.getElementById("ButHel3").className = "buttonHelUnSel";
 
+				document.getElementById("ButHel4").className = "buttonHelUnSel";
+
 				return false;
 			}
 			function ChangeImageHelI1()
 			{
-				var imgHel = document.getElementById("imageHel");
-				imgHel.src="images/devphotos/HelGameplay1.png";
+				document.getElementById("HelMedia").innerHTML = '<input type="image" id="imageHel" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay1.png" onclick="OpenHelModal();">'; 
 
 				document.getElementById("ButHel1").className = "buttonHelUnSel";
 
 				document.getElementById("ButHel2").className = "buttonHelYeSel";
 
 				document.getElementById("ButHel3").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel4").className = "buttonHelUnSel";
 				
 				return false;
 			}
 			function ChangeImageHelI2()
 			{
-				var imgHel = document.getElementById("imageHel");
-				imgHel.src="images/devphotos/HelGameplay2.png";
+				document.getElementById("HelMedia").innerHTML = '<input type="image" id="imageHel" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay2.png" onclick="OpenHelModal();">'; 
 
 				document.getElementById("ButHel1").className = "buttonHelUnSel";
 
@@ -166,14 +254,52 @@
 
 				document.getElementById("ButHel3").className = "buttonHelYeSel";
 
+				document.getElementById("ButHel4").className = "buttonHelUnSel";
+
+				return false;
+			}
+			function ChangeImageHelVid()
+			{
+				document.getElementById("HelMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/SosAngzSoqQ" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButHel1").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel2").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel3").className = "buttonHelUnSel";
+
+				document.getElementById("ButHel4").className = "buttonHelYeSel";
+
 				return false;
 			}
 
-			// R3 Functions
+			/* Rewound Running Remix Functions */
+
+			function OpenR3Modal()
+			{
+				var modal = document.getElementById("r3Modal");
+				document.getElementById("r3ModalImg").src = imageR3.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("r3Span");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageR3L()
 			{
-				var imgHel = document.getElementById("imageR3");
-				imgHel.src="images/devphotos/R3Logo.png";
+				document.getElementById("R3Media").innerHTML = '<img style="width: 278px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">'; 
 
 				document.getElementById("ButR31").className = "buttonR3YeSel";
 
@@ -181,25 +307,27 @@
 
 				document.getElementById("ButR33").className = "buttonR3UnSel";
 
+				document.getElementById("ButR34").className = "buttonR3UnSel";
+
 				return false;
 			}
 			function ChangeImageR3I1()
 			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Gameplay1.png";
+				document.getElementById("R3Media").innerHTML = '<input type="image" id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay1.png" onclick="OpenR3Modal();">'; 
 
 				document.getElementById("ButR31").className = "buttonR3UnSel";
 
 				document.getElementById("ButR32").className = "buttonR3YeSel";
 
 				document.getElementById("ButR33").className = "buttonR3UnSel";
+
+				document.getElementById("ButR34").className = "buttonR3UnSel";
 				
 				return false;
 			}
 			function ChangeImageR3I2()
 			{
-				var imgR3 = document.getElementById("imageR3");
-				imgR3.src="images/devphotos/R3Gameplay2.png";
+				document.getElementById("R3Media").innerHTML = '<input type="image" id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay2.png" onclick="OpenR3Modal();">'; 
 
 				document.getElementById("ButR31").className = "buttonR3UnSel";
 
@@ -207,14 +335,52 @@
 
 				document.getElementById("ButR33").className = "buttonR3YeSel";
 
+				document.getElementById("ButR34").className = "buttonR3UnSel";
+
+				return false;
+			}
+			function ChangeImageR3Vid()
+			{
+				document.getElementById("R3Media").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 49px; padding-bottom: 41px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/2l0JYAdxMpk" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButR31").className = "buttonR3UnSel";
+
+				document.getElementById("ButR32").className = "buttonR3UnSel";
+
+				document.getElementById("ButR33").className = "buttonR3UnSel";
+
+				document.getElementById("ButR34").className = "buttonR3YeSel";
+
 				return false;
 			}
 
-			// LoF Functions
+			/* Legend of Fantasy Functions */
+
+			function OpenLoFModal()
+			{
+				var modal = document.getElementById("lofModal");
+				document.getElementById("lofModalImg").src = imageLoF.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("lofSpan");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageLoFL()
 			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFLogo.png"; 
+				document.getElementById("LoFMedia").innerHTML = '<img style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">'; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFYeSel";
 
@@ -222,25 +388,27 @@
 
 				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
 
+				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
+
 				return false;
 			}
 			function ChangeImageLoFI1()
 			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFGameplay1.png";
+				document.getElementById("LoFMedia").innerHTML = '<input type="image" id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay1.png" onclick="OpenLoFModal();">'; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
 
 				document.getElementById("ButLoF2").className = "buttonLoFYeSel";
 
 				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
 				
 				return false;
 			}
 			function ChangeImageLoFI2()
 			{
-				var imgLoF = document.getElementById("imageLoF");
-				imgLoF.src="images/devphotos/LoFGameplay2.png";
+				document.getElementById("LoFMedia").innerHTML = '<input type="image" id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay2.png" onclick="OpenLoFModal();">'; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
 
@@ -248,14 +416,52 @@
 
 				document.getElementById("ButLoF3").className = "buttonLoFYeSel";
 
+				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
+
+				return false;
+			}
+			function ChangeImageLoFVid()
+			{
+				document.getElementById("LoFMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 24px; padding-bottom: 17px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/DwehfYrfE_k" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
+
+				document.getElementById("ButLoF4").className = "buttonLoFYeSel";
+
 				return false;
 			}
 
-			// SS Functions
+			/* Space Shooter 9000 Functions */
+
+			function OpenSSModal()
+			{
+				var modal = document.getElementById("ssModal");
+				document.getElementById("ssModalImg").src = imageSS.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("ssSpan");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageSSL()
 			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Logo.png"; 
+				document.getElementById("SSMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSLogo.png">'; 
 
 				document.getElementById("ButSS1").className = "buttonSSYeSel";
 
@@ -263,25 +469,27 @@
 
 				document.getElementById("ButSS3").className = "buttonSSUnSel";
 
+				document.getElementById("ButSS4").className = "buttonSSUnSel";
+
 				return false;
 			}
 			function ChangeImageSSI1()
 			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Gameplay1.png";
+				document.getElementById("SSMedia").innerHTML = '<input type="image" id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay1.png" onclick="OpenSSModal();">'; 
 
 				document.getElementById("ButSS1").className = "buttonSSUnSel";
 
 				document.getElementById("ButSS2").className = "buttonSSYeSel";
 
 				document.getElementById("ButSS3").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS4").className = "buttonSSUnSel";
 				
 				return false;
 			}
 			function ChangeImageSSI2()
 			{
-				var imgLoF = document.getElementById("imageSS");
-				imgLoF.src="images/devphotos/SS9000Gameplay2.png";
+				document.getElementById("SSMedia").innerHTML = '<input type="image" id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay2.png" onclick="OpenSSModal();">'; 
 
 				document.getElementById("ButSS1").className = "buttonSSUnSel";
 
@@ -289,14 +497,53 @@
 
 				document.getElementById("ButSS3").className = "buttonSSYeSel";
 
+				document.getElementById("ButSS4").className = "buttonSSUnSel";
+
+				return false;
+			}
+			function ChangeImageSSVid()
+			{
+				document.getElementById("SSMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 85px; padding-bottom: 74px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/Z_3XtojWlSA" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButSS1").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS2").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS3").className = "buttonSSUnSel";
+
+				document.getElementById("ButSS4").className = "buttonSSYeSel";
+
 				return false;
 			}
 
-			// Fa Functions
+			/* Factory Functions */
+
+			function OpenFaModal()
+			{
+				var modal = document.getElementById("factoryModal");
+				document.getElementById("factoryModalImg").src = imageFa.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("factorySpan");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
+
 			function ChangeImageFaL()
 			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryLogo.png"; 
+				document.getElementById("FaMedia").innerHTML = '<img style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaLogo.png">'; 
 
 				document.getElementById("ButFa1").className = "buttonFaYeSel";
 
@@ -304,25 +551,27 @@
 
 				document.getElementById("ButFa3").className = "buttonFaUnSel";
 
+				document.getElementById("ButFa4").className = "buttonFaUnSel";
+
 				return false;
 			}
 			function ChangeImageFaI1()
 			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryGameplay1.png";
+				document.getElementById("FaMedia").innerHTML = '<input type="image" id="imageFa" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay1.png" onclick="OpenFaModal();">'; 
 
 				document.getElementById("ButFa1").className = "buttonFaUnSel";
 
 				document.getElementById("ButFa2").className = "buttonFaYeSel";
 
 				document.getElementById("ButFa3").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa4").className = "buttonFaUnSel";
 				
 				return false;
 			}
 			function ChangeImageFaI2()
 			{
-				var imgLoF = document.getElementById("imageFa");
-				imgLoF.src="images/devphotos/FactoryGameplay2.png";
+				document.getElementById("FaMedia").innerHTML = '<input type="image" id="imageFa" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay2.png" onclick="OpenFaModal();">'; 
 
 				document.getElementById("ButFa1").className = "buttonFaUnSel";
 
@@ -330,14 +579,52 @@
 
 				document.getElementById("ButFa3").className = "buttonFaYeSel";
 
+				document.getElementById("ButFa4").className = "buttonFaUnSel";
+
+				return false;
+			}
+			function ChangeImageFaVid()
+			{
+				document.getElementById("FaMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 48px; padding-bottom: 42px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/ESyvW9RUt9A" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButFa1").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa2").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa3").className = "buttonFaUnSel";
+
+				document.getElementById("ButFa4").className = "buttonFaYeSel";
+
 				return false;
 			}
 
-			// Black Ops III Functions
+			/* Black Ops III Functions */
+
+			function OpenBO3Modal()
+			{
+				var modal = document.getElementById("bo3Modal");
+				document.getElementById("bo3ModalImg").src = imageBO3.src; 
+				modal.style.display = "block";
+				var span = document.getElementById("bo3Span");
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() 
+				{
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) 
+				{
+					if (event.target == modal) 
+					{
+						modal.style.display = "none";
+					}
+				}
+			}
 			function ChangeImageBO3L()
 			{
-				var imgBO3 = document.getElementById("imageBO3");
-				imgBO3.src="images/devphotos/BO3Logo.png";
+				document.getElementById("BO3Media").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">'; 
 
 				document.getElementById("ButBO31").className = "buttonBO3YeSel";
 
@@ -345,25 +632,27 @@
 
 				document.getElementById("ButBO33").className = "buttonBO3UnSel";
 
+				document.getElementById("ButBO34").className = "buttonBO3UnSel";
+
 				return false;
 			}
 			function ChangeImageBO3I1()
 			{
-				var imgBO3 = document.getElementById("imageBO3");
-				imgBO3.src="images/devphotos/BO3Gameplay1.png";
+				document.getElementById("BO3Media").innerHTML = '<input type="image" id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay1.png" onclick="OpenBO3Modal();">'; 
 
 				document.getElementById("ButBO31").className = "buttonBO3UnSel";
 
 				document.getElementById("ButBO32").className = "buttonBO3YeSel";
 
 				document.getElementById("ButBO33").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO34").className = "buttonBO3UnSel";
 				
 				return false;
 			}
 			function ChangeImageBO3I2()
 			{
-				var imgBO3 = document.getElementById("imageBO3");
-				imgBO3.src="images/devphotos/BO3Gameplay2.png";
+				document.getElementById("BO3Media").innerHTML = '<input type="image" id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay2.png" onclick="OpenBO3Modal();">'; 
 
 				document.getElementById("ButBO31").className = "buttonBO3UnSel";
 
@@ -371,8 +660,25 @@
 
 				document.getElementById("ButBO33").className = "buttonBO3YeSel";
 
+				document.getElementById("ButBO34").className = "buttonBO3UnSel";
+
 				return false;
 			}
+			function ChangeImageBO3Vid()
+			{
+				document.getElementById("BO3Media").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 85px; padding-bottom: 74px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/GM2m9LG35N0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButBO31").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO32").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO33").className = "buttonBO3UnSel";
+
+				document.getElementById("ButBO34").className = "buttonBO3YeSel";
+
+				return false;
+			}
+
 		</script>
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -409,6 +715,13 @@
 
 		<!-- Funem -->
 
+		<div id="funemModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="funemSpan">&times;</span>
+				<img id="funemModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FunLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -417,22 +730,25 @@
 			<div class="columngameimg">
 				<h5>Funem</h5>
 				<h6>(GMTK 2021 "Joined Together" Game Jam)</h6>
-		  		<img id="imageFunem" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">
-		  		<div style="display: flex; justify-content: center; align-items: center;">
-		  			<F><b>Images: </b></F>
-		  			<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();">Logo</button>
-		  			<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();">Gameplay 1</button>
-		  			<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();">Gameplay 2</button>
-		  		</div>
-		  	</div>
+				<div id="FunemMedia">
+					<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">
+				</div>
+				<div style="display: flex; justify-content: center; align-items: center;">
+					<F><b>Buttons: </b></F>
+					<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();">Logo</button>
+					<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();">Screenshot 1</button>
+					<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();">Screenshot 2</button>
+					<button id="ButFunem4" class="buttonFunemUnSel" onclick="ChangeImageFunemVid();">Gameplay</button>
+				</div>
+			</div>
 
-		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+			<div class="columngamedes">
+				<p style="padding-left: 25px; margin-top: 45px;">
 
-		  			A 2D top-down Zelda-like game where you play as two characters, Wasd and Arro making their way through a puzzle dungeon. Only caveat, Wasd and Arro are joined together by a rope! Fight your way through rats, puzzle your way through rooms, and use spacial reasoning to beat every level.  
+					A 2D top-down Zelda-like game where you play as two characters, Wasd and Arro making their way through a puzzle dungeon. Only caveat, Wasd and Arro are joined together by a rope! Fight your way through rats, puzzle your way through rooms, and use spacial reasoning to beat every level.  
 
-		  			</br>
-		  			</br>	
+					</br>
+					</br>	
 
 					Made in the Unity Engine in <b>C#</b> during the GMTK Game Jam 2021 with the theme "Joined Together" in just 2 days. I solo developed the game, including doing all of the <b>programming</b> for the game as well as the <b>UI/UX design</b>, <b>SFX</b>, general <b>game design</b> and <b>level design</b>, and some of the game's <b>Art</b>. 
 
@@ -440,7 +756,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://persomatey.itch.io/funem">
+					<A href="https://persomatey.itch.io/funem" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -449,17 +765,17 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/Funem">
+					<A href="https://github.com/Persomatey/Funem" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
 					</A>
 				</p>
-		  	</div>
+			</div>
 
-		  	<div class="columnside">
-		  		<p></p>
-		  	</div>
+			<div class="columnside">
+				<p></p>
+			</div>
 		</div>
 
 		<!-- End Funem -->
@@ -473,7 +789,14 @@
 
 			<div class="columngameimg">
 				<h5>Music-Chan</h5>
-		  		<img id="imageMus" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.jpg?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">
+				<div id="MusicMedia">
+		  			<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.jpg?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">
+		  		</div>
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+					<F><b>Buttons: </b></F>
+					<button id="ButMusic1" class="buttonMusicYeSel" onclick="ChangeImageMusicL();">Logo</button>
+					<button id="ButMusic2" class="buttonMusicUnSel" onclick="ChangeImageMusicVid();">Tutorial</button>
+				</div>
 		  	</div>
 
 		  	<div class="columngamedes">
@@ -490,7 +813,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/MusicBot">
+					<A href="https://github.com/Persomatey/MusicBot" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -508,6 +831,13 @@
 		<hr/>
 		<!-- Key Finder -->
 
+		<div id="keyModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="keySpan">&times;</span>
+				<img id="keyModalImg"style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/KeyLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -515,12 +845,15 @@
 
 			<div class="columngameimg">
 				<h5>Key Finder</h5>
-		  		<img id="imageKey" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyLogo.png">
+				<div id="KeyMedia">
+		  			<img style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyLogo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-		  			<F><b>Images: </b></F>
+		  			<F><b>Buttons: </b></F>
 		  			<button id="ButKey1" class="buttonKeyYeSel" onclick="ChangeImageKeyL();">Logo</button>
-		  			<button id="ButKey2" class="buttonKeyUnSel" onclick="ChangeImageKeyI1();">Gameplay 1</button>
-		  			<button id="ButKey3" class="buttonKeyUnSel" onclick="ChangeImageKeyI2();">Gameplay 2</button>
+		  			<button id="ButKey2" class="buttonKeyUnSel" onclick="ChangeImageKeyI1();">Screenshot 1</button>
+		  			<button id="ButKey3" class="buttonKeyUnSel" onclick="ChangeImageKeyI2();">Screenshot 2</button>
+		  			<button id="ButKey4" class="buttonKeyUnSel" onclick="ChangeImageKeyVid();">Gameplay</button>
 		  		</div>
 		  	</div>
 
@@ -538,7 +871,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://persomatey.itch.io/key-finder">
+					<A href="https://persomatey.itch.io/key-finder" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -547,7 +880,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/ProjectPraeter">
+					<A href="https://github.com/Persomatey/ProjectPraeter" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -564,6 +897,13 @@
 		<hr/>
 		<!-- Helation -->
 
+		<div id="helModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="helSpan">&times;</span>
+				<img id="helModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/HelLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -571,12 +911,15 @@
 
 			<div class="columngameimg">
 				<h5>Helation</h5>
-		  		<img id="imageHel" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">
+		  		<div id="HelMedia">
+		  			<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-		  			<F><b>Images: </b></F>
+		  			<F><b>Buttons: </b></F>
 		  			<button id="ButHel1" class="buttonHelYeSel" onclick="ChangeImageHelL();">Logo</button>
-		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();">Gameplay 1</button>
-		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();">Gameplay 2</button>
+		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();">Screenshot 1</button>
+		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();">Screenshot 2</button>
+		  			<button id="ButHel4" class="buttonHelUnSel" onclick="ChangeImageHelVid();">Trailer</button>
 		  		</div>
 		  	</div>
 
@@ -594,7 +937,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://persomatey.itch.io/helation">
+					<A href="https://persomatey.itch.io/helation" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -603,7 +946,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/Helation">
+					<A href="https://github.com/Persomatey/Helation" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -620,6 +963,13 @@
 		<hr/>
 		<!-- Rewound Running Remix -->
 
+		<div id="r3Modal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="r3Span">&times;</span>
+				<img id="r3ModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/R3Logo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -628,12 +978,15 @@
 			<div class="columngameimg">
 				<h5>Rewound Running Remix</h5>
 				<h6>(Brackeys 2020.2 "Rewind" Game Jam)</h6>
-		  		<img id="imageR3" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">
+		  		<div id="R3Media">
+		  			<img id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Images: </b></F>
+			  		<F><b>Buttons: </b></F>
 			  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
-			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Gameplay 1</button>
-			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Gameplay 2</button>
+			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Screenshot 1</button>
+			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Screenshot 2</button>
+			  		<button id="ButR34" class="buttonR3UnSel" onclick="ChangeImageR3Vid();">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -651,7 +1004,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://persomatey.itch.io/rewound-running-remix">
+					<A href="https://persomatey.itch.io/rewound-running-remix" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -660,7 +1013,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/ProjectRewindRhythm">
+					<A href="https://github.com/Persomatey/ProjectRewindRhythm" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -677,6 +1030,13 @@
 		<hr/>
 		<!-- Legend of Legacy -->
 
+		<div id="lofModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="lofSpan">&times;</span>
+				<img id="lofModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/LoFLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -685,12 +1045,15 @@
 			<div class="columngameimg">
 				<h5>Legend of Fantasy</h5>
 				<h6>(COC CSC Spring 2019)</h6>
-		  		<img  id="imageLoF" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">
+				<div id="LoFMedia">
+		  			<img id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Images: </b></F>
+			  		<F><b>Buttons: </b></F>
 			  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
-			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Gameplay 1</button>
-			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Gameplay 2</button>
+			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Screenshot 1</button>
+			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Screenshot 2</button>
+			  		<button id="ButLoF4" class="buttonLoFUnSel" onclick="ChangeImageLoFVid();">Gameplay</button>
 		  		</div>
 		  	</div>
 
@@ -708,7 +1071,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/legend-of-fantasy">
+					<A href="https://coc-computerscienceclub.itch.io/legend-of-fantasy" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -717,7 +1080,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/LegendOfFantasy">
+					<A href="https://github.com/Persomatey/LegendOfFantasy" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -734,6 +1097,13 @@
 		<hr/>
 		<!-- Space Shooter 9000 -->
 
+		<div id="ssModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="ssSpan">&times;</span>
+				<img id="ssModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/SSLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -742,12 +1112,15 @@
 			<div class="columngameimg">
 				<h5>Space Shooter 9000</h5>
 				<h6>(COC CSC Fall 2017)</h6>
-		  		<img  id="imageSS" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SS9000Logo.png">
+				<div id="SSMedia">
+		  			<img id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSLogo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Images: </b></F>
+			  		<F><b>Buttons: </b></F>
 			  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
-			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Gameplay 1</button>
-			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Gameplay 2</button>
+			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Screenshot 1</button>
+			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Screenshot 2</button>
+			  		<button id="ButSS4" class="buttonSSUnSel" onclick="ChangeImageSSVid();">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -765,7 +1138,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/space-shooter-9000">
+					<A href="https://persomatey.itch.io/space-shooter-9000" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -774,7 +1147,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/SpaceShooter9000">
+					<A href="https://github.com/Persomatey/SpaceShooter9000" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -790,6 +1163,13 @@
 		<!-- End Space Shooter 9000 -->
 		<hr/>
 		<!-- Factory -->
+		
+		<div id="factoryModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="factorySpan">&times;</span>
+				<img id="factoryModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FaLogo.png">
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="columnside">
@@ -799,12 +1179,15 @@
 			<div class="columngameimg">
 				<h5>Factory</h5>
 				<h6>(COC CSC Fall 2016)</h6>
-		  		<img  id="imageFa" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FactoryLogo.png">
+				<div id="FaMedia">
+		  			<img id="imageFactory" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaLogo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Images: </b></F>
+			  		<F><b>Buttons: </b></F>
 			  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
-			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Gameplay 1</button>
-			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Gameplay 2</button>
+			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Screenshot 1</button>
+			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Screenshot 2</button>
+			  		<button id="ButFa4" class="buttonFaUnSel" onclick="ChangeImageFaVid();">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -822,7 +1205,7 @@
 					</br>
 
 					<E><b>Link to download:</b></E>
-					<A href="https://coc-computerscienceclub.itch.io/factory">
+					<A href="https://coc-computerscienceclub.itch.io/factory" target="_blank">
 						<E>
 							<b class="hunterlink">PC (itch.io)</b>
 						</E>
@@ -831,7 +1214,7 @@
 					</br>
 
 					<E><b>Link to repository:</b></E>
-					<A href="https://github.com/Persomatey/Factory">
+					<A href="https://github.com/Persomatey/Factory" target="_blank">
 						<E>
 							<b class="hunterlink">GitHub</b>
 						</E>
@@ -847,6 +1230,13 @@
 		<hr/>
 		<!-- Black Ops 3 -->
 
+		<div id="bo3Modal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="bo3Span">&times;</span>
+				<img id="bo3ModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FunLogo.png">
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -855,12 +1245,15 @@
 			<div class="columngameimg">
 				<h5>Call of Duty: Black Ops III</h5>
 				<h6>(Activision | Blizzard)</h6>
-		  		<img  id="imageBO3" style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">
+				<div id="BO3Media">
+		  			<img id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">
+		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Images: </b></F>
+			  		<F><b>Buttons: </b></F>
 			  		<button id="ButBO31" class="buttonBO3YeSel" onclick="ChangeImageBO3L();">Logo</button>
-			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();">Gameplay 1</button>
-			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();">Gameplay 2</button>
+			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();">Screenshot 1</button>
+			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();">Screenshot 2</button>
+			  		<button id="ButBO34" class="buttonBO3UnSel" onclick="ChangeImageBO3Vid();">Trailer</button>
 			  	</div>
 		  	</div>
 
@@ -878,17 +1271,17 @@
 					</br>
 
 					<E><b>Links to download:</b></E>
-					<A href="https://store.steampowered.com/app/311210/Call_of_Duty_Black_Ops_III/">
+					<A href="https://store.steampowered.com/app/311210/Call_of_Duty_Black_Ops_III/" target="_blank">
 						<E>
 							<b class="hunterlink">PC (Steam)</b> <b>-</b>
 						</E>
 					</A>
-					<A href="https://www.playstation.com/en-us/games/call-of-duty-black-ops-iii/">
+					<A href="https://www.playstation.com/en-us/games/call-of-duty-black-ops-iii/" target="_blank">
 						<E>
 							<b class="hunterlink">Play Station 4</b> <b>-</b>
 						</E>
 					</A>
-					<A href="https://www.microsoft.com/en-us/p/Call-of-Duty-Black-Ops-III---Zombies-Deluxe/BPP4NB1CKGP1?ranMID=24542&ranEAID=jo%2fpTdthTuc&ranSiteID=jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw&epi=jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw&irgwc=1&OCID=AID2000142_aff_7593_1243925&tduid=(ir__nd1pryhm6gkfqmyykk0sohzibu2xu3qwjlo21nwt00)(7593)(1243925)(jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw)()&irclickid=_nd1pryhm6gkfqmyykk0sohzibu2xu3qwjlo21nwt00&rtc=1&activetab=pivot:overviewtab">
+					<A href="https://www.microsoft.com/en-us/p/Call-of-Duty-Black-Ops-III---Zombies-Deluxe/BPP4NB1CKGP1?ranMID=24542&ranEAID=jo%2fpTdthTuc&ranSiteID=jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw&epi=jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw&irgwc=1&OCID=AID2000142_aff_7593_1243925&tduid=(ir__nd1pryhm6gkfqmyykk0sohzibu2xu3qwjlo21nwt00)(7593)(1243925)(jo_pTdthTuc-ncFA58vKoVP.5A6gscZ1Sw)()&irclickid=_nd1pryhm6gkfqmyykk0sohzibu2xu3qwjlo21nwt00&rtc=1&activetab=pivot:overviewtab" target="_blank">
 						<E>
 							<b class="hunterlink">XBox One</b>
 						</E>
