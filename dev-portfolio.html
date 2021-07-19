@@ -7,6 +7,29 @@
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script>
 
+			/* Crypto Alert Bot Functions */
+
+			function ChangeImageCryL()
+			{
+				document.getElementById("CryMedia").innerHTML = '<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/CryptoBotLogoBot.png">'; 
+
+				document.getElementById("ButCry1").className = "buttonCryYeSel";
+
+				document.getElementById("ButCry2").className = "buttonCryUnSel";
+
+				return false;
+			}
+			function ChangeImageCryVid()
+			{
+				document.getElementById("CryMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/4t32sicjFYI" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+
+				document.getElementById("ButCry1").className = "buttonCryUnSel";
+
+				document.getElementById("ButCry2").className = "buttonCryYeSel";
+
+				return false;
+			}
+
 			/* Funem Functions */
 
 			function OpenFunemModal()
@@ -713,6 +736,56 @@
 
 		<!-- Portfolio Unique -->
 
+		<!-- Crypto Alert Bot -->
+
+		<div class="row">
+			<div class="columnside">
+				<p></p>
+			</div>
+
+			<div class="columngameimg">
+				<h5>Crypto Alert Bot</h5>
+				<div id="CryMedia">
+		  			<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/CryptoBotLogoBot.png">
+		  		</div>
+		  		<div style="display: flex; justify-content: center; align-items: center;">
+					<F><b>Buttons: </b></F>
+					<button id="ButCry1" class="buttonCryYeSel" onclick="ChangeImageCryL();">Logo</button>
+					<button id="ButCry2" class="buttonCryUnSel" onclick="ChangeImageCryVid();">Tutorial</button>
+				</div>
+		  	</div>
+
+		  	<div class="columngamedes">
+		  		<p style="padding-left: 25px; margin-top: 45px;">
+
+		  			A Discord bot that checks crypto values and alerts the user if a specified asset has reached a specificied value. Designed to be easy to impliment for any Discord moderator without requiring any prior coding knowledge.  A full breakdown of the instructions on how to get the code running for your Discord bot can be found in the belowmentioned repository. Pricing information is kept current using <A href="https://www.cryptonator.com/" target="_blank" style='font-family: Arial, Helvetica, sans-serif; color: grey;'>Cyrptonator</A>'s API's. 
+
+		  			</br>
+		  			</br>	
+
+					I solo developed this project, doing the <b>programming</b> in <b>Javascript</b> using the <b>Node.js</b> and <b>Discord.js</b> frameworks.
+
+					</br>
+					</br>
+
+					<E><b>Link to repository:</b></E>
+					<A href="https://github.com/Persomatey/CryptoAlertBot" target="_blank">
+						<E>
+							<b class="hunterlink">GitHub</b>
+						</E>
+					</A>
+				</p>
+		  	</div>
+
+		  	<div class="columnside">
+		  		<p></p>
+		  	</div>
+		</div>
+
+		<!-- End Crypto Alert Bot -->
+
+		<hr/>
+
 		<!-- Funem -->
 
 		<div id="funemModal" class="modal">
@@ -779,7 +852,9 @@
 		</div>
 
 		<!-- End Funem -->
+
 		<hr/>
+
 		<!-- MusicBot -->
 
 		<div class="row">

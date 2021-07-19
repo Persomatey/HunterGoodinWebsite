@@ -316,6 +316,34 @@ F
 }
 
 /* Custom Button Stuff */
+.buttonCryUnSel 
+{
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: grey; 
+	border-radius: 3px;
+}
+.buttonCryYeSel 
+{
+	border: none;
+	color: lightblue;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #000201; 
+	border-radius: 14px;
+}
 .buttonFunemUnSel 
 {
 	border: none;
