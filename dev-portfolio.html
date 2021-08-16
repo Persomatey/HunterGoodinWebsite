@@ -7,37 +7,22 @@
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script>
 
-			/* Crypto Alert Bot Functions */
-
-			function ChangeImageCryL()
+			function OpenModal(isURL, path)
 			{
-				document.getElementById("CryMedia").innerHTML = '<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/images/CryptoBotLogoBot.png">'; 
-
-				document.getElementById("ButCry1").className = "buttonCryYeSel";
-
-				document.getElementById("ButCry2").className = "buttonCryUnSel";
-
-				return false;
-			}
-			function ChangeImageCryVid()
-			{
-				document.getElementById("CryMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/4t32sicjFYI" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
-
-				document.getElementById("ButCry1").className = "buttonCryUnSel";
-
-				document.getElementById("ButCry2").className = "buttonCryYeSel";
-
-				return false;
-			}
-
-			/* Funem Functions */
-
-			function OpenFunemModal()
-			{
-				var modal = document.getElementById("funemModal");
-				document.getElementById("funemModalImg").src = imageFunem.src; 
+				var modal = document.getElementById("modal");
 				modal.style.display = "block";
-				var span = document.getElementById("funemSpan");
+				var span = document.getElementById("span");
+
+				
+				if(isURL)
+				{
+					document.getElementById("modalID").innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/` + path + `" frameborder="0" allowfullscreen="allowfullscreen"></iframe>`;
+				}
+				else
+				{
+					document.getElementById("modalID").innerHTML = `<img style="width:100%; height:100%; object-fit:contain; margin:auto;" src="` + path + `">`; 
+				}
+				
 
 				// When the user clicks on <span> (x), close the modal
 				span.onclick = function() 
@@ -54,9 +39,35 @@
 					}
 				}
 			}
+
+			/* Crypto Alert Bot Functions */
+
+			function ChangeImageCryL()
+			{
+				document.getElementById("CryMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/images/CryptoBotLogoBot.png">`; 
+
+				document.getElementById("ButCry1").className = "buttonCryYeSel";
+
+				document.getElementById("ButCry2").className = "buttonCryUnSel";
+
+				return false;
+			}
+			function ChangeImageCryVid()
+			{
+				document.getElementById("CryMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
+
+				document.getElementById("ButCry1").className = "buttonCryUnSel";
+
+				document.getElementById("ButCry2").className = "buttonCryYeSel";
+
+				return false;
+			}
+
+			/* Funem Functions */
+
 			function ChangeImageFunemL()
 			{
-				document.getElementById("FunemMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">'; 
+				document.getElementById("FunemMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunLogo.png">`; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemYeSel";
 
@@ -70,7 +81,7 @@
 			}
 			function ChangeImageFunemI1()
 			{
-				document.getElementById("FunemMedia").innerHTML = '<input type="image" id="imageFunem" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunGameplay1.png" onclick="OpenFunemModal();">'; 
+				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunGameplay1.png" onclick="OpenModal(false, 'images/devphotos/FunGameplay1.png');">`; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
 
@@ -84,7 +95,7 @@
 			}
 			function ChangeImageFunemI2()
 			{
-				document.getElementById("FunemMedia").innerHTML = '<input type="image" id="imageFunem" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunGameplay2.png" onclick="OpenFunemModal();">'; 
+				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunGameplay2.png" onclick="OpenModal(false, 'images/devphotos/FunGameplay2.png');">`; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
 
@@ -98,7 +109,7 @@
 			}
 			function ChangeImageFunemVid()
 			{
-				document.getElementById("FunemMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/QUR4Pki2UoU" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
 				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
 
@@ -115,7 +126,7 @@
 
 			function ChangeImageMusicL()
 			{
-				document.getElementById("MusicMedia").innerHTML = '<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.png?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">'; 
+				document.getElementById("MusicMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.png?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">`; 
 
 				document.getElementById("ButMusic1").className = "buttonMusicYeSel";
 
@@ -125,7 +136,7 @@
 			}
 			function ChangeImageMusicVid()
 			{
-				document.getElementById("MusicMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 112px; padding-bottom: 110px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/4t32sicjFYI" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("MusicMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
 
 				document.getElementById("ButMusic1").className = "buttonMusicUnSel";
 
@@ -136,31 +147,9 @@
 
 			/* Key Finder Functions */
 
-			function OpenKeyModal()
-			{
-				var modal = document.getElementById("keyModal");
-				document.getElementById("keyModalImg").src = imageKey.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("keySpan");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageKeyL()
 			{
-				document.getElementById("KeyMedia").innerHTML = '<img style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyLogo.png">'; 
+				document.getElementById("KeyMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/KeyLogo.png">`; 
 
 				document.getElementById("ButKey1").className = "buttonKeyYeSel";
 
@@ -174,7 +163,7 @@
 			}
 			function ChangeImageKeyI1()
 			{
-				document.getElementById("KeyMedia").innerHTML = '<input type="image" id="imageKey" style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay1.png" onclick="OpenKeyModal();">'; 
+				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay1.png" onclick="OpenModal(false, 'images/devphotos/KeyGameplay1.png');">`; 
 
 				document.getElementById("ButKey1").className = "buttonKeyUnSel";
 
@@ -188,7 +177,7 @@
 			}
 			function ChangeImageKeyI2()
 			{
-				document.getElementById("KeyMedia").innerHTML = '<input type="image" id="imageKey" style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay2.png" onclick="OpenKeyModal();">'; 
+				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay2.png" onclick="OpenModal(false, 'images/devphotos/KeyGameplay2.png');">`; 
 
 				document.getElementById("ButKey1").className = "buttonKeyUnSel";
 
@@ -202,7 +191,7 @@
 			}
 			function ChangeImageKeyVid()
 			{
-				document.getElementById("KeyMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 76px; padding-bottom: 67px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/w260kcveYuc" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/KeyThumb.png" onclick="OpenModal(true, 'w260kcveYuc');">`; 
 
 				document.getElementById("ButKey1").className = "buttonKeyUnSel";
 
@@ -217,31 +206,9 @@
 
 			/* Helation Functions */
 
-			function OpenHelModal()
-			{
-				var modal = document.getElementById("helModal");
-				document.getElementById("helModalImg").src = imageHel.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("helSpan");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageHelL()
 			{
-				document.getElementById("HelMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">'; 
+				document.getElementById("HelMedia").innerHTML = `<img style="width:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/HelLogo.png">`; 
 
 				document.getElementById("ButHel1").className = "buttonHelYeSel";
 
@@ -255,7 +222,7 @@
 			}
 			function ChangeImageHelI1()
 			{
-				document.getElementById("HelMedia").innerHTML = '<input type="image" id="imageHel" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay1.png" onclick="OpenHelModal();">'; 
+				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay1.png" onclick="OpenModal(false, 'images/devphotos/HelGameplay1.png');">`; 
 
 				document.getElementById("ButHel1").className = "buttonHelUnSel";
 
@@ -269,7 +236,7 @@
 			}
 			function ChangeImageHelI2()
 			{
-				document.getElementById("HelMedia").innerHTML = '<input type="image" id="imageHel" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay2.png" onclick="OpenHelModal();">'; 
+				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay2.png" onclick="OpenModal(false, 'images/devphotos/HelGameplay2.png');">`; 
 
 				document.getElementById("ButHel1").className = "buttonHelUnSel";
 
@@ -283,7 +250,7 @@
 			}
 			function ChangeImageHelVid()
 			{
-				document.getElementById("HelMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 83px; padding-bottom: 76px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/SosAngzSoqQ" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/HelThumb.png" onclick="OpenModal(true, 'SosAngzSoqQ');">`; 
 
 				document.getElementById("ButHel1").className = "buttonHelUnSel";
 
@@ -298,31 +265,9 @@
 
 			/* Rewound Running Remix Functions */
 
-			function OpenR3Modal()
-			{
-				var modal = document.getElementById("r3Modal");
-				document.getElementById("r3ModalImg").src = imageR3.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("r3Span");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageR3L()
 			{
-				document.getElementById("R3Media").innerHTML = '<img style="width: 278px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">'; 
+				document.getElementById("R3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/R3Logo.png">`; 
 
 				document.getElementById("ButR31").className = "buttonR3YeSel";
 
@@ -336,7 +281,7 @@
 			}
 			function ChangeImageR3I1()
 			{
-				document.getElementById("R3Media").innerHTML = '<input type="image" id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay1.png" onclick="OpenR3Modal();">'; 
+				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay1.png" onclick="OpenModal(false, 'images/devphotos/R3Gameplay1.png');">`; 
 
 				document.getElementById("ButR31").className = "buttonR3UnSel";
 
@@ -350,7 +295,7 @@
 			}
 			function ChangeImageR3I2()
 			{
-				document.getElementById("R3Media").innerHTML = '<input type="image" id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay2.png" onclick="OpenR3Modal();">'; 
+				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay2.png" onclick="OpenModal(false, 'images/devphotos/R3Gameplay2.png');">`; 
 
 				document.getElementById("ButR31").className = "buttonR3UnSel";
 
@@ -364,7 +309,7 @@
 			}
 			function ChangeImageR3Vid()
 			{
-				document.getElementById("R3Media").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 49px; padding-bottom: 41px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/2l0JYAdxMpk" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/R3Thumb.png" onclick="OpenModal(true, '2l0JYAdxMpk');">`; 
 
 				document.getElementById("ButR31").className = "buttonR3UnSel";
 
@@ -379,31 +324,9 @@
 
 			/* Legend of Fantasy Functions */
 
-			function OpenLoFModal()
-			{
-				var modal = document.getElementById("lofModal");
-				document.getElementById("lofModalImg").src = imageLoF.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("lofSpan");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageLoFL()
 			{
-				document.getElementById("LoFMedia").innerHTML = '<img style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">'; 
+				document.getElementById("LoFMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/LoFLogo.png">`; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFYeSel";
 
@@ -417,7 +340,7 @@
 			}
 			function ChangeImageLoFI1()
 			{
-				document.getElementById("LoFMedia").innerHTML = '<input type="image" id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay1.png" onclick="OpenLoFModal();">'; 
+				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay1.png" onclick="OpenModal(false, 'images/devphotos/LoFGameplay1.png');">`; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
 
@@ -431,7 +354,7 @@
 			}
 			function ChangeImageLoFI2()
 			{
-				document.getElementById("LoFMedia").innerHTML = '<input type="image" id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay2.png" onclick="OpenLoFModal();">'; 
+				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay2.png" onclick="OpenModal(false, 'images/devphotos/LoFGameplay2.png');">`; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
 
@@ -445,7 +368,7 @@
 			}
 			function ChangeImageLoFVid()
 			{
-				document.getElementById("LoFMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 24px; padding-bottom: 17px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/DwehfYrfE_k" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/LoFThumb.png" onclick="OpenModal(true, 'DwehfYrfE_k');">`; 
 
 				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
 
@@ -460,31 +383,9 @@
 
 			/* Space Shooter 9000 Functions */
 
-			function OpenSSModal()
-			{
-				var modal = document.getElementById("ssModal");
-				document.getElementById("ssModalImg").src = imageSS.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("ssSpan");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageSSL()
 			{
-				document.getElementById("SSMedia").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSLogo.png">'; 
+				document.getElementById("SSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/SSLogo.png">`; 
 
 				document.getElementById("ButSS1").className = "buttonSSYeSel";
 
@@ -498,7 +399,7 @@
 			}
 			function ChangeImageSSI1()
 			{
-				document.getElementById("SSMedia").innerHTML = '<input type="image" id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay1.png" onclick="OpenSSModal();">'; 
+				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay1.png" onclick="OpenModal(false, 'images/devphotos/SSGameplay1.png');">`; 
 
 				document.getElementById("ButSS1").className = "buttonSSUnSel";
 
@@ -512,8 +413,7 @@
 			}
 			function ChangeImageSSI2()
 			{
-				document.getElementById("SSMedia").innerHTML = '<input type="image" id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay2.png" onclick="OpenSSModal();">'; 
-
+				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay2.png" onclick="OpenModal(false, 'images/devphotos/SSGameplay2.png');">`; 
 				document.getElementById("ButSS1").className = "buttonSSUnSel";
 
 				document.getElementById("ButSS2").className = "buttonSSUnSel";
@@ -526,7 +426,7 @@
 			}
 			function ChangeImageSSVid()
 			{
-				document.getElementById("SSMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 85px; padding-bottom: 74px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/Z_3XtojWlSA" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/SSThumb.png" onclick="OpenModal(true, 'Z_3XtojWlSA');">`; 
 
 				document.getElementById("ButSS1").className = "buttonSSUnSel";
 
@@ -541,32 +441,9 @@
 
 			/* Factory Functions */
 
-			function OpenFaModal()
-			{
-				var modal = document.getElementById("factoryModal");
-				document.getElementById("factoryModalImg").src = imageFa.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("factorySpan");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
-
 			function ChangeImageFaL()
 			{
-				document.getElementById("FaMedia").innerHTML = '<img style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaLogo.png">'; 
+				document.getElementById("FaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FaLogo.png">`; 
 
 				document.getElementById("ButFa1").className = "buttonFaYeSel";
 
@@ -580,7 +457,7 @@
 			}
 			function ChangeImageFaI1()
 			{
-				document.getElementById("FaMedia").innerHTML = '<input type="image" id="imageFa" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay1.png" onclick="OpenFaModal();">'; 
+				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay1.png" onclick="OpenModal(false, 'images/devphotos/FaGameplay1.png');">`; 
 
 				document.getElementById("ButFa1").className = "buttonFaUnSel";
 
@@ -594,7 +471,7 @@
 			}
 			function ChangeImageFaI2()
 			{
-				document.getElementById("FaMedia").innerHTML = '<input type="image" id="imageFa" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay2.png" onclick="OpenFaModal();">'; 
+				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay2.png" onclick="OpenModal(false, 'images/devphotos/FaGameplay2.png');">`; 
 
 				document.getElementById("ButFa1").className = "buttonFaUnSel";
 
@@ -608,7 +485,7 @@
 			}
 			function ChangeImageFaVid()
 			{
-				document.getElementById("FaMedia").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 48px; padding-bottom: 42px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/ESyvW9RUt9A" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/FaThumb.png" onclick="OpenModal(true, 'ESyvW9RUt9A');">`; 
 
 				document.getElementById("ButFa1").className = "buttonFaUnSel";
 
@@ -623,31 +500,9 @@
 
 			/* Black Ops III Functions */
 
-			function OpenBO3Modal()
-			{
-				var modal = document.getElementById("bo3Modal");
-				document.getElementById("bo3ModalImg").src = imageBO3.src; 
-				modal.style.display = "block";
-				var span = document.getElementById("bo3Span");
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
-			}
 			function ChangeImageBO3L()
 			{
-				document.getElementById("BO3Media").innerHTML = '<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">'; 
+				document.getElementById("BO3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/BO3Logo.png">`; 
 
 				document.getElementById("ButBO31").className = "buttonBO3YeSel";
 
@@ -661,7 +516,7 @@
 			}
 			function ChangeImageBO3I1()
 			{
-				document.getElementById("BO3Media").innerHTML = '<input type="image" id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay1.png" onclick="OpenBO3Modal();">'; 
+				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay1.png" onclick="OpenModal(false, 'images/devphotos/BO3Gameplay1.png');">`; 
 
 				document.getElementById("ButBO31").className = "buttonBO3UnSel";
 
@@ -675,7 +530,7 @@
 			}
 			function ChangeImageBO3I2()
 			{
-				document.getElementById("BO3Media").innerHTML = '<input type="image" id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay2.png" onclick="OpenBO3Modal();">'; 
+				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay2.png" onclick="OpenModal(false, 'images/devphotos/BO3Gameplay2.png');">`; 
 
 				document.getElementById("ButBO31").className = "buttonBO3UnSel";
 
@@ -689,7 +544,7 @@
 			}
 			function ChangeImageBO3Vid()
 			{
-				document.getElementById("BO3Media").innerHTML = '<div style="width: 347px; text-align: center; object-fit: contain; margin-left: auto; margin-right: auto; padding-top: 85px; padding-bottom: 74px;"><iframe width=347 height=195 src="https://www.youtube.com/embed/GM2m9LG35N0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/BO3Thumb.png" onclick="OpenModal(true, 'GM2m9LG35N0');">`; 
 
 				document.getElementById("ButBO31").className = "buttonBO3UnSel";
 
@@ -706,6 +561,21 @@
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style> 
+		.box 
+		{
+			position: relative;
+			width: 50%;
+		}
+		.box:before 
+		{
+			content: "";
+			float: left;
+			padding-top: 100%;
+		}
+		.content 
+		{
+			float: left;
+		}
 	</style>
 	<body style="background-color:whitesmoke;">
 		<div class="row">
@@ -714,13 +584,15 @@
 			</div>
 
 			<div class="column">
-				<h1>Hunter Goodin</h1>
-				<h2>Software Engineer</h2>
+				<A href="dev.html">
+					<h1 style="font-size:2.6vw;">Hunter Goodin</h1>
+					<h2 style="font-size:1.1vw;">Software Engineer</h2>
+				</A>
 			</div>
 
 			<div class="column">
 				<h3>
-					<A href="dev.html" ><D>About</D></A>
+					<A href="dev.html"><D>About</D></A>
 					<A href="dev-portfolio.html"><C>Portfolio</C></A>
 					<A href="dev-contact.html"><D>Contact</D></A>
 					<!-- <A href="dev-other.html"><D>Other</D></A> -->
@@ -736,6 +608,14 @@
 
 		<!-- Portfolio Unique -->
 
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="span">&times;</span>
+				<div id="modalID" style="width:90%; height:90%; padding-top: 2.8%; object-fit: contain; margin: auto">
+				</div>
+			</div>
+		</div>
+
 		<!-- Crypto Alert Bot -->
 
 		<div class="row">
@@ -744,19 +624,19 @@
 			</div>
 
 			<div class="columngameimg">
-				<h5>Crypto Alert Bot</h5>
+				<h5 style="font-size:1.8vw;">Crypto Alert Bot</h5>
 				<div id="CryMedia">
-		  			<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/images/CryptoBotLogoBot.png">
+		  			<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/images/CryptoBotLogoBot.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-					<F><b>Buttons: </b></F>
-					<button id="ButCry1" class="buttonCryYeSel" onclick="ChangeImageCryL();">Logo</button>
-					<button id="ButCry2" class="buttonCryUnSel" onclick="ChangeImageCryVid();">Tutorial</button>
+					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+					<button id="ButCry1" class="buttonCryYeSel" onclick="ChangeImageCryL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButCry2" class="buttonCryUnSel" onclick="ChangeImageCryVid();" style="font-size:0.9vw;">Tutorial</button>
 				</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A Discord bot code repository that checks crypto values and alerts the user if a specified asset has reached a specificied value. Designed to be easy to impliment for any Discord moderator without requiring any prior coding knowledge. A full breakdown of the instructions on how to get the code running for your Discord bot can be found in the belowmentioned repository. Pricing information is kept current using <A href="https://www.cryptonator.com/" target="_blank" style='font-family: Arial, Helvetica, sans-serif; color: grey;'>Cyrptonator</A>'s API's. 
 
@@ -788,35 +668,28 @@
 
 		<!-- Funem -->
 
-		<div id="funemModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="funemSpan">&times;</span>
-				<img id="funemModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FunLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Funem</h5>
-				<h6>(GMTK 2021 "Joined Together" Game Jam)</h6>
+				<h5 style="font-size:1.8vw;">Funem</h5>
+				<h6 style="font-size:0.9vw;">(GMTK 2021 "Joined Together" Game Jam)</h6>
 				<div id="FunemMedia">
-					<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FunLogo.png">
+					<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunLogo.png">
 				</div>
 				<div style="display: flex; justify-content: center; align-items: center;">
-					<F><b>Buttons: </b></F>
-					<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();">Logo</button>
-					<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();">Screenshot 1</button>
-					<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();">Screenshot 2</button>
-					<button id="ButFunem4" class="buttonFunemUnSel" onclick="ChangeImageFunemVid();">Gameplay</button>
+					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+					<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButFunem4" class="buttonFunemUnSel" onclick="ChangeImageFunemVid();" style="font-size:0.9vw;">Gameplay</button>
 				</div>
 			</div>
 
 			<div class="columngamedes">
-				<p style="padding-left: 25px; margin-top: 45px;">
+				<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 					A 2D top-down Zelda-like game where you play as two characters, Wasd and Arro making their way through a puzzle dungeon. Only caveat, Wasd and Arro are joined together by a rope! Fight your way through rats, puzzle your way through rooms, and use spacial reasoning to beat every level.  
 
@@ -863,19 +736,19 @@
 			</div>
 
 			<div class="columngameimg">
-				<h5>Music-Chan</h5>
+				<h5 style="font-size:1.8vw;">Music-Chan</h5>
 				<div id="MusicMedia">
-		  			<img style="width: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.png?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">
+		  			<img style="width:20vw; height:20vw;; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.png?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-					<F><b>Buttons: </b></F>
-					<button id="ButMusic1" class="buttonMusicYeSel" onclick="ChangeImageMusicL();">Logo</button>
-					<button id="ButMusic2" class="buttonMusicUnSel" onclick="ChangeImageMusicVid();">Tutorial</button>
+					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+					<button id="ButMusic1" class="buttonMusicYeSel" onclick="ChangeImageMusicL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButMusic2" class="buttonMusicUnSel" onclick="ChangeImageMusicVid();" style="font-size:0.9vw;">Tutorial</button>
 				</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A music focused Discord bot code repository that, when linked with a Discord Bot using Discord's Developer Portal, will play a given music stream on runtime in a given Discord server's voice channel. Designed to be easy to impliment for any Discord moderator without requiring any prior coding knowledge.  A full breakdown of the instructions on how to get the code running for your Discord bot can be found in the belowmentioned repository. 
 
@@ -906,34 +779,27 @@
 		<hr/>
 		<!-- Key Finder -->
 
-		<div id="keyModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="keySpan">&times;</span>
-				<img id="keyModalImg"style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/KeyLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Key Finder</h5>
+				<h5 style="font-size:1.8vw;">Key Finder</h5>
 				<div id="KeyMedia">
-		  			<img style="width: 347px; height: 331px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyLogo.png">
+		  			<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/KeyLogo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-		  			<F><b>Buttons: </b></F>
-		  			<button id="ButKey1" class="buttonKeyYeSel" onclick="ChangeImageKeyL();">Logo</button>
-		  			<button id="ButKey2" class="buttonKeyUnSel" onclick="ChangeImageKeyI1();">Screenshot 1</button>
-		  			<button id="ButKey3" class="buttonKeyUnSel" onclick="ChangeImageKeyI2();">Screenshot 2</button>
-		  			<button id="ButKey4" class="buttonKeyUnSel" onclick="ChangeImageKeyVid();">Gameplay</button>
+		  			<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+		  			<button id="ButKey1" class="buttonKeyYeSel" onclick="ChangeImageKeyL();" style="font-size:0.9vw;">Logo</button>
+		  			<button id="ButKey2" class="buttonKeyUnSel" onclick="ChangeImageKeyI1();" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButKey3" class="buttonKeyUnSel" onclick="ChangeImageKeyI2();" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButKey4" class="buttonKeyUnSel" onclick="ChangeImageKeyVid();" style="font-size:0.9vw;">Gameplay</button>
 		  		</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A 2D Action Platformer where you must fight your way through enemies to obtain the keys to beat the level. 
 
@@ -972,34 +838,27 @@
 		<hr/>
 		<!-- Helation -->
 
-		<div id="helModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="helSpan">&times;</span>
-				<img id="helModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/HelLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Helation</h5>
+				<h5 style="font-size:1.8vw;">Helation</h5>
 		  		<div id="HelMedia">
-		  			<img style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelLogo.png">
+		  			<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/HelLogo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-		  			<F><b>Buttons: </b></F>
-		  			<button id="ButHel1" class="buttonHelYeSel" onclick="ChangeImageHelL();">Logo</button>
-		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();">Screenshot 1</button>
-		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();">Screenshot 2</button>
-		  			<button id="ButHel4" class="buttonHelUnSel" onclick="ChangeImageHelVid();">Trailer</button>
+		  			<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+		  			<button id="ButHel1" class="buttonHelYeSel" onclick="ChangeImageHelL();" style="font-size:0.9vw;" style="font-size:0.9vw;">Logo</button>
+		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButHel4" class="buttonHelUnSel" onclick="ChangeImageHelVid();" style="font-size:0.9vw;" style="font-size:0.9vw;">Trailer</button>
 		  		</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			An Arena FPS game inspired by classic games in the genre such as Halo, Doom, and Portal. A tutorial mode where you make your way through the training facility while learning the ropes of the game. An arena mode where you fight your way through troves of enemies to try to beat your high score. 
 
@@ -1038,35 +897,28 @@
 		<hr/>
 		<!-- Rewound Running Remix -->
 
-		<div id="r3Modal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="r3Span">&times;</span>
-				<img id="r3ModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/R3Logo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Rewound Running Remix</h5>
-				<h6>(Brackeys 2020.2 "Rewind" Game Jam)</h6>
+				<h5 style="font-size:1.8vw;">Rewound Running Remix</h5>
+				<h6 style="font-size:0.9vw;">(Brackeys 2020.2 "Rewind" Game Jam)</h6>
 		  		<div id="R3Media">
-		  			<img id="imageR3" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Logo.png">
+		  			<img id="imageR3" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/R3Logo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Buttons: </b></F>
-			  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();">Logo</button>
-			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();">Screenshot 1</button>
-			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();">Screenshot 2</button>
-			  		<button id="ButR34" class="buttonR3UnSel" onclick="ChangeImageR3Vid();">Gameplay</button>
+			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+			  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButR34" class="buttonR3UnSel" onclick="ChangeImageR3Vid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			This game is a platforming auto-runner... in reverse!? The player must press the 'jump' button as the player would normally be jumping as the whole level rewinds to the very beginning in this rhythm game disguised as a 2D platformer. 
 
@@ -1105,35 +957,28 @@
 		<hr/>
 		<!-- Legend of Legacy -->
 
-		<div id="lofModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="lofSpan">&times;</span>
-				<img id="lofModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/LoFLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Legend of Fantasy</h5>
-				<h6>(COC CSC Spring 2019)</h6>
+				<h5 style="font-size:1.8vw;">Legend of Fantasy</h5>
+				<h6 style="font-size:0.9vw;">(COC CSC Spring 2019)</h6>
 				<div id="LoFMedia">
-		  			<img id="imageLoF" style="width: 347px; height: 229px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFLogo.png">
+		  			<img id="imageLoF" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/LoFLogo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Buttons: </b></F>
-			  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();">Logo</button>
-			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();">Screenshot 1</button>
-			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();">Screenshot 2</button>
-			  		<button id="ButLoF4" class="buttonLoFUnSel" onclick="ChangeImageLoFVid();">Gameplay</button>
+			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+			  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButLoF4" class="buttonLoFUnSel" onclick="ChangeImageLoFVid();" style="font-size:0.9vw;">Gameplay</button>
 		  		</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A top-down Zelda-like game with a fantasy theme. Fight your way through droves of villainous monsters such as orcs and mushrooms to make your way to the end to defeat the scourge of the Fantaswhere Forest, Orcutoryx. 
 
@@ -1172,35 +1017,28 @@
 		<hr/>
 		<!-- Space Shooter 9000 -->
 
-		<div id="ssModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="ssSpan">&times;</span>
-				<img id="ssModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/SSLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Space Shooter 9000</h5>
-				<h6>(COC CSC Fall 2017)</h6>
+				<h5 style="font-size:1.8vw;">Space Shooter 9000</h5>
+				<h6 style="font-size:0.9vw;">(COC CSC Fall 2017)</h6>
 				<div id="SSMedia">
-		  			<img id="imageSS" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSLogo.png">
+		  			<img id="imageSS" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/SSLogo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Buttons: </b></F>
-			  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();">Logo</button>
-			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();">Screenshot 1</button>
-			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();">Screenshot 2</button>
-			  		<button id="ButSS4" class="buttonSSUnSel" onclick="ChangeImageSSVid();">Gameplay</button>
+			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+			  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButSS4" class="buttonSSUnSel" onclick="ChangeImageSSVid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A side-scrolling space shooter arcade game with a low poly aesthetic. Battle through wave after wave of enemy ships as you plunge deep into enemy territory. 
 
@@ -1238,13 +1076,6 @@
 		<!-- End Space Shooter 9000 -->
 		<hr/>
 		<!-- Factory -->
-		
-		<div id="factoryModal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="factorySpan">&times;</span>
-				<img id="factoryModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FaLogo.png">
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="columnside">
@@ -1252,22 +1083,22 @@
 			</div>
 
 			<div class="columngameimg">
-				<h5>Factory</h5>
-				<h6>(COC CSC Fall 2016)</h6>
+				<h5 style="font-size:1.8vw;">Factory</h5>
+				<h6 style="font-size:0.9vw;">(COC CSC Fall 2016)</h6>
 				<div id="FaMedia">
-		  			<img id="imageFactory" style="width: 347px; height: 278px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaLogo.png">
+		  			<img id="imageFactory" style="width:20vw; height:20vw;; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FaLogo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
-			  		<F><b>Buttons: </b></F>
-			  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();">Logo</button>
-			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();">Screenshot 1</button>
-			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();">Screenshot 2</button>
-			  		<button id="ButFa4" class="buttonFaUnSel" onclick="ChangeImageFaVid();">Gameplay</button>
+			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
+			  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButFa4" class="buttonFaUnSel" onclick="ChangeImageFaVid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			A top-down shooter with a military theme. Grind your way through hoards of zombies and droves of drones as you fight your way to the large boss drone at the end of the level to recapture the factory! 
 
@@ -1305,35 +1136,28 @@
 		<hr/>
 		<!-- Black Ops 3 -->
 
-		<div id="bo3Modal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="bo3Span">&times;</span>
-				<img id="bo3ModalImg" style="width:90%; height:90%; padding-top: 2.5%; object-fit: contain; margin: auto" src="https://huntergoodin.com/images/devphotos/FunLogo.png">
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="columnside">
 				<p></p>
 			</div>
 
 			<div class="columngameimg">
-				<h5>Call of Duty: Black Ops III</h5>
-				<h6>(Activision | Blizzard)</h6>
+				<h5 style="font-size:1.8vw;">Call of Duty: Black Ops III</h5>
+				<h6 style="font-size:0.9vw;">(Activision | Blizzard)</h6>
 				<div id="BO3Media">
-		  			<img id="imageBO3" style="width: 347px; height: 347px; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Logo.png">
+		  			<img id="imageBO3" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/BO3Logo.png">
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F><b>Buttons: </b></F>
-			  		<button id="ButBO31" class="buttonBO3YeSel" onclick="ChangeImageBO3L();">Logo</button>
-			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();">Screenshot 1</button>
-			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();">Screenshot 2</button>
-			  		<button id="ButBO34" class="buttonBO3UnSel" onclick="ChangeImageBO3Vid();">Trailer</button>
+			  		<button id="ButBO31" class="buttonBO3YeSel" onclick="ChangeImageBO3L();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButBO34" class="buttonBO3UnSel" onclick="ChangeImageBO3Vid();" style="font-size:0.9vw;">Trailer</button>
 			  	</div>
 		  	</div>
 
 		  	<div class="columngamedes">
-		  		<p style="padding-left: 25px; margin-top: 45px;">
+		  		<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
 
 		  			Military-styled AAA Sci-Fi FPS. The game's multiplayer features different heroes, each with their own abilities. 
 

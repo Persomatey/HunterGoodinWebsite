@@ -15,8 +15,10 @@
 			</div>
 
 			<div class="column">
-				<h1>Hunter Goodin</h1>
-				<h2>Software Engineer</h2>
+				<A href="dev.html">
+					<h1>Hunter Goodin</h1>
+					<h2>Software Engineer</h2>
+				</A>
 			</div>
 
 			<div class="column">
@@ -45,9 +47,9 @@
 
 		<!-- Email form -->
 		<div style="text-align: left; padding-top: 1%; font-size: 20px">
-			<h5 style="font-size: 45px;">Contact Me</h5>
+			<h5 style="font-size: 2.35vw;">Contact Me</h5>
 
-			<div style="text-align: center; font-size: 18px; color: grey;">
+			<div style="text-align: center; font-size: 1vw; color: grey;">
 				If you would like to infer about work or get a resume, feel free to shoot me an email.
 			</div>
 
@@ -55,23 +57,21 @@
 
 			<div id="contact-form" class="container">
 				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-					First & Last Name:
+					<div style="font-size:1.2vw">First & Last Name:</div>
+					<input type="text" name="entry.246933771" id="entry.246933771" style="font-size:0.8vw;">
 					<br>
-					<input type="text" name="entry.246933771" id="entry.246933771">
+					<div style="font-size:1.2vw">Email:</div>
+					<input type="text" name="entry.1580348872" id="entry.1580348872" style="font-size:0.8vw;">
 					<br>
-					Email:
-					<br>
-					<input type="text" name="entry.1580348872" id="entry.1580348872">
-					<br>
-					Message:
-					<br>
-					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px; min-height:75px;"></textarea>
+					<div style="font-size:1.2vw">Message:</div>
+					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px; min-height:75px; font-size:0.8vw;"></textarea>
 					<br>
 					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
 					<input id="submitBtn" type="submit" value="Send" onclick="checkRecaptcha()">
 					<text id="feedback"></text>
 				</form>
+				
 				</br>
 
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
