@@ -8,20 +8,14 @@
 	<script>
 		function myFunction() 
 		{
-			//var copyText = document.getElementById("myInput");
-			var copyText = "huntercgoodin@gmail.com";
-			//copyText.select();
-			//copyText.setSelectionRange(0, 99999);
-			document.execCommand("copy");
+			navigator.clipboard.writeText("huntercgoodin@gmail.com");
 
-			var tooltip = document.getElementById("myTooltip");
-			tooltip.innerHTML = "Copied email address";
+			var tooltip = document.getElementById("myTooltip").innerHTML = "Copied email address";
 		}
 
 		function outFunc() 
 		{
-			var tooltip = document.getElementById("myTooltip");
-			tooltip.innerHTML = "Copy to clipboard";
+			var tooltip = document.getElementById("myTooltip").innerHTML = "Copy to clipboard";
 		}
 	</script>
 	<style> 
@@ -115,13 +109,13 @@
 			</div>
 
 			<div class="column">
-		  		<img style="height: 100%; width: 100%; object-fit: contain" src="images/devphotos/IMG_5414-2.jpg">
+		  		<img style="height:100%; width:100%; object-fit:contain;" src="images/devphotos/IMG_5414-2.jpg">
 		  	</div>
 
 		  	<div class="column">
 		  		<h4 style="font-size:1.4vw; text-align:center; padding-bottom:0px">About</h4>
 				<hr />
-				<p style="color:dimgrey; font-size:0.85vw; padding-left:1.25vw;">
+				<p style="color:dimgrey; font-size:0.85vw; padding-left:2vw;">
 		  			Software engineer based in Santa Clarita, CA. Working professionally in the games industry since 2015, I have worked in nearly all aspects of the industry from <b>programming</b>, to <b>directing</b>, <b>level design</b>, <b>3D modeling & animation</b>, and <b>quality assurance</b>.
 		  			</br>
 		  			</br>
