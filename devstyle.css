@@ -361,7 +361,7 @@ F
 .buttonFunemYeSel 
 {
 	border: none;
-	color: #dddded;
+	color: #E3C399;
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
@@ -369,7 +369,7 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: #222323; 
+	background-color: #43434F; 
 	border-radius: 14px;
 }
 .buttonMusicUnSel 
@@ -501,7 +501,7 @@ F
 .buttonR3YeSel 
 {
 	border: none;
-	color: yellow;
+	color: #FFBEE6;
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
