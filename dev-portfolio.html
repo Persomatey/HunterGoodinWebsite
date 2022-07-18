@@ -13,13 +13,11 @@
 				//document.getElementById("TestTest").innerHTML = "hellowlrd";
 				//document.getElementById('TestTest').src = 'test.html';
 
-				var text = "test"; 
+				console.log("test 2"); 
 
 				fetch('test.html')
-				.then(
-					//text=> document.getElementById('TestTest').innerHTML = text
-					console.log(text)
-				);
+				.then(response=> response.text())
+  				.then(text=> document.getElementById('TestTest').innerHTML = text);
 			}
 		</script>
 
