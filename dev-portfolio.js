@@ -31,16 +31,6 @@ function OpenModal(isURL, path)
 	}
 }
 
-/* Include Projects */
-function LoadIncludedProjects()
-{
-	console.log("Test 5");
-
-	fetch('NewProject.html')
-	.then(response=> response.getElementById("project").text())
-	.then(text=> document.getElementById('NewProject').innerHTML = text);
-}
-
 /* Utility Functions */
 
 function UnselectAllButtons(proj, buttonCount)

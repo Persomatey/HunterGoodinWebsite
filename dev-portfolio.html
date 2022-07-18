@@ -5,6 +5,16 @@
 		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script type="text/javascript" src="dev-portfolio.js"></script>
+		<script type="text/javascript">
+			function LoadIncludedProjects()
+			{
+				console.log("Test 6");
+
+				fetch('NewProject.html')
+				.then(response=> response.getElementById("project").text())
+				.then(text=> document.getElementById('NewProject').innerHTML = text);
+			}
+		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
