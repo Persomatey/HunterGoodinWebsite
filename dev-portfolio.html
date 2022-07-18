@@ -5,23 +5,6 @@
 		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
 		<script type="text/javascript" src="dev-portfolio.js"></script>
-		<script type="text/javascript" src="html-include.js"></script>
-		<script>
-			function TestFunc()
-			{
-				console.log("loading HTML from test.html"); 
-				//document.getElementById("TestTest").innerHTML = "hellowlrd";
-				//document.getElementById('TestTest').src = 'test.html';
-
-				console.log("test 3"); 
-
-				fetch('test.html')
-				.then(response=> response.text())
-				.then(text => console.log(text))
-  				.then(text=> document.getElementById('TestTest').innerHTML = text);
-			}
-		</script>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
@@ -54,22 +37,8 @@
 		<hr/>
 
 		<!-- Portfolio Unique -->
-
-		<div id="modal" class="modal">
-			<div class="modal-content">
-				<span class="close" id="span">&times;</span>
-				<div id="modalID" style="width:90%; height:90%; padding-top: 2.8%; object-fit: contain; margin: auto">
-				</div>
-			</div>
-		</div>
-
-		<!-- NEW -->
 		
-		<div id="TestTest"></div>
-
-		<!-- End NEW -->
-
-		
+		<div id="NewProject"></div>
 
 		<!-- Crypto Alert Bot -->
 
