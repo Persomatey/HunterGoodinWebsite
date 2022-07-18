@@ -1,13 +1,12 @@
 <!doctype html>
 <html style="background-color:whitesmoke;">
-	<head>
-		<title>Hunter Goodin</title>
-		<link rel="stylesheet" type="text/css" href="devstyle.css">
-	</head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Hunter Goodin Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="devstyle.css">
+	<script type="text/javascript" src="dev-portfolio.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<style> 
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<body style="background-color:whitesmoke;">
 		<div class="row">
 			<div class="columnside">
@@ -26,7 +25,6 @@
 					<A href="dev.html"><D>About</D></A>
 					<A href="dev-portfolio.html"><D>Portfolio</D></A>
 					<A href="dev-contact.html"><C>Contact</C></A>
-					<!-- <A href="dev-other.html"><D>Other</D></A> -->
 				</h3>
 			</div>
 
@@ -38,12 +36,6 @@
 		<hr/>
 
 		<!-- Contact Unique -->
-
-		<!-- 
-			Goodle ReCaptcha Stuff 
-			Site Key: 6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5
-			Secret Key: 6LcWTuwaAAAAAHTQX6XzGc9bvfHfSnsFuA67FCjd
-		-->
 
 		<!-- Email form -->
 		<div style="text-align: left; padding-top: 1%; font-size: 20px">
@@ -57,18 +49,18 @@
 
 			<div id="contact-form" class="container">
 				<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfy_LuRKLzcoqqFz-wdRe-F2Ba-DAMEGFH5h67KX4A78xbvpQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-					<div style="font-size:1.2vw">First & Last Name:</div>
+					<div style="font-size:1vw">First & Last Name:</div>
 					<input type="text" name="entry.246933771" id="entry.246933771" style="font-size:0.8vw;">
 					<br>
-					<div style="font-size:1.2vw">Email:</div>
+					<div style="font-size:1vw">Your Email Address:</div>
 					<input type="text" name="entry.1580348872" id="entry.1580348872" style="font-size:0.8vw;">
 					<br>
-					<div style="font-size:1.2vw">Message:</div>
+					<div style="font-size:1vw">Message:</div>
 					<textarea id="subject" name="entry.1579448101" id="entry.1579448101" style="height:200px; min-height:75px; font-size:0.8vw;"></textarea>
 					<br>
 					<div class="g-recaptcha" data-sitekey="6LcWTuwaAAAAAL6r1tply0OnJohzQR8Ko3fYuNl5"></div>
 					<br>
-					<input id="submitBtn" type="submit" value="Send" onclick="checkRecaptcha()">
+					<input id="submitBtn" type="submit" value="Send" onclick="CheckRecaptcha()">
 					<text id="feedback"></text>
 				</form>
 				
@@ -77,73 +69,5 @@
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="AfterSend()"></iframe>
 			</div>
 		</div>
-
-		<script type="text/javascript">
-
-			var boolCap = false; 
-
-			function checkRecaptcha() 
-			{
-				var response = grecaptcha.getResponse();
-				if(response.length == 0) 
-				{
-					boolCap = false; 
-				}
-				else
-				{
-					boolCap = true; 
-				}
-			}
-
-			function AfterSend()
-			{
-				var error = ""; 
-				var name = " 'Name' ";
-				var email = " 'Email' "; 
-				var message = " 'Message' "; 
-				var cap = " 'ReCaptcha' "; 
-				var count = 0; 
-
-				if(document.forms["gform"]["entry.246933771"].value == "")
-				{
-					error = error + name; 
-					count++; 
-				}
-
-				if(document.forms["gform"]["entry.1580348872"].value == "")
-				{
-					error = error + email; 
-					count++;
-				}
-
-				if(document.forms["gform"]["entry.1579448101"].value == "")
-				{
-					error = error + message; 
-					count++;
-				}
-
-				if(boolCap == false)
-				{
-					error = error + cap; 
-					count ++; 
-				}
-
-				if(count == 0)
-				{
-					document.getElementById("gform").reset();
-					document.getElementById("feedback").innerHTML = "<font color='#45a049'><b>Message Sent!</b></font>";
-				}
-				else if(count == 1)
-				{
-					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " is a required field </b></font>";
-				}
-				else if(count > 1)
-				{
-					document.getElementById("feedback").innerHTML = "<font color='#ff4242'><b> " + error + " are required fields </b></font>";
-				}
-			}
-			
-		</script>
-
 	</body>
 </html>

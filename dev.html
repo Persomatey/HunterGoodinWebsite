@@ -1,76 +1,11 @@
 <!doctype html>
 <html style="background-color:whitesmoke;">
-	<head>
-		<title>Hunter Goodin</title>
-		<link rel="stylesheet" type="text/css" href="devstyle.css">
-	</head>
+
+	<title>Hunter Goodin</title>
+	<link rel="stylesheet" type="text/css" href="devstyle.css">
+	<script type="text/javascript" src="dev-portfolio.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script>
-		function myFunction() 
-		{
-			navigator.clipboard.writeText("huntercgoodin@gmail.com");
-
-			var tooltip = document.getElementById("myTooltip").innerHTML = "Copied email address";
-		}
-
-		function outFunc() 
-		{
-			var tooltip = document.getElementById("myTooltip").innerHTML = "Copy to clipboard";
-		}
-	</script>
-	<style> 
-		.tooltip 
-		{
-			position: relative;
-			display: inline-block;
-		}
-
-		.tooltip .tooltiptext 
-		{
-			visibility: hidden;
-			width: 11vw;
-			font-size: 1vw;
-			background-color: #555;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 5px;
-			position: absolute;
-			z-index: 1;
-			bottom: 150%;
-			left: 50%;
-			margin-left: -5.5vw;
-			opacity: 0;
-			transition: opacity 0.3s;
-		}
-
-		.tooltip .tooltiptext::after 
-		{
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-width: 5px;
-			border-style: solid;
-			border-color: #555 transparent transparent transparent;
-		}
-
-		.tooltip:hover .tooltiptext 
-		{
-			visibility: visible;
-			opacity: 1;
-		}
-
-		.btn 
-		{
-			border: none;
-			background-color: inherit;
-			cursor: pointer;
-			display: inline-block;
-		}
-	</style>
-
+	
 	<body style="background-color:whitesmoke;">
 		<div class="row">
 			<div class="columnside">
@@ -89,7 +24,6 @@
 					<A href="dev.html"><C>About</C></A>
 					<A href="dev-portfolio.html"><D>Portfolio</D></A>
 					<A href="dev-contact.html"><D>Contact</D></A>
-					<!-- <A href="dev-other.html"><D>Other</D></A> -->
 				</h3>
 			</div>
 
@@ -116,7 +50,7 @@
 		  		<h4 style="font-size:1.4vw; text-align:center; padding-bottom:0px">About</h4>
 				<hr />
 				<p style="color:dimgrey; font-size:0.85vw; padding-left:2vw;">
-		  			Software engineer based in Santa Clarita, CA. Working professionally in the games industry since 2015, I have worked in nearly all aspects of the industry from <b>programming</b>, to <b>directing</b>, <b>level design</b>, <b>3D modeling & animation</b>, and <b>quality assurance</b>.
+		  			Software engineer based in Los Angeles, CA. Working professionally in the games industry since 2015, I have worked in <b>quality assurance</b> at <b>Activision|Blizzard</b> before pursuing a career in <b>programming</b> where I worked as a <b>software engineer</b> at <b>WayForward Technologies</b> as an engineer for location-based entertainment, specializing in  Augmented Reality (AR) development.
 		  			</br>
 		  			</br>
 					I have a <b>Unity Programmer</b> certification from Unity Technologies as well as a <b>Computer Science degree</b> from College of the Canyons where I joined the <b>Computer Science Club</b> in Spring 2017, and served as <b>president</b> of the club from Fall 2017 to Spring 2019 where we made a plethora of games. 
@@ -129,7 +63,7 @@
 
 					<div class="tooltip">
 						<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-						<button class="btn" onclick="myFunction()" onmouseout="outFunc()"><E style="font-size:1.1vw;"><b>huntercgoodin@gmail.com</b></E></button>
+						<button class="btn" onclick="CopyEmailAddress()" onmouseout="HoverOverEmailAddress()"><E style="font-size:1.1vw;"><b>huntercgoodin@gmail.com</b></E></button>
 					</div>
 
 					</br>

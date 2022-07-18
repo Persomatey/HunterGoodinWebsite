@@ -7,7 +7,6 @@ html
 
 p, li 
 {
-	font-family: "Times New Roman", Times, serif
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 1px;
@@ -316,10 +315,11 @@ F
 }
 
 /* Custom Button Stuff */
-.buttonCryUnSel 
+
+.buttonNewSelected 
 {
 	border: none;
-	color: white;
+	color: #88f5be;
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
@@ -327,10 +327,11 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
+	background-color: #0f7944; 
+	border-radius: 14px;
 }
-.buttonCryYeSel 
+
+.buttonCrySelected 
 {
 	border: none;
 	color: lightblue;
@@ -344,21 +345,8 @@ F
 	background-color: #000201; 
 	border-radius: 14px;
 }
-.buttonFunemUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonFunemYeSel 
+
+.buttonFunemSelected 
 {
 	border: none;
 	color: #E3C399;
@@ -372,21 +360,8 @@ F
 	background-color: #43434F; 
 	border-radius: 14px;
 }
-.buttonMusicUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonMusicYeSel 
+
+.buttonMusicSelected 
 {
 	border: none;
 	color: #fedcac;
@@ -400,21 +375,8 @@ F
 	background-color: #385865; 
 	border-radius: 14px;
 }
-.buttonKeyUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonKeyYeSel 
+
+.buttonKeySelected 
 {
 	border: none;
 	color: lightyellow;
@@ -428,21 +390,8 @@ F
 	background-color: darkolivegreen; 
 	border-radius: 14px;
 }
-.buttonBO3UnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonBO3YeSel 
+
+.buttonBO3Selected 
 {
 	border: none;
 	color: orange;
@@ -456,21 +405,8 @@ F
 	background-color: black; 
 	border-radius: 14px;
 }
-.buttonHelUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonHelYeSel 
+
+.buttonHelSelected 
 {
 	border: none;
 	color: #f5e3df;
@@ -484,21 +420,8 @@ F
 	background-color: lightslategrey; 
 	border-radius: 14px;
 }
-.buttonR3UnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonR3YeSel 
+
+.buttonR3Selected 
 {
 	border: none;
 	color: #FFBEE6;
@@ -512,21 +435,8 @@ F
 	background-color: #0000d1; 
 	border-radius: 14px;
 }
-.buttonLoFUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonLoFYeSel 
+
+.buttonLoFSelected 
 {
 	border: none;
 	color: palegoldenrod;
@@ -540,21 +450,8 @@ F
 	background-color: #2e7630; 
 	border-radius: 14px;
 }
-.buttonSSUnSel 
-{
-	border: none;
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: grey; 
-	border-radius: 3px;
-}
-.buttonSSYeSel 
+
+.buttonSSSelected 
 {
 	border: none;
 	color: white;
@@ -568,7 +465,23 @@ F
 	background-color: #f41818; 
 	border-radius: 14px;
 }
-.buttonFaUnSel 
+
+.buttonFaSelected 
+{
+	border: none;
+	color: aliceblue;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #195195; 
+	border-radius: 14px;
+}
+
+.buttonUnselected
 {
 	border: none;
 	color: white;
@@ -582,17 +495,72 @@ F
 	background-color: grey; 
 	border-radius: 3px;
 }
-.buttonFaYeSel 
+
+/* Other */
+
+.tooltip 
+{
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext 
+{
+	visibility: hidden;
+	width: 11vw;
+	font-size: 1vw;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -5.5vw;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after 
+{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext 
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+.btn 
 {
 	border: none;
-	color: aliceblue;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
+	background-color: inherit;
 	cursor: pointer;
-	background-color: #195195; 
-	border-radius: 14px;
+	display: inline-block;
+}
+
+.box 
+{
+	position: relative;
+	width: 50%;
+}
+.box:before 
+{
+	content: "";
+	float: left;
+	padding-top: 100%;
+}
+.content 
+{
+	float: left;
 }

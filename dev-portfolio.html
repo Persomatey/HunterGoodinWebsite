@@ -1,583 +1,32 @@
-<!-- Look into es6 object destructuring for importing specific javascript functions instead of a whole library -->
-
 <!doctype html>
 <html style="background-color:whitesmoke;">
+
 	<head>
 		<title>Hunter Goodin</title>
 		<link rel="stylesheet" type="text/css" href="devstyle.css">
+		<script type="text/javascript" src="dev-portfolio.js"></script>
+		<script type="text/javascript" src="html-include.js"></script>
 		<script>
-
-			function OpenModal(isURL, path)
+			function TestFunc()
 			{
-				var modal = document.getElementById("modal");
-				modal.style.display = "block";
-				var span = document.getElementById("span");
+				console.log("loading HTML from test.html"); 
+				//document.getElementById("TestTest").innerHTML = "hellowlrd";
+				//document.getElementById('TestTest').src = 'test.html';
 
-				
-				if(isURL)
-				{
-					document.getElementById("modalID").innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/` + path + `" frameborder="0" allowfullscreen="allowfullscreen"></iframe>`;
-				}
-				else
-				{
-					document.getElementById("modalID").innerHTML = `<img style="width:100%; height:100%; object-fit:contain; margin:auto;" src="` + path + `">`; 
-				}
-				
+				var text = "test"; 
 
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function() 
-				{
-					modal.style.display = "none";
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function(event) 
-				{
-					if (event.target == modal) 
-					{
-						modal.style.display = "none";
-					}
-				}
+				fetch('test.html')
+				.then(
+					//text=> document.getElementById('TestTest').innerHTML = text
+					console.log(text)
+				);
 			}
-
-			/* Crypto Alert Bot Functions */
-
-			function ChangeImageCryL()
-			{
-				document.getElementById("CryMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/CryptoAlertBot/master/images/CryptoBotLogoBot.png">`; 
-
-				document.getElementById("ButCry1").className = "buttonCryYeSel";
-
-				document.getElementById("ButCry2").className = "buttonCryUnSel";
-
-				return false;
-			}
-			function ChangeImageCryVid()
-			{
-				document.getElementById("CryMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
-
-				document.getElementById("ButCry1").className = "buttonCryUnSel";
-
-				document.getElementById("ButCry2").className = "buttonCryYeSel";
-
-				return false;
-			}
-
-			/* Funem Functions */
-
-			function ChangeImageFunemL()
-			{
-				document.getElementById("FunemMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunLogo.png">`; 
-
-				document.getElementById("ButFunem1").className = "buttonFunemYeSel";
-
-				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
-
-				return false;
-			}
-			function ChangeImageFunemI1()
-			{
-				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunGameplay1.png" onclick="OpenModal(false, 'images/devphotos/FunGameplay1.png');">`; 
-
-				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem2").className = "buttonFunemYeSel";
-
-				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
-				
-				return false;
-			}
-			function ChangeImageFunemI2()
-			{
-				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunGameplay2.png" onclick="OpenModal(false, 'images/devphotos/FunGameplay2.png');">`; 
-
-				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem3").className = "buttonFunemYeSel";
-
-				document.getElementById("ButFunem4").className = "buttonFunemUnSel";
-
-				return false;
-			}
-			function ChangeImageFunemVid()
-			{
-				document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
-
-				document.getElementById("ButFunem1").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem2").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem3").className = "buttonFunemUnSel";
-
-				document.getElementById("ButFunem4").className = "buttonFunemYeSel";
-
-				return false;
-			}
-
-			/* Music-Chan Functions */
-
-			function ChangeImageMusicL()
-			{
-				document.getElementById("MusicMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="https://raw.githubusercontent.com/Persomatey/MusicBot/master/LoFiGirl.png?token=AFRVWK7IVN2U7LXLBY5TFYDA6AHK4">`; 
-
-				document.getElementById("ButMusic1").className = "buttonMusicYeSel";
-
-				document.getElementById("ButMusic2").className = "buttonMusicUnSel";
-
-				return false;
-			}
-			function ChangeImageMusicVid()
-			{
-				document.getElementById("MusicMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
-
-				document.getElementById("ButMusic1").className = "buttonMusicUnSel";
-
-				document.getElementById("ButMusic2").className = "buttonMusicYeSel";
-
-				return false;
-			}
-
-			/* Key Finder Functions */
-
-			function ChangeImageKeyL()
-			{
-				document.getElementById("KeyMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/KeyLogo.png">`; 
-
-				document.getElementById("ButKey1").className = "buttonKeyYeSel";
-
-				document.getElementById("ButKey2").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey3").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey4").className = "buttonKeyUnSel";
-
-				return false;
-			}
-			function ChangeImageKeyI1()
-			{
-				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay1.png" onclick="OpenModal(false, 'images/devphotos/KeyGameplay1.png');">`; 
-
-				document.getElementById("ButKey1").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey2").className = "buttonKeyYeSel";
-
-				document.getElementById("ButKey3").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey4").className = "buttonKeyUnSel";
-				
-				return false;
-			}
-			function ChangeImageKeyI2()
-			{
-				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/KeyGameplay2.png" onclick="OpenModal(false, 'images/devphotos/KeyGameplay2.png');">`; 
-
-				document.getElementById("ButKey1").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey2").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey3").className = "buttonKeyYeSel";
-
-				document.getElementById("ButKey4").className = "buttonKeyUnSel";
-
-				return false;
-			}
-			function ChangeImageKeyVid()
-			{
-				document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/KeyThumb.png" onclick="OpenModal(true, 'w260kcveYuc');">`; 
-
-				document.getElementById("ButKey1").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey2").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey3").className = "buttonKeyUnSel";
-
-				document.getElementById("ButKey4").className = "buttonKeyYeSel";
-
-				return false;
-			}
-
-			/* Helation Functions */
-
-			function ChangeImageHelL()
-			{
-				document.getElementById("HelMedia").innerHTML = `<img style="width:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/HelLogo.png">`; 
-
-				document.getElementById("ButHel1").className = "buttonHelYeSel";
-
-				document.getElementById("ButHel2").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel3").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel4").className = "buttonHelUnSel";
-
-				return false;
-			}
-			function ChangeImageHelI1()
-			{
-				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay1.png" onclick="OpenModal(false, 'images/devphotos/HelGameplay1.png');">`; 
-
-				document.getElementById("ButHel1").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel2").className = "buttonHelYeSel";
-
-				document.getElementById("ButHel3").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel4").className = "buttonHelUnSel";
-				
-				return false;
-			}
-			function ChangeImageHelI2()
-			{
-				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/HelGameplay2.png" onclick="OpenModal(false, 'images/devphotos/HelGameplay2.png');">`; 
-
-				document.getElementById("ButHel1").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel2").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel3").className = "buttonHelYeSel";
-
-				document.getElementById("ButHel4").className = "buttonHelUnSel";
-
-				return false;
-			}
-			function ChangeImageHelVid()
-			{
-				document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/HelThumb.png" onclick="OpenModal(true, 'SosAngzSoqQ');">`; 
-
-				document.getElementById("ButHel1").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel2").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel3").className = "buttonHelUnSel";
-
-				document.getElementById("ButHel4").className = "buttonHelYeSel";
-
-				return false;
-			}
-
-			/* Rewound Running Remix Functions */
-
-			function ChangeImageR3L()
-			{
-				document.getElementById("R3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/R3Logo.png">`; 
-
-				document.getElementById("ButR31").className = "buttonR3YeSel";
-
-				document.getElementById("ButR32").className = "buttonR3UnSel";
-
-				document.getElementById("ButR33").className = "buttonR3UnSel";
-
-				document.getElementById("ButR34").className = "buttonR3UnSel";
-
-				return false;
-			}
-			function ChangeImageR3I1()
-			{
-				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay1.png" onclick="OpenModal(false, 'images/devphotos/R3Gameplay1.png');">`; 
-
-				document.getElementById("ButR31").className = "buttonR3UnSel";
-
-				document.getElementById("ButR32").className = "buttonR3YeSel";
-
-				document.getElementById("ButR33").className = "buttonR3UnSel";
-
-				document.getElementById("ButR34").className = "buttonR3UnSel";
-				
-				return false;
-			}
-			function ChangeImageR3I2()
-			{
-				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/R3Gameplay2.png" onclick="OpenModal(false, 'images/devphotos/R3Gameplay2.png');">`; 
-
-				document.getElementById("ButR31").className = "buttonR3UnSel";
-
-				document.getElementById("ButR32").className = "buttonR3UnSel";
-
-				document.getElementById("ButR33").className = "buttonR3YeSel";
-
-				document.getElementById("ButR34").className = "buttonR3UnSel";
-
-				return false;
-			}
-			function ChangeImageR3Vid()
-			{
-				document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/R3Thumb.png" onclick="OpenModal(true, '2l0JYAdxMpk');">`; 
-
-				document.getElementById("ButR31").className = "buttonR3UnSel";
-
-				document.getElementById("ButR32").className = "buttonR3UnSel";
-
-				document.getElementById("ButR33").className = "buttonR3UnSel";
-
-				document.getElementById("ButR34").className = "buttonR3YeSel";
-
-				return false;
-			}
-
-			/* Legend of Fantasy Functions */
-
-			function ChangeImageLoFL()
-			{
-				document.getElementById("LoFMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/LoFLogo.png">`; 
-
-				document.getElementById("ButLoF1").className = "buttonLoFYeSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
-
-				return false;
-			}
-			function ChangeImageLoFI1()
-			{
-				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay1.png" onclick="OpenModal(false, 'images/devphotos/LoFGameplay1.png');">`; 
-
-				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFYeSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
-				
-				return false;
-			}
-			function ChangeImageLoFI2()
-			{
-				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/LoFGameplay2.png" onclick="OpenModal(false, 'images/devphotos/LoFGameplay2.png');">`; 
-
-				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFYeSel";
-
-				document.getElementById("ButLoF4").className = "buttonLoFUnSel";
-
-				return false;
-			}
-			function ChangeImageLoFVid()
-			{
-				document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/LoFThumb.png" onclick="OpenModal(true, 'DwehfYrfE_k');">`; 
-
-				document.getElementById("ButLoF1").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF2").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF3").className = "buttonLoFUnSel";
-
-				document.getElementById("ButLoF4").className = "buttonLoFYeSel";
-
-				return false;
-			}
-
-			/* Space Shooter 9000 Functions */
-
-			function ChangeImageSSL()
-			{
-				document.getElementById("SSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/SSLogo.png">`; 
-
-				document.getElementById("ButSS1").className = "buttonSSYeSel";
-
-				document.getElementById("ButSS2").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS3").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS4").className = "buttonSSUnSel";
-
-				return false;
-			}
-			function ChangeImageSSI1()
-			{
-				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay1.png" onclick="OpenModal(false, 'images/devphotos/SSGameplay1.png');">`; 
-
-				document.getElementById("ButSS1").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS2").className = "buttonSSYeSel";
-
-				document.getElementById("ButSS3").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS4").className = "buttonSSUnSel";
-				
-				return false;
-			}
-			function ChangeImageSSI2()
-			{
-				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/SSGameplay2.png" onclick="OpenModal(false, 'images/devphotos/SSGameplay2.png');">`; 
-				document.getElementById("ButSS1").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS2").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS3").className = "buttonSSYeSel";
-
-				document.getElementById("ButSS4").className = "buttonSSUnSel";
-
-				return false;
-			}
-			function ChangeImageSSVid()
-			{
-				document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/SSThumb.png" onclick="OpenModal(true, 'Z_3XtojWlSA');">`; 
-
-				document.getElementById("ButSS1").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS2").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS3").className = "buttonSSUnSel";
-
-				document.getElementById("ButSS4").className = "buttonSSYeSel";
-
-				return false;
-			}
-
-			/* Factory Functions */
-
-			function ChangeImageFaL()
-			{
-				document.getElementById("FaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FaLogo.png">`; 
-
-				document.getElementById("ButFa1").className = "buttonFaYeSel";
-
-				document.getElementById("ButFa2").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa3").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa4").className = "buttonFaUnSel";
-
-				return false;
-			}
-			function ChangeImageFaI1()
-			{
-				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay1.png" onclick="OpenModal(false, 'images/devphotos/FaGameplay1.png');">`; 
-
-				document.getElementById("ButFa1").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa2").className = "buttonFaYeSel";
-
-				document.getElementById("ButFa3").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa4").className = "buttonFaUnSel";
-				
-				return false;
-			}
-			function ChangeImageFaI2()
-			{
-				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/FaGameplay2.png" onclick="OpenModal(false, 'images/devphotos/FaGameplay2.png');">`; 
-
-				document.getElementById("ButFa1").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa2").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa3").className = "buttonFaYeSel";
-
-				document.getElementById("ButFa4").className = "buttonFaUnSel";
-
-				return false;
-			}
-			function ChangeImageFaVid()
-			{
-				document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/FaThumb.png" onclick="OpenModal(true, 'ESyvW9RUt9A');">`; 
-
-				document.getElementById("ButFa1").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa2").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa3").className = "buttonFaUnSel";
-
-				document.getElementById("ButFa4").className = "buttonFaYeSel";
-
-				return false;
-			}
-
-			/* Black Ops III Functions */
-
-			function ChangeImageBO3L()
-			{
-				document.getElementById("BO3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/BO3Logo.png">`; 
-
-				document.getElementById("ButBO31").className = "buttonBO3YeSel";
-
-				document.getElementById("ButBO32").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO33").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO34").className = "buttonBO3UnSel";
-
-				return false;
-			}
-			function ChangeImageBO3I1()
-			{
-				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay1.png" onclick="OpenModal(false, 'images/devphotos/BO3Gameplay1.png');">`; 
-
-				document.getElementById("ButBO31").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO32").className = "buttonBO3YeSel";
-
-				document.getElementById("ButBO33").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO34").className = "buttonBO3UnSel";
-				
-				return false;
-			}
-			function ChangeImageBO3I2()
-			{
-				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="images/devphotos/BO3Gameplay2.png" onclick="OpenModal(false, 'images/devphotos/BO3Gameplay2.png');">`; 
-
-				document.getElementById("ButBO31").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO32").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO33").className = "buttonBO3YeSel";
-
-				document.getElementById("ButBO34").className = "buttonBO3UnSel";
-
-				return false;
-			}
-			function ChangeImageBO3Vid()
-			{
-				document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="images/devphotos/BO3Thumb.png" onclick="OpenModal(true, 'GM2m9LG35N0');">`; 
-
-				document.getElementById("ButBO31").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO32").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO33").className = "buttonBO3UnSel";
-
-				document.getElementById("ButBO34").className = "buttonBO3YeSel";
-
-				return false;
-			}
-
 		</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style> 
-		.box 
-		{
-			position: relative;
-			width: 50%;
-		}
-		.box:before 
-		{
-			content: "";
-			float: left;
-			padding-top: 100%;
-		}
-		.content 
-		{
-			float: left;
-		}
-	</style>
-	<body style="background-color:whitesmoke;">
+
+	<body style="background-color:whitesmoke;" onload="TestFunc()">
 		<div class="row">
 			<div class="columnside">
 				<p></p>
@@ -595,7 +44,6 @@
 					<A href="dev.html"><D>About</D></A>
 					<A href="dev-portfolio.html"><C>Portfolio</C></A>
 					<A href="dev-contact.html"><D>Contact</D></A>
-					<!-- <A href="dev-other.html"><D>Other</D></A> -->
 				</h3>
 			</div>
 
@@ -617,53 +65,12 @@
 		</div>
 
 		<!-- NEW -->
+		
+		<div id="TestTest"></div>
 
-		<!--
+		<!-- End NEW -->
 
-		<div class="row">
-			<div class="columnside">
-				<p></p>
-			</div>
-
-			<div class="columngameimg">
-				<h5 style="font-size:1.8vw;">NEW</h5>
-				<h6 style="font-size:0.9vw;">(Straightforward Specnometries)</h6>
-				<div id="FunemMedia">
-					<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="images/devphotos/FunLogo.png">
-				</div>
-				<div style="display: flex; justify-content: center; align-items: center;">
-					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-					<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();" style="font-size:0.9vw;">Logo</button>
-					<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();" style="font-size:0.9vw;">Screenshot</button>
-					<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();" style="font-size:0.9vw;">Screenshot</button>
-					<button id="ButFunem4" class="buttonFunemUnSel" onclick="ChangeImageFunemVid();" style="font-size:0.9vw;">Gameplay</button>
-				</div>
-			</div>
-
-			<div class="columngamedes">
-				<p style="padding-left: 25px; margin-top: 0px; font-size:0.9vw;">
-
-					Description: there are several quests and the players must go on them D= 
-
-					</br>
-					</br>	
-
-					A split between <b>Unity Engine</b> written in <b>C#</b> <i>(running as 'Unity as a Library' withing a proprietary app)</i>, <b>Unreal Engine</b> written in <b>C++</b> <i>(for the boss battle theater room)</i> and <b>Phaser 3</b> written in <b>Typescript</b>/<b>Node.JS</b> <i>(for all digital signage)</i>. I primarily worked as the <b>lead developer</b> on all <b>Augmented Reality</b> (AR) games as well as <b>Prop</b> experiences with real physical props with react in real time to your actions in the game on your phone. I programmed all of the peer-to-peer and peer-to-server multiplayer functionality for those games. I also did a lot of work on the Digital Signage games as well (basically taking the lead on several games), as well as some work on the boss battle game. 
-
-					</A>
-				</p>
-			</div>
-
-			<div class="columnside">
-				<p></p>
-			</div>
-		</div>
-
-		!-- End NEW --
-
-		<hr/>
-
-		-->
+		
 
 		<!-- Crypto Alert Bot -->
 
@@ -679,8 +86,8 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-					<button id="ButCry1" class="buttonCryYeSel" onclick="ChangeImageCryL();" style="font-size:0.9vw;">Logo</button>
-					<button id="ButCry2" class="buttonCryUnSel" onclick="ChangeImageCryVid();" style="font-size:0.9vw;">Tutorial</button>
+					<button id="ButCry1" class="buttonCrySelected" onclick="ChangeImageCryL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButCry2" class="buttonUnselected" onclick="ChangeImageCryVid();" style="font-size:0.9vw;">Tutorial</button>
 				</div>
 		  	</div>
 
@@ -730,10 +137,10 @@
 				</div>
 				<div style="display: flex; justify-content: center; align-items: center;">
 					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-					<button id="ButFunem1" class="buttonFunemYeSel" onclick="ChangeImageFunemL();" style="font-size:0.9vw;">Logo</button>
-					<button id="ButFunem2" class="buttonFunemUnSel" onclick="ChangeImageFunemI1();" style="font-size:0.9vw;">Screenshot</button>
-					<button id="ButFunem3" class="buttonFunemUnSel" onclick="ChangeImageFunemI2();" style="font-size:0.9vw;">Screenshot</button>
-					<button id="ButFunem4" class="buttonFunemUnSel" onclick="ChangeImageFunemVid();" style="font-size:0.9vw;">Gameplay</button>
+					<button id="ButFunem1" class="buttonFunemSelected" onclick="ChangeImageFunemL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButFunem2" class="buttonUnselected" onclick="ChangeImageFunemI1();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButFunem3" class="buttonUnselected" onclick="ChangeImageFunemI2();" style="font-size:0.9vw;">Screenshot</button>
+					<button id="ButFunem4" class="buttonUnselected" onclick="ChangeImageFunemVid();" style="font-size:0.9vw;">Gameplay</button>
 				</div>
 			</div>
 
@@ -791,8 +198,8 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 					<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-					<button id="ButMusic1" class="buttonMusicYeSel" onclick="ChangeImageMusicL();" style="font-size:0.9vw;">Logo</button>
-					<button id="ButMusic2" class="buttonMusicUnSel" onclick="ChangeImageMusicVid();" style="font-size:0.9vw;">Tutorial</button>
+					<button id="ButMusic1" class="buttonMusicSelected" onclick="ChangeImageMusicL();" style="font-size:0.9vw;">Logo</button>
+					<button id="ButMusic2" class="buttonUnselected" onclick="ChangeImageMusicVid();" style="font-size:0.9vw;">Tutorial</button>
 				</div>
 		  	</div>
 
@@ -840,10 +247,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 		  			<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-		  			<button id="ButKey1" class="buttonKeyYeSel" onclick="ChangeImageKeyL();" style="font-size:0.9vw;">Logo</button>
-		  			<button id="ButKey2" class="buttonKeyUnSel" onclick="ChangeImageKeyI1();" style="font-size:0.9vw;">Screenshot</button>
-		  			<button id="ButKey3" class="buttonKeyUnSel" onclick="ChangeImageKeyI2();" style="font-size:0.9vw;">Screenshot</button>
-		  			<button id="ButKey4" class="buttonKeyUnSel" onclick="ChangeImageKeyVid();" style="font-size:0.9vw;">Gameplay</button>
+		  			<button id="ButKey1" class="buttonKeySelected" onclick="ChangeImageKeyL();" style="font-size:0.9vw;">Logo</button>
+		  			<button id="ButKey2" class="buttonUnselected" onclick="ChangeImageKeyI1();" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButKey3" class="buttonUnselected" onclick="ChangeImageKeyI2();" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButKey4" class="buttonUnselected" onclick="ChangeImageKeyVid();" style="font-size:0.9vw;">Gameplay</button>
 		  		</div>
 		  	</div>
 
@@ -899,10 +306,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 		  			<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-		  			<button id="ButHel1" class="buttonHelYeSel" onclick="ChangeImageHelL();" style="font-size:0.9vw;" style="font-size:0.9vw;">Logo</button>
-		  			<button id="ButHel2" class="buttonHelUnSel" onclick="ChangeImageHelI1();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
-		  			<button id="ButHel3" class="buttonHelUnSel" onclick="ChangeImageHelI2();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
-		  			<button id="ButHel4" class="buttonHelUnSel" onclick="ChangeImageHelVid();" style="font-size:0.9vw;" style="font-size:0.9vw;">Trailer</button>
+		  			<button id="ButHel1" class="buttonHelSelected" onclick="ChangeImageHelL();" style="font-size:0.9vw;" style="font-size:0.9vw;">Logo</button>
+		  			<button id="ButHel2" class="buttonUnselected" onclick="ChangeImageHelI1();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButHel3" class="buttonUnselected" onclick="ChangeImageHelI2();" style="font-size:0.9vw;" style="font-size:0.9vw;">Screenshot</button>
+		  			<button id="ButHel4" class="buttonUnselected" onclick="ChangeImageHelVid();" style="font-size:0.9vw;" style="font-size:0.9vw;">Trailer</button>
 		  		</div>
 		  	</div>
 
@@ -959,10 +366,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-			  		<button id="ButR31" class="buttonR3YeSel" onclick="ChangeImageR3L();" style="font-size:0.9vw;">Logo</button>
-			  		<button id="ButR32" class="buttonR3UnSel" onclick="ChangeImageR3I1();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButR33" class="buttonR3UnSel" onclick="ChangeImageR3I2();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButR34" class="buttonR3UnSel" onclick="ChangeImageR3Vid();" style="font-size:0.9vw;">Gameplay</button>
+			  		<button id="ButR31" class="buttonR3Selected" onclick="ChangeImageR3L();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButR32" class="buttonUnselected" onclick="ChangeImageR3I1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButR33" class="buttonUnselected" onclick="ChangeImageR3I2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButR34" class="buttonUnselected" onclick="ChangeImageR3Vid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -1019,10 +426,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-			  		<button id="ButLoF1" class="buttonLoFYeSel" onclick="ChangeImageLoFL();" style="font-size:0.9vw;">Logo</button>
-			  		<button id="ButLoF2" class="buttonLoFUnSel" onclick="ChangeImageLoFI1();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButLoF3" class="buttonLoFUnSel" onclick="ChangeImageLoFI2();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButLoF4" class="buttonLoFUnSel" onclick="ChangeImageLoFVid();" style="font-size:0.9vw;">Gameplay</button>
+			  		<button id="ButLoF1" class="buttonLoFSelected" onclick="ChangeImageLoFL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButLoF2" class="buttonUnselected" onclick="ChangeImageLoFI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButLoF3" class="buttonUnselected" onclick="ChangeImageLoFI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButLoF4" class="buttonUnselected" onclick="ChangeImageLoFVid();" style="font-size:0.9vw;">Gameplay</button>
 		  		</div>
 		  	</div>
 
@@ -1079,10 +486,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-			  		<button id="ButSS1" class="buttonSSYeSel" onclick="ChangeImageSSL();" style="font-size:0.9vw;">Logo</button>
-			  		<button id="ButSS2" class="buttonSSUnSel" onclick="ChangeImageSSI1();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButSS3" class="buttonSSUnSel" onclick="ChangeImageSSI2();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButSS4" class="buttonSSUnSel" onclick="ChangeImageSSVid();" style="font-size:0.9vw;">Gameplay</button>
+			  		<button id="ButSS1" class="buttonSSSelected" onclick="ChangeImageSSL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButSS2" class="buttonUnselected" onclick="ChangeImageSSI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButSS3" class="buttonUnselected" onclick="ChangeImageSSI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButSS4" class="buttonUnselected" onclick="ChangeImageSSVid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -1139,10 +546,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-			  		<button id="ButFa1" class="buttonFaYeSel" onclick="ChangeImageFaL();" style="font-size:0.9vw;">Logo</button>
-			  		<button id="ButFa2" class="buttonFaUnSel" onclick="ChangeImageFaI1();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButFa3" class="buttonFaUnSel" onclick="ChangeImageFaI2();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButFa4" class="buttonFaUnSel" onclick="ChangeImageFaVid();" style="font-size:0.9vw;">Gameplay</button>
+			  		<button id="ButFa1" class="buttonFaSelected" onclick="ChangeImageFaL();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButFa2" class="buttonUnselected" onclick="ChangeImageFaI1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButFa3" class="buttonUnselected" onclick="ChangeImageFaI2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButFa4" class="buttonUnselected" onclick="ChangeImageFaVid();" style="font-size:0.9vw;">Gameplay</button>
 			  	</div>
 		  	</div>
 
@@ -1198,10 +605,10 @@
 		  		</div>
 		  		<div style="display: flex; justify-content: center; align-items: center;">
 			  		<F style="font-size:0.9vw;"><b>Buttons: </b></F>
-			  		<button id="ButBO31" class="buttonBO3YeSel" onclick="ChangeImageBO3L();" style="font-size:0.9vw;">Logo</button>
-			  		<button id="ButBO32" class="buttonBO3UnSel" onclick="ChangeImageBO3I1();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButBO33" class="buttonBO3UnSel" onclick="ChangeImageBO3I2();" style="font-size:0.9vw;">Screenshot</button>
-			  		<button id="ButBO34" class="buttonBO3UnSel" onclick="ChangeImageBO3Vid();" style="font-size:0.9vw;">Trailer</button>
+			  		<button id="ButBO31" class="buttonBO3Selected" onclick="ChangeImageBO3L();" style="font-size:0.9vw;">Logo</button>
+			  		<button id="ButBO32" class="buttonUnselected" onclick="ChangeImageBO3I1();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButBO33" class="buttonUnselected" onclick="ChangeImageBO3I2();" style="font-size:0.9vw;">Screenshot</button>
+			  		<button id="ButBO34" class="buttonUnselected" onclick="ChangeImageBO3Vid();" style="font-size:0.9vw;">Trailer</button>
 			  	</div>
 		  	</div>
 
