@@ -34,7 +34,7 @@ function OpenModal(isURL, path)
 /* Include Projects */
 function LoadIncludedProjects()
 {
-	console.log("Test 4");
+	console.log("Test 5");
 
 	fetch('NewProject.html')
 	.then(response=> response.getElementById("project").text())
