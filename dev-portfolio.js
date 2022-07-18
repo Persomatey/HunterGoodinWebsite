@@ -33,7 +33,7 @@ function OpenModal(isURL, path)
 
 /* Loading HTML */
 
-function LoadIncludedProjects(project)
+function LoadProject(project)
 {
 	console.log(`Loading ${project}`);
 
