@@ -7,4 +7,4 @@ The website can be accessed at:
 - https://huntergoodin.com 
 - <img src="https://raw.githubusercontent.com/Persomatey/HunterGoodinWebsite/master/images/devphotos/_QR-Website.png" width="126" height="126" />
 
-The domain was purchased on [Hover](https://www.hover.com/). 
+The domain "huntergoodin.com" was purchased on [Hover](https://www.hover.com/). 
