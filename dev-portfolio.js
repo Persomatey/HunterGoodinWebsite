@@ -75,6 +75,7 @@ function UnselectAllButtons(proj, buttonCount)
 {
 	for (var i = 1; i <= buttonCount; i++)
 	{
+		console.log(`unselecting But${proj}${i}`); 
 		document.getElementById(`But${proj}${i}`).className = "buttonUnselected";
 	}
 }
@@ -181,6 +182,28 @@ function ChangeImageNewVid()
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew4").className = "buttonNewSelected";
 	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+
+}
+
+/* Disney's Uncharted Adventure Functions */
+
+function ChangeImageDuaL()
+{
+	UnselectAllButtons(`Dua`, 3);
+	document.getElementById("ButDua1").className = "buttonDuaSelected";
+	document.getElementById("DuaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaLogo.png">`; 
+}
+function ChangeImageDuaI1()
+{
+	UnselectAllButtons(`Dua`, 3);
+	document.getElementById("ButDua2").className = "buttonDuaSelected";
+	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DuaGameplay1.png');">`; 
+}
+function ChangeImageDuaVid()
+{
+	UnselectAllButtons(`Dua`, 3);
+	document.getElementById("ButDua3").className = "buttonDuaSelected";
+	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaThumb.png" onclick="OpenModal(true, 'nLu06CHDZ0Y');">`; 
 
 }
 
