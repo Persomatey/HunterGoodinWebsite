@@ -331,6 +331,21 @@ F
 	border-radius: 14px;
 }
 
+.buttonSkyJelSelected 
+{
+	border: none;
+	color: #e7ffff;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #76c620; 
+	border-radius: 14px;
+}
+
 .buttonDuaSelected 
 {
 	border: none;

@@ -55,11 +55,6 @@ function LoadHeader(id)
 	}
 }
 
-function Test()
-{
-	console.log("Test");
-}; 
-
 function ChangeHeader(id)
 {
 	if (id)
@@ -182,6 +177,34 @@ function ChangeImageNewVid()
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew4").className = "buttonNewSelected";
 	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+
+}
+
+/* Sky Jellies Functions */
+
+function ChangeImageSkyJelL()
+{
+	UnselectAllButtons(`SkyJel`, 4);
+	document.getElementById("ButSkyJel1").className = "buttonSkyJelSelected";
+	document.getElementById("SkyJelMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelLogo.png">`; 
+}
+function ChangeImageSkyJelI1()
+{
+	UnselectAllButtons(`SkyJel`, 4);
+	document.getElementById("ButSkyJel2").className = "buttonSkyJelSelected";
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay1.png');">`; 
+}
+function ChangeImageSkyJelI2()
+{
+	UnselectAllButtons(`SkyJel`, 4);
+	document.getElementById("ButSkyJel3").className = "buttonSkyJelSelected";
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay2.png');">`; 
+}
+function ChangeImageSkyJelVid()
+{
+	UnselectAllButtons(`SkyJel`, 4);
+	document.getElementById("ButSkyJel4").className = "buttonSkyJelSelected";
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelThumb.png" onclick="OpenModal(true, 'JJ2_pkzjdfQ');">`; 
 
 }
 
