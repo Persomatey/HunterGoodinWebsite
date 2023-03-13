@@ -14,7 +14,6 @@ p, li
 
 html 
 {
-	background-color: white;
 	font-size: 40px;
 }
 
@@ -23,8 +22,7 @@ body
 	width: auto;
 	height: auto;
 	margin: 0 auto;
-	background-color: white;
-	color: black;
+	color: #dfe4eb;
 	font-size: 15px;
 	/*padding: 0 20px 20px 20px;*/
 }
@@ -36,7 +34,7 @@ h1
 	padding-top: 50px;
 	padding-right: 10px;
 	padding-left: 0px;
-	color: black;
+	color: ghostwhite;
 	margin-bottom: 0;
 }
 
@@ -46,7 +44,7 @@ h2
 	text-align: left;
 	padding-right: 10px;
 	padding-left: 0px;
-	color: grey;
+	color: ghostwhite;
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 0px;
@@ -67,7 +65,7 @@ h4
 	font-size: 30px;
 	text-align: left;
 	margin: 0 auto;
-	color: black;
+	color: #dfe4eb;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 15px;
@@ -79,7 +77,7 @@ h5
 	font-size: 30px;
 	text-align: center;
 	margin: 0 auto;
-	color: black;
+	color: #dfe4eb;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -89,7 +87,7 @@ h6
 	font-size: 15px;
 	text-align: center;
 	margin: 0 auto;
-	color: black;
+	color: #dfe4eb;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -98,7 +96,7 @@ p
 {
 	padding-left: 15px;
 	padding-right: 0px;
-	color: grey; 
+	color: #dfe4eb; 
 }
 
 img 
@@ -180,7 +178,7 @@ hr
 
 .modal-content 
 {
-	background-color: whitesmoke;
+	background-color: ghostwhite;
 	padding-right: 10px; /**/
 	margin: auto;
 	border: 1px solid #888; 
@@ -253,24 +251,24 @@ input[type=submit]:hover
 
 .hunterlink
 {
-	color: slategrey;
+	color: #dfe4eb;
 }
 
 .hunterlink:hover
 {
-	color: slateblue;
+	color: white;
 }
 
 /* Font Control Stuff */
 A
 {
 	text-decoration: none; 
-	color: black;
+	color: #dfe4eb;
 } 
 C
 {
 	text-decoration: none;
-	color: black; 
+	color: #dfe4eb; 
 	padding-right: 0px;
 	padding-left: 20px;
 	font-size: 1.3vw;
@@ -278,19 +276,19 @@ C
 D
 {
 	text-decoration: none;
-	color: grey; 
+	color: ghostwhite; 
 	padding-right: 0px;
 	padding-left: 20px;
 }
 E
 {
 	text-decoration: none;
-	color: black; 
+	color: #dfe4eb; 
 }
 F
 {
 	text-decoration: none;
-	color: black; 
+	color: #dfe4eb; 
 	padding-right: 0px;
 	padding-left: 5px;
 	font-size: 18px;
@@ -303,7 +301,7 @@ F
 }
 ::-webkit-scrollbar-track 
 {
-	background: #f1f1f1; 
+	/*background: #f1f1f1; */
 }
 ::-webkit-scrollbar-thumb 
 {
@@ -315,6 +313,21 @@ F
 }
 
 /* Custom Button Stuff */
+
+.buttonCarnSelected 
+{
+	border: none;
+	color: #add9f6;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #024466; 
+	border-radius: 14px;
+}
 
 .buttonNewSelected 
 {
@@ -387,14 +400,14 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: #43434F; 
+	background-color: #162929; 
 	border-radius: 14px;
 }
 
 .buttonMusicSelected 
 {
 	border: none;
-	color: #fedcac;
+	color: #e8fff3;
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
@@ -402,14 +415,14 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: #385865; 
+	background-color: #9a4c4a; 
 	border-radius: 14px;
 }
 
 .buttonKeySelected 
 {
 	border: none;
-	color: lightyellow;
+	color: #647d34;
 	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
@@ -417,7 +430,7 @@ F
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: darkolivegreen; 
+	background-color: #c0c741; 
 	border-radius: 14px;
 }
 

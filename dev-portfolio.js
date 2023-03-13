@@ -1,4 +1,4 @@
-/* Custom Modal */
+//#region Custom Modal
 
 function OpenModal(isURL, path)
 {
@@ -31,7 +31,9 @@ function OpenModal(isURL, path)
 	}
 }
 
-/* Loading HTML */
+//#endregion Custom Modal
+
+// #region Loading HTML
 
 function LoadProject(project)
 {
@@ -64,7 +66,9 @@ function ChangeHeader(id)
 	}
 }
 
-/* Utility Functions */
+// #endregion Loading HTML
+
+// #region Utility Functions
 
 function UnselectAllButtons(proj, buttonCount)
 {
@@ -87,7 +91,9 @@ function HoverOverEmailAddress()
 	var tooltip = document.getElementById("myTooltip").innerHTML = "Copy to clipboard";
 }
 
-/* Google Captcha Stuff */
+// #endregion Utility Functions
+
+// #region Google Captcha Stuff
 
 var boolCap = false; 
 
@@ -152,7 +158,9 @@ function AfterSend()
 	}
 }
 
-/* New Project Functions */
+// #endregion Google Captcha Stuff
+
+// #region New Project Functions
 
 function ChangeImageNewL()
 {
@@ -180,7 +188,26 @@ function ChangeImageNewVid()
 
 }
 
-/* Sky Jellies Functions */
+// #endregion New Project Functions
+
+// #region Carnival Functions
+
+function ChangeImageCarnL()
+{
+	UnselectAllButtons(`Carn`, 2);
+	document.getElementById("ButCarn1").className = "buttonCarnSelected";
+	document.getElementById("CarnMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/CarnLogo.png">`; 
+}
+function ChangeImageCarnI1()
+{
+	UnselectAllButtons(`Carn`, 2);
+	document.getElementById("ButCarn2").className = "buttonCarnSelected";
+	document.getElementById("CarnMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/CarnGameplay1.png" onclick="OpenModal(false, '/images/devphotos/CarnGameplay1.png');">`; 
+}
+
+// #endregion Carnival Functions
+
+// #region Sky Jellies Functions
 
 function ChangeImageSkyJelL()
 {
@@ -208,7 +235,9 @@ function ChangeImageSkyJelVid()
 
 }
 
-/* Disney's Uncharted Adventure Functions */
+// #endregion Sky Jellies Functions
+
+// #region Disney's Uncharted Adventure Functions
 
 function ChangeImageDuaL()
 {
@@ -230,7 +259,9 @@ function ChangeImageDuaVid()
 
 }
 
-/* Crypto Alert Bot Functions */
+// #endregion Disney's Uncharted Adventure Functions
+
+// #region Crypto Alert Bot Functions
 
 function ChangeImageCryL()
 {
@@ -246,7 +277,9 @@ function ChangeImageCryVid()
 	document.getElementById("CryMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
 }
 
-/* Funem Functions */
+// #endregion Crypto Alert Bot Functions
+
+// #region Funem Functions
 
 function ChangeImageFunemL()
 {
@@ -274,7 +307,9 @@ function ChangeImageFunemVid()
 	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 }
 
-/* Music-Chan Functions */
+// #endregion Funem Functions
+
+// #region Music-Chan Functions
 
 function ChangeImageMusicL()
 {
@@ -289,7 +324,9 @@ function ChangeImageMusicVid()
 	document.getElementById("MusicMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
 }
 
-/* Key Finder Functions */
+// #endregion Music-Chan Functions
+
+// #region Key Finder Functions
 
 function ChangeImageKeyL()
 {
@@ -316,7 +353,9 @@ function ChangeImageKeyVid()
 	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/KeyThumb.png" onclick="OpenModal(true, 'w260kcveYuc');">`; 
 }
 
-/* Helation Functions */
+// #endregion Key Finder Functions
+
+// #region Helation Functions
 
 function ChangeImageHelL()
 {
@@ -343,7 +382,9 @@ function ChangeImageHelVid()
 	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/HelThumb.png" onclick="OpenModal(true, 'SosAngzSoqQ');">`; 
 }
 
-/* Rewound Running Remix Functions */
+// #endregion Helation Functions
+
+// #region Rewound Running Remix Functions
 
 function ChangeImageR3L()
 {
@@ -370,7 +411,9 @@ function ChangeImageR3Vid()
 	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/R3Thumb.png" onclick="OpenModal(true, '2l0JYAdxMpk');">`; 
 }
 
-/* Legend of Fantasy Functions */
+// #endregion Rewound Running Remix Functions
+
+// #region Legend of Fantasy Functions
 
 function ChangeImageLoFL()
 {
@@ -398,7 +441,9 @@ function ChangeImageLoFVid()
 	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/LoFThumb.png" onclick="OpenModal(true, 'DwehfYrfE_k');">`; 
 }
 
-/* Space Shooter 9000 Functions */
+// #endregion Legend of Fantasy Functions
+
+// #region Space Shooter 9000 Functions
 
 function ChangeImageSSL()
 {
@@ -425,7 +470,9 @@ function ChangeImageSSVid()
 	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SSThumb.png" onclick="OpenModal(true, 'Z_3XtojWlSA');">`; 
 }
 
-/* Factory Functions */
+// #endregion Space Shooter 9000 Functions
+
+// #region Factory Functions
 
 function ChangeImageFaL()
 {
@@ -454,7 +501,9 @@ function ChangeImageFaVid()
 	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FaThumb.png" onclick="OpenModal(true, 'ESyvW9RUt9A');">`; 
 }
 
-/* Black Ops III Functions */
+// #endregion Factory Functions
+
+// #region Black Ops III Functions
 
 function ChangeImageBO3L()
 {
@@ -480,3 +529,5 @@ function ChangeImageBO3Vid()
 	document.getElementById("ButBO34").className = "buttonBO3Selected";
 	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/BO3Thumb.png" onclick="OpenModal(true, 'GM2m9LG35N0');">`; 
 }
+
+// #endregion Factory Functions
