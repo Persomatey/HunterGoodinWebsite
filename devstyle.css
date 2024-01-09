@@ -314,6 +314,36 @@ F
 
 /* Custom Button Stuff */
 
+.buttonRCGRSelected 
+{
+	border: none;
+	color: #add9f6;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #024466; 
+	border-radius: 14px;
+}
+
+.buttonHSSelected 
+{
+	border: none;
+	color: #add9f6;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #024466; 
+	border-radius: 14px;
+}
+
 .buttonCarnSelected 
 {
 	border: none;
