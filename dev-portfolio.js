@@ -190,6 +190,36 @@ function ChangeImageNewVid()
 
 // #endregion New Project Functions
 
+// #region New Project Functions
+
+function ChangeImageSpSL()
+{
+	UnselectAllButtons(`SpS`, 3);
+	document.getElementById("ButSpS1").className = "buttonSpSSelected";
+	document.getElementById("SpSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSLogo.png">`; 
+}
+function ChangeImageSpSI1()
+{
+	UnselectAllButtons(`SpS`, 3);
+	document.getElementById("ButSpS2").className = "buttonSpSSelected";
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay1.png');">`; 
+}
+function ChangeImageSpSI2()
+{
+	UnselectAllButtons(`SpS`, 3);
+	document.getElementById("ButSpS3").className = "buttonSpSSelected";
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay2.png');">`; 
+}
+function ChangeImageSpSVid()
+{
+	UnselectAllButtons(`SpS`, 3);
+	document.getElementById("ButSpS4").className = "buttonSpSSelected";
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+
+}
+
+// #endregion New Project Functions
+
 // #region Carnival Functions
 
 function ChangeImageCarnL()
