@@ -192,6 +192,36 @@ function ChangeImageNewVid()
 
 // #region New Project Functions
 
+function ChangeImageDDL()
+{
+	UnselectAllButtons(`DD`, 3);
+	document.getElementById("ButDD1").className = "buttonDDSelected";
+	document.getElementById("DDMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDLogo.png">`; 
+}
+function ChangeImageDDI1()
+{
+	UnselectAllButtons(`DD`, 3);
+	document.getElementById("ButDD2").className = "buttonDDSelected";
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay1.png');">`; 
+}
+function ChangeImageDDI2()
+{
+	UnselectAllButtons(`DD`, 3);
+	document.getElementById("ButDD3").className = "buttonDDSelected";
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay2.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay2.png');">`; 
+}
+function ChangeImageDDVid()
+{
+	UnselectAllButtons(`DD`, 4);
+	document.getElementById("ButDD4").className = "buttonDDSelected";
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+
+}
+
+// #endregion New Project Functions
+
+// #region Spellslinger Functions
+
 function ChangeImageSpSL()
 {
 	UnselectAllButtons(`SpS`, 3);
@@ -218,7 +248,7 @@ function ChangeImageSpSVid()
 
 }
 
-// #endregion New Project Functions
+// #endregion Spellslinger Functions
 
 // #region Carnival Functions
 

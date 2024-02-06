@@ -314,6 +314,21 @@ F
 
 /* Custom Button Stuff */
 
+.buttonDDSelected 
+{
+	border: none;
+	color: #ffe478;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #3ca370; 
+	border-radius: 14px;
+}
+
 .buttonSpSSelected 
 {
 	border: none;
