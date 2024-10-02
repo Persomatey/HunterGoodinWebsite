@@ -190,23 +190,50 @@ function ChangeImageNewVid()
 
 // #endregion New Project Functions
 
-// #region New Project Functions
+// #region Horror Series Functions
+
+function ChangeImageHSL()
+{
+	UnselectAllButtons(`HS`, 4);
+	document.getElementById("ButHS1").className = "buttonHSSelected";
+	document.getElementById("HSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSLogo.png">`; 
+}
+function ChangeImageHSI1()
+{
+	UnselectAllButtons(`HS`, 4);
+	document.getElementById("ButHS2").className = "buttonHSSelected";
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay1.png');">`; 
+}
+function ChangeImageHSI2()
+{
+	UnselectAllButtons(`HS`, 4);
+	document.getElementById("ButHS3").className = "buttonHSSelected";
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay2.png');">`; 
+}
+function ChangeImageHSVid()
+{
+	UnselectAllButtons(`HS`, 4);
+	document.getElementById("ButHS4").className = "buttonHSSelected";
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSThumb.png" onclick="OpenModal(true, 'ao3sM3nEhcI');">`; 
+}
+
+// #region Draconix Defenders Functions
 
 function ChangeImageDDL()
 {
-	UnselectAllButtons(`DD`, 3);
+	UnselectAllButtons(`DD`, 4);
 	document.getElementById("ButDD1").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDLogo.png">`; 
 }
 function ChangeImageDDI1()
 {
-	UnselectAllButtons(`DD`, 3);
+	UnselectAllButtons(`DD`, 4);
 	document.getElementById("ButDD2").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay1.png');">`; 
 }
 function ChangeImageDDI2()
 {
-	UnselectAllButtons(`DD`, 3);
+	UnselectAllButtons(`DD`, 4);
 	document.getElementById("ButDD3").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay2.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay2.png');">`; 
 }
@@ -224,25 +251,25 @@ function ChangeImageDDVid()
 
 function ChangeImageSpSL()
 {
-	UnselectAllButtons(`SpS`, 3);
+	UnselectAllButtons(`SpS`, 4);
 	document.getElementById("ButSpS1").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSLogo.png">`; 
 }
 function ChangeImageSpSI1()
 {
-	UnselectAllButtons(`SpS`, 3);
+	UnselectAllButtons(`SpS`, 4);
 	document.getElementById("ButSpS2").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay1.png');">`; 
 }
 function ChangeImageSpSI2()
 {
-	UnselectAllButtons(`SpS`, 3);
+	UnselectAllButtons(`SpS`, 4);
 	document.getElementById("ButSpS3").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay2.png');">`; 
 }
 function ChangeImageSpSVid()
 {
-	UnselectAllButtons(`SpS`, 3);
+	UnselectAllButtons(`SpS`, 4);
 	document.getElementById("ButSpS4").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
