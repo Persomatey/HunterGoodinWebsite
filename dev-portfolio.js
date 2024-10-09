@@ -217,59 +217,61 @@ function ChangeImageHSVid()
 	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSThumb.png" onclick="OpenModal(true, 'ao3sM3nEhcI');">`; 
 }
 
-// #region Draconix Defenders Functions
+// #endregion Horror Series Functions
+
+// #region Draconic Defenders Functions
 
 function ChangeImageDDL()
 {
-	UnselectAllButtons(`DD`, 4);
+	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD1").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDLogo.png">`; 
 }
 function ChangeImageDDI1()
 {
-	UnselectAllButtons(`DD`, 4);
+	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD2").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay1.png');">`; 
 }
 function ChangeImageDDI2()
 {
-	UnselectAllButtons(`DD`, 4);
+	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD3").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay2.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay2.png');">`; 
 }
 function ChangeImageDDVid()
 {
-	UnselectAllButtons(`DD`, 4);
+	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD4").className = "buttonDDSelected";
 	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
 }
 
-// #endregion New Project Functions
+// #endregion Draconic Defenders Functions
 
 // #region Spellslinger Functions
 
 function ChangeImageSpSL()
 {
-	UnselectAllButtons(`SpS`, 4);
+	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS1").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSLogo.png">`; 
 }
 function ChangeImageSpSI1()
 {
-	UnselectAllButtons(`SpS`, 4);
+	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS2").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay1.png');">`; 
 }
 function ChangeImageSpSI2()
 {
-	UnselectAllButtons(`SpS`, 4);
+	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS3").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay2.png');">`; 
 }
 function ChangeImageSpSVid()
 {
-	UnselectAllButtons(`SpS`, 4);
+	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS4").className = "buttonSpSSelected";
 	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
