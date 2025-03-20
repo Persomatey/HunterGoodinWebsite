@@ -50,7 +50,7 @@ function LoadHeader(id)
 	{
 		console.log("Loading Header"); 
 
-		fetch('header.html')
+		fetch('./header.html')
 		.then(response => response.text())
 		.then(text => document.getElementById('header').innerHTML = text)
 		.then(() => ChangeHeader(id));
@@ -166,25 +166,25 @@ function ChangeImageNewL()
 {
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew1").className = "buttonNewSelected";
-	document.getElementById("NewMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunLogo.png">`; 
+	document.getElementById("NewMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunLogo.png">`; 
 }
 function ChangeImageNewI1()
 {
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew2").className = "buttonNewSelected";
-	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay1.png');">`; 
+	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay1.png');">`; 
 }
 function ChangeImageNewI2()
 {
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew3").className = "buttonNewSelected";
-	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay2.png');">`; 
+	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay2.png');">`; 
 }
 function ChangeImageNewVid()
 {
 	UnselectAllButtons(`New`, 4);
 	document.getElementById("ButNew4").className = "buttonNewSelected";
-	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+	document.getElementById("NewMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
 }
 
@@ -196,25 +196,25 @@ function ChangeImageHSL()
 {
 	UnselectAllButtons(`HS`, 4);
 	document.getElementById("ButHS1").className = "buttonHSSelected";
-	document.getElementById("HSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSLogo.png">`; 
+	document.getElementById("HSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/HSLogo.png">`; 
 }
 function ChangeImageHSI1()
 {
 	UnselectAllButtons(`HS`, 4);
 	document.getElementById("ButHS2").className = "buttonHSSelected";
-	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay1.png');">`; 
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/HSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay1.png');">`; 
 }
 function ChangeImageHSI2()
 {
 	UnselectAllButtons(`HS`, 4);
 	document.getElementById("ButHS3").className = "buttonHSSelected";
-	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay2.png');">`; 
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/HSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/HSGameplay2.png');">`; 
 }
 function ChangeImageHSVid()
 {
 	UnselectAllButtons(`HS`, 4);
 	document.getElementById("ButHS4").className = "buttonHSSelected";
-	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/HSThumb.png" onclick="OpenModal(true, 'ao3sM3nEhcI');">`; 
+	document.getElementById("HSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/HSThumb.png" onclick="OpenModal(true, 'ao3sM3nEhcI');">`; 
 }
 
 // #endregion Horror Series Functions
@@ -225,25 +225,25 @@ function ChangeImageDDL()
 {
 	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD1").className = "buttonDDSelected";
-	document.getElementById("DDMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDLogo.png">`; 
+	document.getElementById("DDMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/DDLogo.png">`; 
 }
 function ChangeImageDDI1()
 {
 	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD2").className = "buttonDDSelected";
-	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay1.png');">`; 
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/DDGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay1.png');">`; 
 }
 function ChangeImageDDI2()
 {
 	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD3").className = "buttonDDSelected";
-	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DDGameplay2.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay2.png');">`; 
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/DDGameplay2.png" onclick="OpenModal(false, '/images/devphotos/DDGameplay2.png');">`; 
 }
 function ChangeImageDDVid()
 {
 	UnselectAllButtons(`DD`, 3);
 	document.getElementById("ButDD4").className = "buttonDDSelected";
-	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+	document.getElementById("DDMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
 }
 
@@ -255,25 +255,25 @@ function ChangeImageSpSL()
 {
 	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS1").className = "buttonSpSSelected";
-	document.getElementById("SpSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSLogo.png">`; 
+	document.getElementById("SpSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SpSLogo.png">`; 
 }
 function ChangeImageSpSI1()
 {
 	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS2").className = "buttonSpSSelected";
-	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay1.png');">`; 
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SpSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay1.png');">`; 
 }
 function ChangeImageSpSI2()
 {
 	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS3").className = "buttonSpSSelected";
-	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay2.png');">`; 
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SpSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SpSGameplay2.png');">`; 
 }
 function ChangeImageSpSVid()
 {
 	UnselectAllButtons(`SpS`, 3);
 	document.getElementById("ButSpS4").className = "buttonSpSSelected";
-	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SpSThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+	document.getElementById("SpSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/SpSThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 
 }
 
@@ -285,13 +285,13 @@ function ChangeImageCarnL()
 {
 	UnselectAllButtons(`Carn`, 2);
 	document.getElementById("ButCarn1").className = "buttonCarnSelected";
-	document.getElementById("CarnMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/CarnLogo.png">`; 
+	document.getElementById("CarnMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/CarnLogo.png">`; 
 }
 function ChangeImageCarnI1()
 {
 	UnselectAllButtons(`Carn`, 2);
 	document.getElementById("ButCarn2").className = "buttonCarnSelected";
-	document.getElementById("CarnMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/CarnGameplay1.png" onclick="OpenModal(false, '/images/devphotos/CarnGameplay1.png');">`; 
+	document.getElementById("CarnMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/CarnGameplay1.png" onclick="OpenModal(false, '/images/devphotos/CarnGameplay1.png');">`; 
 }
 
 // #endregion Carnival Functions
@@ -302,25 +302,25 @@ function ChangeImageSkyJelL()
 {
 	UnselectAllButtons(`SkyJel`, 4);
 	document.getElementById("ButSkyJel1").className = "buttonSkyJelSelected";
-	document.getElementById("SkyJelMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelLogo.png">`; 
+	document.getElementById("SkyJelMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SkyJelLogo.png">`; 
 }
 function ChangeImageSkyJelI1()
 {
 	UnselectAllButtons(`SkyJel`, 4);
 	document.getElementById("ButSkyJel2").className = "buttonSkyJelSelected";
-	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay1.png');">`; 
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SkyJelGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay1.png');">`; 
 }
 function ChangeImageSkyJelI2()
 {
 	UnselectAllButtons(`SkyJel`, 4);
 	document.getElementById("ButSkyJel3").className = "buttonSkyJelSelected";
-	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay2.png');">`; 
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SkyJelGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SkyJelGameplay2.png');">`; 
 }
 function ChangeImageSkyJelVid()
 {
 	UnselectAllButtons(`SkyJel`, 4);
 	document.getElementById("ButSkyJel4").className = "buttonSkyJelSelected";
-	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SkyJelThumb.png" onclick="OpenModal(true, 'JJ2_pkzjdfQ');">`; 
+	document.getElementById("SkyJelMedia").innerHTML = `<input type="image" id="imageSkyJel" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/SkyJelThumb.png" onclick="OpenModal(true, 'JJ2_pkzjdfQ');">`; 
 
 }
 
@@ -332,19 +332,19 @@ function ChangeImageDuaL()
 {
 	UnselectAllButtons(`Dua`, 3);
 	document.getElementById("ButDua1").className = "buttonDuaSelected";
-	document.getElementById("DuaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaLogo.png">`; 
+	document.getElementById("DuaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/DuaLogo.png">`; 
 }
 function ChangeImageDuaI1()
 {
 	UnselectAllButtons(`Dua`, 3);
 	document.getElementById("ButDua2").className = "buttonDuaSelected";
-	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DuaGameplay1.png');">`; 
+	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/DuaGameplay1.png" onclick="OpenModal(false, '/images/devphotos/DuaGameplay1.png');">`; 
 }
 function ChangeImageDuaVid()
 {
 	UnselectAllButtons(`Dua`, 3);
 	document.getElementById("ButDua3").className = "buttonDuaSelected";
-	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/DuaThumb.png" onclick="OpenModal(true, 'nLu06CHDZ0Y');">`; 
+	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/DuaThumb.png" onclick="OpenModal(true, 'nLu06CHDZ0Y');">`; 
 
 }
 
@@ -363,7 +363,7 @@ function ChangeImageCryVid()
 {
 	UnselectAllButtons(`Cry`, 2);
 	document.getElementById("ButCry2").className = "buttonCrySelected";
-	document.getElementById("CryMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
+	document.getElementById("CryMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
 }
 
 // #endregion Crypto Alert Bot Functions
@@ -374,26 +374,26 @@ function ChangeImageFunemL()
 {
 	UnselectAllButtons(`Funem`, 4);
 	document.getElementById("ButFunem1").className = "buttonFunemSelected";
-	document.getElementById("FunemMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunLogo.png">`; 
+	document.getElementById("FunemMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunLogo.png">`; 
 }
 function ChangeImageFunemI1()
 {
 	UnselectAllButtons(`Funem`, 4);
 	document.getElementById("ButFunem2").className = "buttonFunemSelected";
-	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay1.png');">`; 
+	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay1.png');">`; 
 }
 function ChangeImageFunemI2()
 {
 	UnselectAllButtons(`Funem`, 4);
 	document.getElementById("ButFunem3").className = "buttonFunemSelected";
-	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay2.png');">`; 
+	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FunGameplay2.png');">`; 
 
 }
 function ChangeImageFunemVid()
 {
 	UnselectAllButtons(`Funem`, 4);
 	document.getElementById("ButFunem4").className = "buttonFunemSelected";
-	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
+	document.getElementById("FunemMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/FunThumb.png" onclick="OpenModal(true, 'QUR4Pki2UoU');">`; 
 }
 
 // #endregion Funem Functions
@@ -410,7 +410,7 @@ function ChangeImageMusicVid()
 {
 	UnselectAllButtons(`Music`, 2);
 	document.getElementById("ButMusic2").className = "buttonMusicSelected";
-	document.getElementById("MusicMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
+	document.getElementById("MusicMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/MusicThumb.png" onclick="OpenModal(true, '4t32sicjFYI');">`; 
 }
 
 // #endregion Music-Chan Functions
@@ -421,25 +421,25 @@ function ChangeImageKeyL()
 {
 	UnselectAllButtons(`Key`, 4);
 	document.getElementById("ButKey1").className = "buttonKeySelected";
-	document.getElementById("KeyMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/KeyLogo.png">`; 
+	document.getElementById("KeyMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/KeyLogo.png">`; 
 }
 function ChangeImageKeyI1()
 {
 	UnselectAllButtons(`Key`, 4);
 	document.getElementById("ButKey2").className = "buttonKeySelected";
-	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/KeyGameplay1.png" onclick="OpenModal(false, '/images/devphotos/KeyGameplay1.png');">`; 
+	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/KeyGameplay1.png" onclick="OpenModal(false, '/images/devphotos/KeyGameplay1.png');">`; 
 }
 function ChangeImageKeyI2()
 {
 	UnselectAllButtons(`Key`, 4);
 	document.getElementById("ButKey3").className = "buttonKeySelected";
-	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/KeyGameplay2.png" onclick="OpenModal(false, '/images/devphotos/KeyGameplay2.png');">`; 
+	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/KeyGameplay2.png" onclick="OpenModal(false, '/images/devphotos/KeyGameplay2.png');">`; 
 }
 function ChangeImageKeyVid()
 {
 	UnselectAllButtons(`Key`, 4);
 	document.getElementById("ButKey4").className = "buttonKeySelected";
-	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/KeyThumb.png" onclick="OpenModal(true, 'w260kcveYuc');">`; 
+	document.getElementById("KeyMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/KeyThumb.png" onclick="OpenModal(true, 'w260kcveYuc');">`; 
 }
 
 // #endregion Key Finder Functions
@@ -450,25 +450,25 @@ function ChangeImageHelL()
 {
 	UnselectAllButtons(`Hel`, 4);
 	document.getElementById("ButHel1").className = "buttonHelSelected";
-	document.getElementById("HelMedia").innerHTML = `<img style="width:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/HelLogo.png">`; 
+	document.getElementById("HelMedia").innerHTML = `<img style="width:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/HelLogo.png">`; 
 }
 function ChangeImageHelI1()
 {
 	UnselectAllButtons(`Hel`, 4);
 	document.getElementById("ButHel2").className = "buttonHelSelected";
-	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/HelGameplay1.png" onclick="OpenModal(false, '/images/devphotos/HelGameplay1.png');">`; 
+	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/HelGameplay1.png" onclick="OpenModal(false, '/images/devphotos/HelGameplay1.png');">`; 
 }
 function ChangeImageHelI2()
 {
 	UnselectAllButtons(`Hel`, 4);
 	document.getElementById("ButHel3").className = "buttonHelSelected";
-	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/HelGameplay2.png" onclick="OpenModal(false, '/images/devphotos/HelGameplay2.png');">`; 
+	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/HelGameplay2.png" onclick="OpenModal(false, '/images/devphotos/HelGameplay2.png');">`; 
 }
 function ChangeImageHelVid()
 {
 	UnselectAllButtons(`Hel`, 4);
 	document.getElementById("ButHel4").className = "buttonHelSelected";
-	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/HelThumb.png" onclick="OpenModal(true, 'SosAngzSoqQ');">`; 
+	document.getElementById("HelMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/HelThumb.png" onclick="OpenModal(true, 'SosAngzSoqQ');">`; 
 }
 
 // #endregion Helation Functions
@@ -479,25 +479,25 @@ function ChangeImageR3L()
 {
 	UnselectAllButtons(`R3`, 4);
 	document.getElementById("ButR31").className = "buttonR3Selected";
-	document.getElementById("R3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/R3Logo.png">`; 
+	document.getElementById("R3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/R3Logo.png">`; 
 }
 function ChangeImageR3I1()
 {
 	UnselectAllButtons(`R3`, 4);
 	document.getElementById("ButR32").className = "buttonR3Selected";
-	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/R3Gameplay1.png" onclick="OpenModal(false, '/images/devphotos/R3Gameplay1.png');">`; 
+	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/R3Gameplay1.png" onclick="OpenModal(false, '/images/devphotos/R3Gameplay1.png');">`; 
 }
 function ChangeImageR3I2()
 {
 	UnselectAllButtons(`R3`, 4);
 	document.getElementById("ButR33").className = "buttonR3Selected";
-	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/R3Gameplay2.png" onclick="OpenModal(false, '/images/devphotos/R3Gameplay2.png');">`; 
+	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/R3Gameplay2.png" onclick="OpenModal(false, '/images/devphotos/R3Gameplay2.png');">`; 
 }
 function ChangeImageR3Vid()
 {
 	UnselectAllButtons(`R3`, 4);
 	document.getElementById("ButR34").className = "buttonR3Selected";
-	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/R3Thumb.png" onclick="OpenModal(true, '2l0JYAdxMpk');">`; 
+	document.getElementById("R3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/R3Thumb.png" onclick="OpenModal(true, '2l0JYAdxMpk');">`; 
 }
 
 // #endregion Rewound Running Remix Functions
@@ -508,26 +508,26 @@ function ChangeImageLoFL()
 {
 	UnselectAllButtons(`LoF`, 4);
 	document.getElementById("ButLoF1").className = "buttonLoFSelected";
-	document.getElementById("LoFMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/LoFLogo.png">`; 
+	document.getElementById("LoFMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/LoFLogo.png">`; 
 }
 function ChangeImageLoFI1()
 {
 	UnselectAllButtons(`LoF`, 4);
 	document.getElementById("ButLoF2").className = "buttonLoFSelected";
-	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/LoFGameplay1.png" onclick="OpenModal(false, '/images/devphotos/LoFGameplay1.png');">`; 
+	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/LoFGameplay1.png" onclick="OpenModal(false, '/images/devphotos/LoFGameplay1.png');">`; 
 }
 function ChangeImageLoFI2()
 {
 	UnselectAllButtons(`LoF`, 4);
 	document.getElementById("ButLoF3").className = "buttonLoFSelected";
-	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/LoFGameplay2.png" onclick="OpenModal(false, '/images/devphotos/LoFGameplay2.png');">`; 
+	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/LoFGameplay2.png" onclick="OpenModal(false, '/images/devphotos/LoFGameplay2.png');">`; 
 
 }
 function ChangeImageLoFVid()
 {
 	UnselectAllButtons(`LoF`, 4);
 	document.getElementById("ButLoF4").className = "buttonLoFSelected";
-	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/LoFThumb.png" onclick="OpenModal(true, 'DwehfYrfE_k');">`; 
+	document.getElementById("LoFMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/LoFThumb.png" onclick="OpenModal(true, 'DwehfYrfE_k');">`; 
 }
 
 // #endregion Legend of Fantasy Functions
@@ -538,25 +538,25 @@ function ChangeImageSSL()
 {
 	UnselectAllButtons(`SS`, 4);
 	document.getElementById("ButSS1").className = "buttonSSSelected";
-	document.getElementById("SSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/SSLogo.png">`; 
+	document.getElementById("SSMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/SSLogo.png">`; 
 }
 function ChangeImageSSI1()
 {
 	UnselectAllButtons(`SS`, 4);
 	document.getElementById("ButSS2").className = "buttonSSSelected";
-	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/SSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SSGameplay1.png');">`; 
+	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/SSGameplay1.png" onclick="OpenModal(false, '/images/devphotos/SSGameplay1.png');">`; 
 }
 function ChangeImageSSI2()
 {
 	UnselectAllButtons(`SS`, 4);
 	document.getElementById("ButSS3").className = "buttonSSSelected";
-	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/SSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SSGameplay2.png');">`; 
+	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/SSGameplay2.png" onclick="OpenModal(false, '/images/devphotos/SSGameplay2.png');">`; 
 }
 function ChangeImageSSVid()
 {
 	UnselectAllButtons(`SS`, 4);
 	document.getElementById("ButSS4").className = "buttonSSSelected";
-	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/SSThumb.png" onclick="OpenModal(true, 'Z_3XtojWlSA');">`; 
+	document.getElementById("SSMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/SSThumb.png" onclick="OpenModal(true, 'Z_3XtojWlSA');">`; 
 }
 
 // #endregion Space Shooter 9000 Functions
@@ -567,19 +567,19 @@ function ChangeImageFaL()
 {
 	UnselectAllButtons(`Fa`, 4);
 	document.getElementById("ButFa1").className = "buttonFaSelected";
-	document.getElementById("FaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/FaLogo.png">`; 
+	document.getElementById("FaMedia").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/FaLogo.png">`; 
 }
 function ChangeImageFaI1()
 {
 	UnselectAllButtons(`Fa`, 4);
 	document.getElementById("ButFa2").className = "buttonFaSelected";
-	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/FaGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FaGameplay1.png');">`; 
+	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/FaGameplay1.png" onclick="OpenModal(false, '/images/devphotos/FaGameplay1.png');">`; 
 }
 function ChangeImageFaI2()
 {
 	UnselectAllButtons(`Fa`, 4);
 	document.getElementById("ButFa3").className = "buttonFaSelected";
-	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/FaGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FaGameplay2.png');">`; 
+	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/FaGameplay2.png" onclick="OpenModal(false, '/images/devphotos/FaGameplay2.png');">`; 
 
 }
 function ChangeImageFaVid()
@@ -587,7 +587,7 @@ function ChangeImageFaVid()
 
 	UnselectAllButtons(`Fa`, 4);
 	document.getElementById("ButFa4").className = "buttonFaSelected";
-	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/FaThumb.png" onclick="OpenModal(true, 'ESyvW9RUt9A');">`; 
+	document.getElementById("FaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/FaThumb.png" onclick="OpenModal(true, 'ESyvW9RUt9A');">`; 
 }
 
 // #endregion Factory Functions
@@ -598,25 +598,25 @@ function ChangeImageBO3L()
 {
 	UnselectAllButtons(`BO3`, 4);
 	document.getElementById("ButBO31").className = "buttonBO3Selected";
-	document.getElementById("BO3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="/images/devphotos/BO3Logo.png">`; 
+	document.getElementById("BO3Media").innerHTML = `<img style="width:20vw; height:20vw; object-fit:contain; margin-left:auto; margin-right:auto;" src="./images/devphotos/BO3Logo.png">`; 
 }
 function ChangeImageBO3I1()
 {
 	UnselectAllButtons(`BO3`, 4);
 	document.getElementById("ButBO32").className = "buttonBO3Selected";
-	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/BO3Gameplay1.png" onclick="OpenModal(false, '/images/devphotos/BO3Gameplay1.png');">`; 
+	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/BO3Gameplay1.png" onclick="OpenModal(false, '/images/devphotos/BO3Gameplay1.png');">`; 
 }
 function ChangeImageBO3I2()
 {
 	UnselectAllButtons(`BO3`, 4);
 	document.getElementById("ButBO33").className = "buttonBO3Selected";
-	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="/images/devphotos/BO3Gameplay2.png" onclick="OpenModal(false, '/images/devphotos/BO3Gameplay2.png');">`; 
+	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit: contain; margin-left: auto; margin-right: auto;" src="./images/devphotos/BO3Gameplay2.png" onclick="OpenModal(false, '/images/devphotos/BO3Gameplay2.png');">`; 
 }
 function ChangeImageBO3Vid()
 {
 	UnselectAllButtons(`BO3`, 4);
 	document.getElementById("ButBO34").className = "buttonBO3Selected";
-	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="/images/devphotos/BO3Thumb.png" onclick="OpenModal(true, 'GM2m9LG35N0');">`; 
+	document.getElementById("BO3Media").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/BO3Thumb.png" onclick="OpenModal(true, 'GM2m9LG35N0');">`; 
 }
 
 // #endregion Factory Functions
