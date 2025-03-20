@@ -50,7 +50,7 @@ function LoadHeader(id)
 	{
 		console.log("Loading Header"); 
 
-		fetch('/header.html')
+		fetch('header.html')
 		.then(response => response.text())
 		.then(text => document.getElementById('header').innerHTML = text)
 		.then(() => ChangeHeader(id));
