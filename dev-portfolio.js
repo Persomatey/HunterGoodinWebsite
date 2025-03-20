@@ -39,7 +39,7 @@ function LoadProject(project)
 {
 	console.log(`Loading ${project}`);
 
-	fetch(`/projects/${project}.html`)
+	fetch(`projects/${project}.html`)
 	.then(response => response.text())
 	.then(text => document.getElementById(project).innerHTML = text)
 }
