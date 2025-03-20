@@ -344,7 +344,7 @@ function ChangeImageDuaVid()
 {
 	UnselectAllButtons(`Dua`, 3);
 	document.getElementById("ButDua3").className = "buttonDuaSelected";
-	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/DuaThumb.png" onclick="OpenModal(true, 'nLu06CHDZ0Y');">`; 
+	document.getElementById("DuaMedia").innerHTML = `<input type="image" id="imageKey" style="width:20vw; height:20vw; object-fit:cover; margin-left:auto; margin-right:auto;" src="./images/devphotos/DuaThumb.png" onclick="OpenModal(true, '6rsps98xzsg');">`; 
 
 }
 
